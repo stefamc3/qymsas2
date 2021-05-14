@@ -56,6 +56,7 @@ namespace QYMSAS
 
         public static Int32 ObtenerIDusuario(String usuario, String contraseña)
         {
+            //Ohhhh madre mia.. 
             Int32 Id=0;
             try
             {
