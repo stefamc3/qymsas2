@@ -456,3 +456,4 @@ C:\Users\FRG\source\repos\qymsas2\QYMSAS\obj\Debug\QYMSAS.csproj.CoreCompileInpu
 C:\Users\FRG\source\repos\qymsas2\QYMSAS\obj\Debug\QYMSAS.csproj.CopyComplete
 C:\Users\FRG\source\repos\qymsas2\QYMSAS\obj\Debug\QYMSAS.exe
 C:\Users\FRG\source\repos\qymsas2\QYMSAS\obj\Debug\QYMSAS.pdb
+C:\Users\FRG\source\repos\qymsas2\QYMSAS\obj\Debug\QYMSAS.Notifica.resources

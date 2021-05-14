@@ -47,7 +47,7 @@ namespace QYMSAS
 
         private void Selección_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -87,9 +87,11 @@ namespace QYMSAS
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            Alerta men = new Alerta(iduss);
-            men.Show();
+            //this.Dispose();
+            //Alerta men = new Alerta(iduss);
+            //men.Show();
+            Notifica noti = new Notifica();
+            noti.Show();
         }
     }
 }

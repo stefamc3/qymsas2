@@ -37,7 +37,7 @@ namespace QYMSAS
                     int id = basededatos.ObtenerIDusuario(txt_usuario.Text, txt_contraseña.Text);
                     if (tipo == 1)
                     {
-                        this.Hide();
+                        this.Hide();                        
                         Selección menua = new Selección(id);
                         menua.Show();
                     }

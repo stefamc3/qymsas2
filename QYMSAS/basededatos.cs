@@ -123,6 +123,9 @@ namespace QYMSAS
             }
             return suma;
         }
+
+        
+        
         public static DataTable ConsultaGeneral(string Q)
         {
             //MySqlConnection conectar = new MySqlConnection("server=localhost; database=qymsas; Uid=root; pwd=;");

@@ -255,6 +255,12 @@
     <Compile Include="Nomina_Recebera.Designer.cs">
       <DependentUpon>Nomina_Recebera.cs</DependentUpon>
     </Compile>
+    <Compile Include="Notifica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifica.Designer.cs">
+      <DependentUpon>Notifica.cs</DependentUpon>
+    </Compile>
     <Compile Include="Produccion_Acopio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -448,6 +454,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Nomina_Recebera.resx">
       <DependentUpon>Nomina_Recebera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifica.resx">
+      <DependentUpon>Notifica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Produccion_Acopio.resx">
       <DependentUpon>Produccion_Acopio.cs</DependentUpon>
