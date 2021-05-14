@@ -39,19 +39,33 @@ namespace QYMSAS
             return status;
         }
 
-        public static int ConsultaTipoUsuario(String usuario, String contraseña)
+        public static Int32 ConsultaTipoUsuario(String usuario, String contraseña)
         {
-            int tipo;
+            Int32 tipo=0;
+            try
+            {
             MySqlCommand comando = new MySqlCommand(String.Format("select tipo, usuario, contraseña from usuarios where (usuario='{0}' and contraseña= md5('{1}') )", usuario, contraseña), basededatos.ObtenerConexion());
-            Int32 Tipo = (Int32)comando.ExecuteScalar();
-            tipo = Tipo;
+            tipo = (Int32)comando.ExecuteScalar();
+
+            }catch (Exception ex)
+            {
+                tipo = 3;
+            }
             return tipo;
         }
 
-        public static int ObtenerIDusuario(String usuario, String contraseña)
+        public static Int32 ObtenerIDusuario(String usuario, String contraseña)
         {
+            Int32 Id=0;
+            try
+            {
             MySqlCommand comando = new MySqlCommand(String.Format("select id_us, usuario, contraseña from usuarios where (usuario='{0}' and contraseña= md5('{1}') )", usuario, contraseña), basededatos.ObtenerConexion());
-            int Id = (int)comando.ExecuteScalar();
+            Id = (int)comando.ExecuteScalar();
+
+            }catch (Exception ex)
+            {
+                Id = 0;
+            }
             return Id;
         }
 
