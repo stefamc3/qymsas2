@@ -92,7 +92,12 @@ namespace QYMSAS
             string fullFilePath = folder + "frecebera.xlsx";
             var workbook = new XLWorkbook(fullFilePath); // load the existing Excel file
             var worksheet = workbook.Worksheets.Worksheet(1);
+            worksheet.Cell("I7").SetValue(FechaDesde.Value.Date.ToShortDateString());
+            worksheet.Cell("L7").SetValue(FechaHasta.Value.Date.ToShortDateString());
             worksheet.Cell("K14").SetValue(basededatos.sumametrosremision(fechainicial,fechafinal));
+            worksheet.Cell("K15").SetValue(basededatos.sumaporplaca(fechainicial,fechafinal));
+            worksheet.Cell("K17").SetValue(basededatos.sumamegastosoperativos(fechainicial,fechafinal));
+            worksheet.Cell("K19").SetValue(basededatos.sumamegastosadministrativos(fechainicial,fechafinal));
             workbook.Save();
             string documentoexcel = Path.GetFullPath(fullFilePath);
             string documentopdf = Path.GetFullPath(folder + "reporterecebera.pdf");

@@ -145,6 +145,48 @@ namespace QYMSAS
             return suma;
         }
 
+        public static int sumamegastosadministrativos(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(neto_rec) from nomina_recebera where (fecha between '{0}' and '{1}')", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch (Exception ex)
+            {
+                
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumamegastosoperativos(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(neto) from facturas_de_venta where (fecha between '{0}' and '{1}')", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+
         public static DataTable ConsultaGeneral(string Q)
         {
             //MySqlConnection conectar = new MySqlConnection("server=localhost; database=qymsas; Uid=root; pwd=;");
