@@ -38,17 +38,14 @@ namespace QYMSAS
             monto[10] = basededatos.sumaporplaca("2019/11/01", "2019/11/30");
             monto[11] = basededatos.sumaporplaca("2019/12/01", "2019/12/31");
 
-
             chart1.Palette = ChartColorPalette.Pastel;
 
             for (int i = 0; i < series.Length; i++)
             {
                 Series serie = chart1.Series.Add(series[i]);
-
                 serie.Label = monto[i].ToString();
                 serie.Points.Add(monto[i]);
-            }
-            
+            }            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

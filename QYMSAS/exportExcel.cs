@@ -11,27 +11,17 @@ namespace QYMSAS
     class exportExcel
     {
         Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
-
         public void exportaraexcel(DataGridView tabla)
         {
             int filastotales = tabla.Rows.Count;
-
-
             excel.Application.Workbooks.Add(true);
-
             int IndiceColumna = 0;
-
             foreach (DataGridViewColumn col in tabla.Columns) // Columnas
             {
-
                 IndiceColumna++;
-
                 excel.Cells[1, IndiceColumna] = col.Name;
-
             }
-
-            int IndeceFila = 0;
-
+            int IndeceFila = 0;      
             foreach (DataGridViewRow row in tabla.Rows) // Filas
             {
                 IndeceFila++;

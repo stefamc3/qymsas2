@@ -106,5 +106,12 @@ namespace QYMSAS
                 Application.Exit();
             
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            Alerta via = new Alerta();
+            via.Show();
+        }
     }
 }

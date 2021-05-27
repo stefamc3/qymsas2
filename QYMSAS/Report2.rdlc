@@ -74,7 +74,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>INFORME</Value>
+                <Value>INFORME EMPRESARIAL</Value>
                 <Style>
                   <FontFamily>Microsoft Sans Serif</FontFamily>
                   <FontSize>20pt</FontSize>
@@ -86,9 +86,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>5.59264cm</Top>
-        <Left>6.1841cm</Left>
+        <Left>4.14679cm</Left>
         <Height>1.20854cm</Height>
-        <Width>3.62821cm</Width>
+        <Width>8.90361cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -691,7 +691,7 @@
     <Height>6.35269in</Height>
     <Style />
   </Body>
-  <Width>6.37499in</Width>
+  <Width>6.48171in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>

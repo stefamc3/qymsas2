@@ -74,7 +74,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>ESTADO DE RESULTADOS</Value>
+                <Value>INFORME EMPRESARIAL </Value>
                 <Style>
                   <FontFamily>Microsoft Sans Serif</FontFamily>
                   <FontSize>20pt</FontSize>
@@ -86,9 +86,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>5.84407cm</Top>
-        <Left>3.63721cm</Left>
+        <Left>3.95471cm</Left>
         <Height>1.20854cm</Height>
-        <Width>9.68717cm</Width>
+        <Width>9.08246cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
