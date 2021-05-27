@@ -29,8 +29,10 @@ namespace QYMSAS
         private void pictureBox3_Click_1(object sender, EventArgs e)
         {
             this.Dispose();
-            Report creus = new Report(iduss);
-            creus.Show();
+            ReporteRecebera report = new ReporteRecebera(iduss);
+            report.Show();
+            //Report creus = new Report(iduss);
+            //creus.Show();
         }
 
         private void pictureBox10_Click_1(object sender, EventArgs e)
