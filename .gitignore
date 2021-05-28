@@ -159,4 +159,4 @@ pip-log.txt
 .DS_Store
 
 packages/
-QYMSAS/obj
+QYMSAS/obj/
