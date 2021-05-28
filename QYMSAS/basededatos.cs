@@ -15,7 +15,13 @@ namespace QYMSAS
         public static MySqlConnection ObtenerConexion()
         {
             MySqlConnection conectar = new MySqlConnection("server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;");
+            try
+            {
             conectar.Open();
+            }catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             return conectar;
         }
 
