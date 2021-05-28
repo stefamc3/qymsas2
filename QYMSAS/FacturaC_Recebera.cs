@@ -25,7 +25,7 @@ namespace QYMSAS
         }
         private void busqueda()
         {
-            String busqueda = "select * from FacturaCompra;";
+            String busqueda = "select * from Facturacion where tipo_factura='Compra' and tipo='RECEBERA';";
             MySqlCommand comando = new MySqlCommand(busqueda, basededatos.ObtenerConexion());
             MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
             MyAdapter.SelectCommand = comando;
