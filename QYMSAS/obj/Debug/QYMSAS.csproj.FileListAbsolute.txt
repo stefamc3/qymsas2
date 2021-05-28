@@ -468,3 +468,13 @@ C:\Users\FRG\source\repos\qymsas2\QYMSAS\bin\Debug\ClosedXML.xml
 C:\Users\FRG\source\repos\qymsas2\QYMSAS\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Users\FRG\source\repos\qymsas2\QYMSAS\bin\Debug\ExcelNumberFormat.xml
 C:\Users\FRG\source\repos\qymsas2\QYMSAS\obj\Debug\QYMSAS.ReporteRecebera.resources
+D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\bin\Debug\ClosedXML.dll
+D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\bin\Debug\DocumentFormat.OpenXml.dll
+D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\bin\Debug\ExcelNumberFormat.dll
+D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\bin\Debug\System.IO.FileSystem.Primitives.dll
+D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\bin\Debug\System.IO.Packaging.dll
+D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\bin\Debug\ClosedXML.pdb
+D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\bin\Debug\ClosedXML.xml
+D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\bin\Debug\DocumentFormat.OpenXml.xml
+D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\bin\Debug\ExcelNumberFormat.xml
+D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.ReporteRecebera.resources

@@ -94,21 +94,21 @@ namespace QYMSAS
         {
             try
             {
-                string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
+                //string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
                 String estado = Convert.ToString(Cbid_estadof.SelectedItem);
                 String tipo = Convert.ToString(cbtipo.SelectedItem);
                 string Query = "INSERT INTO FacturaCompra (fecha,N_fac,señores,nit,direccion,telefono,descripcion,cantidad,valor_unitario,subtotal,porcentaje_iva,iva,porcentaje_retf,retefuente,estado,tipo) values('" + fecha + "','" + this.txtnumf.Text + "','" + this.txtdestino.Text + "','" + this.txtnit.Text + "','" + this.txtdireccion.Text + "','" + this.txttelefono.Text + "','" + this.txt_descripcionf.Text + "','" + this.txt_cantidad.Text + "','" + this.txtvaloru.Text + "','" + this.txtsubt.Text + "','" + this.txtivap.Text + "','" + this.txtiva.Text + "','" + this.txtretefp.Text + "','" + this.txtretef.Text + "','" + this.txtneto.Text + "','" + estado + "','" + tipo + "');";
-                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                //MySqlConnection MyConn2 = new MySqlConnection(basededatos.ObtenerConexion());
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;
-                MyConn2.Open();
+                //MyConn2.Open();
                 MyReader2 = MyCommand2.ExecuteReader();
                 MessageBox.Show("Se guardado el registro", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 while (MyReader2.Read())
                 {
                 }
-                MyConn2.Close();
+                //MyConn2.Close();
                 busqueda();
             }
             catch (Exception ex)

@@ -55,6 +55,7 @@ namespace QYMSAS
 
             }catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 tipo = 3;
             }
             return tipo;
