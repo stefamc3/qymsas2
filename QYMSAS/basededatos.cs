@@ -63,14 +63,14 @@ namespace QYMSAS
 
         public static Int32 ObtenerIDusuario(String usuario, String contraseña)
         {
-            //Ohhhh madre mia.. 
+             
             Int32 Id=0;
             try
             {
             MySqlCommand comando = new MySqlCommand(String.Format("select id_us, usuario, contraseña from usuarios where (usuario='{0}' and contraseña= md5('{1}') )", usuario, contraseña), basededatos.ObtenerConexion());
             Id = (int)comando.ExecuteScalar();
 
-            }catch (Exception ex)
+            }catch (Exception)
             {
                 Id = 0;
             }
@@ -103,7 +103,7 @@ namespace QYMSAS
                 MySqlCommand comando = new MySqlCommand(String.Format("update usuarios set contraseña = md5('{0}') where usuario='{1}'", contraseña, usuario), ObtenerConexion());
                 registro = comando.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 registro = 0;
             }
@@ -166,7 +166,7 @@ namespace QYMSAS
                 }
                 suma = (Int32)Suma;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 
                 suma = 0;
@@ -218,15 +218,15 @@ namespace QYMSAS
 
         }
 
-        public static int ModificaAceites(String descripcion, String idaceites)
+        public static int ModificaDiscriminacion(String descripcion, String iddiscriminacion)
         {
             int registro = 1;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("update aceites_y_filtros set descripcion = '{0}' where id_aceites='{1}'", descripcion, idaceites), ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("update discriminacion set descripcion = '{0}' where id_discriminacion='{1}'", descripcion, iddiscriminacion), ObtenerConexion());
                 registro = comando.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 registro = 0;
             }
@@ -240,7 +240,7 @@ namespace QYMSAS
                 MySqlCommand comando = new MySqlCommand(String.Format("update combustible set Valor_Total = '{0}' where id_combustible='{1}'", valor, idcombustible), ObtenerConexion());
                 registro = comando.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 registro = 0;
             }
@@ -255,7 +255,7 @@ namespace QYMSAS
                 MySqlCommand comando = new MySqlCommand(String.Format("update cuentas_de_cobro set Descripcion = '{0}' where id_cuentasC='{1}'", descripcion, idcuentas_de_cobro), ObtenerConexion());
                 registro = comando.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 registro = 0;
             }
@@ -270,7 +270,7 @@ namespace QYMSAS
                 MySqlCommand comando = new MySqlCommand(String.Format("update horas set Num_Horas = '{0}' where id_horas ='{1}'", horas, maquina), ObtenerConexion());
                 registro = comando.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 registro = 0;
             }
@@ -285,7 +285,7 @@ namespace QYMSAS
                 MySqlCommand comando = new MySqlCommand(String.Format("update movimientos_foton2 set patio = '{0}' where id_movimientos ='{1}'", patio, id_movimientos), ObtenerConexion());
                 registro = comando.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 registro = 0;
             }
@@ -300,7 +300,7 @@ namespace QYMSAS
                 MySqlCommand comando = new MySqlCommand(String.Format("update usuarios set contraseña = '{0}' where id_us ='{1}'", contraseña, id_us), ObtenerConexion());
                 registro = comando.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 registro = 0;
             }

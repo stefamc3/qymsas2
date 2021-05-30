@@ -52,6 +52,12 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cb_item = new System.Windows.Forms.ComboBox();
+            this.txt_idFac = new System.Windows.Forms.TextBox();
+            this.txt_cantidad = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,7 +69,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(374, 160);
+            this.label7.Location = new System.Drawing.Point(374, 157);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 18);
             this.label7.TabIndex = 115;
@@ -75,7 +81,7 @@
             this.dt_fecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dt_fecha.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dt_fecha.Location = new System.Drawing.Point(488, 156);
+            this.dt_fecha.Location = new System.Drawing.Point(488, 153);
             this.dt_fecha.Name = "dt_fecha";
             this.dt_fecha.Size = new System.Drawing.Size(305, 26);
             this.dt_fecha.TabIndex = 1;
@@ -84,7 +90,7 @@
             // 
             this.txt_descripcionf.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_descripcionf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_descripcionf.Location = new System.Drawing.Point(488, 199);
+            this.txt_descripcionf.Location = new System.Drawing.Point(488, 185);
             this.txt_descripcionf.Name = "txt_descripcionf";
             this.txt_descripcionf.Size = new System.Drawing.Size(305, 26);
             this.txt_descripcionf.TabIndex = 3;
@@ -94,7 +100,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(374, 203);
+            this.label2.Location = new System.Drawing.Point(374, 189);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 18);
             this.label2.TabIndex = 118;
@@ -104,7 +110,7 @@
             // 
             this.txt_valor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_valor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_valor.Location = new System.Drawing.Point(123, 200);
+            this.txt_valor.Location = new System.Drawing.Point(123, 217);
             this.txt_valor.Name = "txt_valor";
             this.txt_valor.Size = new System.Drawing.Size(247, 26);
             this.txt_valor.TabIndex = 2;
@@ -116,7 +122,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(18, 203);
+            this.label10.Location = new System.Drawing.Point(18, 220);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(57, 18);
             this.label10.TabIndex = 120;
@@ -165,7 +171,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 159);
+            this.label1.Location = new System.Drawing.Point(18, 156);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 18);
             this.label1.TabIndex = 124;
@@ -188,7 +194,7 @@
             "7- SZN-114",
             "8- Tuneleadora",
             "9- Molino"});
-            this.Cbid_maquina.Location = new System.Drawing.Point(123, 156);
+            this.Cbid_maquina.Location = new System.Drawing.Point(123, 153);
             this.Cbid_maquina.Name = "Cbid_maquina";
             this.Cbid_maquina.Size = new System.Drawing.Size(247, 28);
             this.Cbid_maquina.TabIndex = 123;
@@ -319,12 +325,86 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(374, 221);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 18);
+            this.label4.TabIndex = 216;
+            this.label4.Text = "Id Factura: ";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(18, 253);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 18);
+            this.label5.TabIndex = 218;
+            this.label5.Text = "Item";
+            // 
+            // cb_item
+            // 
+            this.cb_item.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_item.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_item.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cb_item.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_item.FormattingEnabled = true;
+            this.cb_item.Items.AddRange(new object[] {
+            "1- AF",
+            "2- COM",
+            "3- FAC",
+            ""});
+            this.cb_item.Location = new System.Drawing.Point(123, 249);
+            this.cb_item.Name = "cb_item";
+            this.cb_item.Size = new System.Drawing.Size(247, 28);
+            this.cb_item.TabIndex = 217;
+            // 
+            // txt_idFac
+            // 
+            this.txt_idFac.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_idFac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_idFac.Location = new System.Drawing.Point(488, 217);
+            this.txt_idFac.Name = "txt_idFac";
+            this.txt_idFac.Size = new System.Drawing.Size(305, 26);
+            this.txt_idFac.TabIndex = 219;
+            // 
+            // txt_cantidad
+            // 
+            this.txt_cantidad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cantidad.Location = new System.Drawing.Point(123, 185);
+            this.txt_cantidad.Name = "txt_cantidad";
+            this.txt_cantidad.Size = new System.Drawing.Size(247, 26);
+            this.txt_cantidad.TabIndex = 220;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(18, 189);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(84, 18);
+            this.label6.TabIndex = 221;
+            this.label6.Text = "Cantidad: ";
+            // 
             // Aceites
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(803, 698);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txt_cantidad);
+            this.Controls.Add(this.txt_idFac);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.cb_item);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.exportar);
             this.Controls.Add(this.bt_eliminar);
             this.Controls.Add(this.label3);
@@ -381,5 +461,11 @@
         public System.Windows.Forms.DataGridView dg_consulta;
         private System.Windows.Forms.Button bt_eliminar;
         private System.Windows.Forms.Button exportar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cb_item;
+        private System.Windows.Forms.TextBox txt_idFac;
+        private System.Windows.Forms.TextBox txt_cantidad;
+        private System.Windows.Forms.Label label6;
     }
 }

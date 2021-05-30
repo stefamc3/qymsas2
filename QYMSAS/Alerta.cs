@@ -1,4 +1,4 @@
-﻿                                                    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +12,11 @@ namespace QYMSAS
 {
     public partial class Alerta : Form
     {
-        String Textt;
-        public Alerta()
+        int iduss;
+        public Alerta(int idusuario)
         {
-            InitializeComponent();            
+            InitializeComponent();
+            iduss = idusuario;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

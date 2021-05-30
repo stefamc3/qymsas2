@@ -41,7 +41,7 @@ namespace QYMSAS.MailServices
                 mailMessage.Priority = MailPriority.Normal;
                 smtpClient.Send(mailMessage);//Enviar mensaje
             }
-            catch (Exception ex) { }
+            catch (Exception) { }
             finally
             {
                 mailMessage.Dispose();

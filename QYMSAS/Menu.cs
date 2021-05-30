@@ -110,7 +110,7 @@ namespace QYMSAS
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            Alerta via = new Alerta();
+            Alerta via = new Alerta(iduss);
             via.Show();
         }
     }

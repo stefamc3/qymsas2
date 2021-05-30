@@ -149,7 +149,7 @@ namespace QYMSAS
                     // Call Excel's native export function (valid in Office 2007 and Office 2010, AFAIK)
                     excelWorkbook.ExportAsFixedFormat(Microsoft.Office.Interop.Excel.XlFixedFormatType.xlTypePDF, outputPath);
                 }
-                catch (System.Exception ex)
+                catch (System.Exception)
                 {
                     // Mark the export as failed for the return value...
                     exportSuccessful = false;
