@@ -26,7 +26,7 @@ namespace QYMSAS
         }
         private void busqueda()
         {
-            String busqueda = "select * from facturas_de_venta;";
+            String busqueda = "SELECT * FROM facturacion WHERE tipo='ACOPIO' and Apartado = 'VENTA';";
             MySqlCommand comando = new MySqlCommand(busqueda, basededatos.ObtenerConexion());
             MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
             MyAdapter.SelectCommand = comando;
@@ -51,8 +51,10 @@ namespace QYMSAS
             dg_consulta.Columns[15].HeaderText = "NETO";
             dg_consulta.Columns[16].HeaderText = "ESTADO";
             dg_consulta.Columns[17].HeaderText = "TIPO";
+            dg_consulta.Columns[18].HeaderText = "TIPO DE FACTURA";
+            dg_consulta.Columns[19].HeaderText = "ID";
         }
-        private void bt_nuevo_Click(object sender, EventArgs e)
+            private void bt_nuevo_Click(object sender, EventArgs e)
         {
             limpia();
         }
@@ -80,28 +82,29 @@ namespace QYMSAS
         {
             try
             {
-                string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
+               // string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
                 String estado = Convert.ToString(Cbid_estadof.SelectedItem);
                 String tipo = Convert.ToString(cbtipo.SelectedItem);
-                string Query = "INSERT INTO facturas_de_venta (fecha, n_factura,destino,NIT,direccion_cliente,telefono_cliente,material,metros,valor_unitario,subtotal,iva_porcentaje,iva,retefuente_porcentaje,rte_fuente,neto,estado_fr,tipo) values('" + fecha + "','" + this.txtfac.Text + "','" + this.txtdestino.Text + "','" + this.txtnit.Text + "','" + this.txtdireccion.Text + "','" + this.txttelefono.Text + "','" + this.txtmaterial.Text + "','" + this.txtmetros.Text + "','" + this.txtvaloru.Text + "','" + this.txtsubt.Text + "','" + this.txtivap.Text + "','" + this.txtiva.Text + "','" + this.txtretefp.Text + "','" + this.txtretef.Text + "','" + this.txtneto.Text + "','" + estado + "''" + tipo + "');";
-                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                String apartado = Convert.ToString(cbApartado.SelectedItem);
+                string Query = "INSERT INTO facturacion (Fecha,Factura,señores,nit,direccion,telefono,Descripcion,cantidad,valor_unitario,subtotal,porcentaje_iva,iva,porcenta_Rtefuente,retefuente,neto,estado,tipo,Apartado,resumen_acopio_id_resumen_acopio) values('" + fecha + "','" + this.txtfac.Text + "','" + this.txtdestino.Text + "','" + this.txtnit.Text + "','" + this.txtdireccion.Text + "','" + this.txttelefono.Text + "','" + this.txtmaterial.Text + "','" + this.txtmetros.Text + "','" + this.txtvaloru.Text + "','" + this.txtsubt.Text + "','" + this.txtivap.Text + "','" + this.txtiva.Text + "','" + this.txtretefp.Text + "','" + this.txtretef.Text + "','" + this.txtneto.Text + "','" + estado + "','" + tipo + "','" + apartado + "','" + this.txt_idR.Text + "');";
+              //  MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;
-                MyConn2.Open();
+             //   MyConn2.Open();
                 MyReader2 = MyCommand2.ExecuteReader();
                 MessageBox.Show("Se guardado el registro", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 while (MyReader2.Read())
                 {
                 }
-                MyConn2.Close();
+             //   MyConn2.Close();
                 busqueda();
-                limpia();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
         }
 
         private void bt_eliminar_Click(object sender, EventArgs e)
@@ -109,7 +112,7 @@ namespace QYMSAS
             String id = dg_consulta.Rows[dg_consulta.CurrentRow.Index].Cells[0].Value.ToString();
             if (MessageBox.Show("¿Realmente Desea Eliminar el registro '" + id + "' ?", "Eliminar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                string Borrar = "delete from facturas_de_venta where id_facturacion_r = '" + id + "';";
+                string Borrar = "delete from facturacion where id_facturacion = '" + id + "';";
                 MySqlCommand ComandBorrar = new MySqlCommand(Borrar, basededatos.ObtenerConexion());
                 ComandBorrar.ExecuteReader();
                 busqueda();
@@ -160,6 +163,11 @@ namespace QYMSAS
         private void pictureBox7_Click(object sender, EventArgs e)
         {
             txtneto.Text = Convert.ToString(Convert.ToDecimal(txtsubt.Text) - Convert.ToDecimal(txtretefp.Text) + Convert.ToDecimal(txtiva.Text));
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

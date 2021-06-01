@@ -25,7 +25,7 @@ namespace QYMSAS
         }
         private void busqueda()
         {
-            String busqueda = "select * from Facturacion where tipo_factura='Compra' and tipo='RECEBERA';";
+            String busqueda = "select * from facturacion where tipo='RECEBERA' and Apartado='COMPRA';";
             MySqlCommand comando = new MySqlCommand(busqueda, basededatos.ObtenerConexion());
             MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
             MyAdapter.SelectCommand = comando;
@@ -35,12 +35,12 @@ namespace QYMSAS
             dg_consulta.Columns[0].HeaderText = "ID FACTURACION";
             dg_consulta.Columns[1].HeaderText = "FECHA";
             dg_consulta.Columns[2].HeaderText = "No.FACTURA";
-            dg_consulta.Columns[3].HeaderText = "SEÑORES";
+            dg_consulta.Columns[3].HeaderText = "DESTINO";
             dg_consulta.Columns[4].HeaderText = "NIT";
             dg_consulta.Columns[5].HeaderText = "DIRECCION";
             dg_consulta.Columns[6].HeaderText = "TELEFONO";
-            dg_consulta.Columns[7].HeaderText = "DESCRIPCION";
-            dg_consulta.Columns[8].HeaderText = "CANTIDAD";
+            dg_consulta.Columns[7].HeaderText = "MATERIAL";
+            dg_consulta.Columns[8].HeaderText = "METROS";
             dg_consulta.Columns[9].HeaderText = "VALOR UNITARIO";
             dg_consulta.Columns[10].HeaderText = "SUBTOTAL";
             dg_consulta.Columns[11].HeaderText = "IVA %";
@@ -50,6 +50,8 @@ namespace QYMSAS
             dg_consulta.Columns[15].HeaderText = "NETO";
             dg_consulta.Columns[16].HeaderText = "ESTADO";
             dg_consulta.Columns[17].HeaderText = "TIPO";
+            dg_consulta.Columns[18].HeaderText = "TIPO DE FACTURA";
+            dg_consulta.Columns[19].HeaderText = "ID";
 
         }
 
@@ -72,43 +74,46 @@ namespace QYMSAS
         }
         private void limpia()
         {
-            this.txtnumf.Text = "";
+            this.txtfac.Text = "";
             this.txtdestino.Text = "";
             this.txtnit.Text = "";
             this.txtdireccion.Text = "";
             this.txttelefono.Text = "";
-            this.txt_descripcionf.Text = "";
-            this.txt_cantidad.Text = "";
+            this.txtmaterial.Text = "";
+            this.txtmetros.Text = "";
             this.txtvaloru.Text = "";
             this.txtsubt.Text = "";
             this.txtivap.Text = "";
-            this.txtiva.Text = "";           
+            this.txtiva.Text = "";
             this.txtretef.Text = "";
             this.txtretefp.Text = "";
             this.txtneto.Text = "";
+            this.txt_idR.Text = "";
             Cbid_estadof.Focus();
             cbtipo.Focus();
+            cbApartado.Focus();
 
         }
         private void Bt_Ingresar_Click(object sender, EventArgs e)
         {
             try
             {
-                //string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
+                // string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
                 String estado = Convert.ToString(Cbid_estadof.SelectedItem);
                 String tipo = Convert.ToString(cbtipo.SelectedItem);
-                string Query = "INSERT INTO FacturaCompra (fecha,N_fac,señores,nit,direccion,telefono,descripcion,cantidad,valor_unitario,subtotal,porcentaje_iva,iva,porcentaje_retf,retefuente,estado,tipo) values('" + fecha + "','" + this.txtnumf.Text + "','" + this.txtdestino.Text + "','" + this.txtnit.Text + "','" + this.txtdireccion.Text + "','" + this.txttelefono.Text + "','" + this.txt_descripcionf.Text + "','" + this.txt_cantidad.Text + "','" + this.txtvaloru.Text + "','" + this.txtsubt.Text + "','" + this.txtivap.Text + "','" + this.txtiva.Text + "','" + this.txtretefp.Text + "','" + this.txtretef.Text + "','" + this.txtneto.Text + "','" + estado + "','" + tipo + "');";
-                //MySqlConnection MyConn2 = new MySqlConnection(basededatos.ObtenerConexion());
+                String apartado = Convert.ToString(cbApartado.SelectedItem);
+                string Query = "INSERT INTO facturacion (Fecha,Factura,señores,nit,direccion,telefono,Descripcion,cantidad,valor_unitario,subtotal,porcentaje_iva,iva,porcenta_Rtefuente,retefuente,neto,estado,tipo,Apartado,resumen_acopio_id_resumen_acopio) values('" + fecha + "','" + this.txtfac.Text + "','" + this.txtdestino.Text + "','" + this.txtnit.Text + "','" + this.txtdireccion.Text + "','" + this.txttelefono.Text + "','" + this.txtmaterial.Text + "','" + this.txtmetros.Text + "','" + this.txtvaloru.Text + "','" + this.txtsubt.Text + "','" + this.txtivap.Text + "','" + this.txtiva.Text + "','" + this.txtretefp.Text + "','" + this.txtretef.Text + "','" + this.txtneto.Text + "','" + estado + "','" + tipo + "','" + apartado + "','" + this.txt_idR.Text + "');";
+                //   MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;
-                //MyConn2.Open();
+                //   MyConn2.Open();
                 MyReader2 = MyCommand2.ExecuteReader();
                 MessageBox.Show("Se guardado el registro", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 while (MyReader2.Read())
                 {
                 }
-                //MyConn2.Close();
+                //   MyConn2.Close();
                 busqueda();
             }
             catch (Exception ex)
@@ -122,7 +127,7 @@ namespace QYMSAS
           String id = dg_consulta.Rows[dg_consulta.CurrentRow.Index].Cells[0].Value.ToString();
             if (MessageBox.Show("¿Realmente Desea Eliminar el registro '" + id + "' ?", "Eliminar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                string Borrar = "delete from FacturaCompra where id_FacturaC = '" + id + "';";
+                string Borrar = "delete from facturacion where id_facturacion = '" + id + "';";
                 MySqlCommand ComandBorrar = new MySqlCommand(Borrar, basededatos.ObtenerConexion());
                 ComandBorrar.ExecuteReader();
                 busqueda();
@@ -131,9 +136,9 @@ namespace QYMSAS
         private void busAce_TextChanged(object sender, EventArgs e)
         {
            if (busAce.Text != "")
-          dg_consulta.DataSource = basededatos.ConsultaGeneral("SELECT * FROM `FacturaCompra` WHERE `señores` LIKE '%" + busAce.Text + "%'");
+          dg_consulta.DataSource = basededatos.ConsultaGeneral("SELECT * FROM `facturacion` WHERE `señores` LIKE '%" + busAce.Text + "%'");
             else
-             dg_consulta.DataSource = basededatos.ConsultaGeneral("SELECT * FROM `FacturaCompra` ");
+             dg_consulta.DataSource = basededatos.ConsultaGeneral("SELECT * FROM `facturacion` ");
         }
 
         private void exportar_Click(object sender, EventArgs e)
@@ -141,23 +146,22 @@ namespace QYMSAS
             exportExcel exc = new exportExcel();
             exc.exportaraexcel(dg_consulta);
         }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void pictureBox5_Click_1(object sender, EventArgs e)
         {
-            txtsubt.Text = Convert.ToString(Convert.ToDecimal(txt_cantidad.Text) * Convert.ToDecimal(txtvaloru.Text));
+            txtsubt.Text = Convert.ToString(Convert.ToDecimal(txtmetros.Text) * Convert.ToDecimal(txtvaloru.Text));
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void pictureBox4_Click_1(object sender, EventArgs e)
         {
             txtiva.Text = Convert.ToString(Convert.ToDecimal(txtsubt.Text) * Convert.ToDecimal(txtivap.Text));
         }
 
-        private void pictureBox6_Click(object sender, EventArgs e)
+        private void pictureBox6_Click_1(object sender, EventArgs e)
         {
             txtretef.Text = Convert.ToString(Convert.ToDecimal(txtsubt.Text) * Convert.ToDecimal(txtretefp.Text));
         }
 
-        private void pictureBox7_Click(object sender, EventArgs e)
+        private void pictureBox7_Click_1(object sender, EventArgs e)
         {
             txtneto.Text = Convert.ToString(Convert.ToDecimal(txtsubt.Text) - Convert.ToDecimal(txtretefp.Text) + Convert.ToDecimal(txtiva.Text));
         }

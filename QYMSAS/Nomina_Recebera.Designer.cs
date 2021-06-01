@@ -62,8 +62,10 @@
             this.bt_Eliminar = new System.Windows.Forms.Button();
             this.Bt_Ingresar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.Cb_tipo = new System.Windows.Forms.ComboBox();
+            this.Cb_idT = new System.Windows.Forms.ComboBox();
             this.exportar = new System.Windows.Forms.Button();
+            this.cbtipo = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -294,7 +296,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dg_consulta.DefaultCellStyle = dataGridViewCellStyle2;
             this.dg_consulta.EnableHeadersVisualStyles = false;
-            this.dg_consulta.Location = new System.Drawing.Point(37, 415);
+            this.dg_consulta.Location = new System.Drawing.Point(37, 441);
             this.dg_consulta.Name = "dg_consulta";
             this.dg_consulta.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -309,7 +311,7 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dg_consulta.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dg_consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_consulta.Size = new System.Drawing.Size(830, 228);
+            this.dg_consulta.Size = new System.Drawing.Size(830, 202);
             this.dg_consulta.TabIndex = 160;
             // 
             // pictureBox1
@@ -338,7 +340,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(155, 387);
+            this.label9.Location = new System.Drawing.Point(154, 415);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(66, 18);
             this.label9.TabIndex = 157;
@@ -346,7 +348,7 @@
             // 
             // busAce
             // 
-            this.busAce.Location = new System.Drawing.Point(227, 387);
+            this.busAce.Location = new System.Drawing.Point(226, 415);
             this.busAce.Name = "busAce";
             this.busAce.Size = new System.Drawing.Size(498, 20);
             this.busAce.TabIndex = 156;
@@ -356,7 +358,7 @@
             // 
             this.btn_modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modificar.Location = new System.Drawing.Point(508, 345);
+            this.btn_modificar.Location = new System.Drawing.Point(507, 373);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(98, 36);
             this.btn_modificar.TabIndex = 155;
@@ -368,7 +370,7 @@
             this.bt_nuevo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bt_nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.bt_nuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_nuevo.Location = new System.Drawing.Point(196, 345);
+            this.bt_nuevo.Location = new System.Drawing.Point(195, 373);
             this.bt_nuevo.Name = "bt_nuevo";
             this.bt_nuevo.Size = new System.Drawing.Size(98, 36);
             this.bt_nuevo.TabIndex = 154;
@@ -381,7 +383,7 @@
             this.bt_Eliminar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bt_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.bt_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_Eliminar.Location = new System.Drawing.Point(404, 345);
+            this.bt_Eliminar.Location = new System.Drawing.Point(403, 373);
             this.bt_Eliminar.Name = "bt_Eliminar";
             this.bt_Eliminar.Size = new System.Drawing.Size(98, 36);
             this.bt_Eliminar.TabIndex = 153;
@@ -394,7 +396,7 @@
             this.Bt_Ingresar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Bt_Ingresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.Bt_Ingresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bt_Ingresar.Location = new System.Drawing.Point(300, 345);
+            this.Bt_Ingresar.Location = new System.Drawing.Point(299, 373);
             this.Bt_Ingresar.Name = "Bt_Ingresar";
             this.Bt_Ingresar.Size = new System.Drawing.Size(98, 36);
             this.Bt_Ingresar.TabIndex = 152;
@@ -413,23 +415,23 @@
             this.label11.TabIndex = 162;
             this.label11.Text = "Id Trabajador:";
             // 
-            // Cb_tipo
+            // Cb_idT
             // 
-            this.Cb_tipo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Cb_tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cb_tipo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cb_tipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cb_tipo.FormattingEnabled = true;
-            this.Cb_tipo.Location = new System.Drawing.Point(580, 145);
-            this.Cb_tipo.Name = "Cb_tipo";
-            this.Cb_tipo.Size = new System.Drawing.Size(287, 28);
-            this.Cb_tipo.TabIndex = 161;
+            this.Cb_idT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Cb_idT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cb_idT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Cb_idT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cb_idT.FormattingEnabled = true;
+            this.Cb_idT.Location = new System.Drawing.Point(580, 145);
+            this.Cb_idT.Name = "Cb_idT";
+            this.Cb_idT.Size = new System.Drawing.Size(287, 28);
+            this.Cb_idT.TabIndex = 161;
             // 
             // exportar
             // 
             this.exportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.exportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exportar.Location = new System.Drawing.Point(612, 345);
+            this.exportar.Location = new System.Drawing.Point(611, 373);
             this.exportar.Name = "exportar";
             this.exportar.Size = new System.Drawing.Size(107, 36);
             this.exportar.TabIndex = 215;
@@ -437,15 +439,42 @@
             this.exportar.UseVisualStyleBackColor = false;
             this.exportar.Click += new System.EventHandler(this.exportar_Click);
             // 
+            // cbtipo
+            // 
+            this.cbtipo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbtipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbtipo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbtipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbtipo.FormattingEnabled = true;
+            this.cbtipo.Items.AddRange(new object[] {
+            "RECEBERA"});
+            this.cbtipo.Location = new System.Drawing.Point(153, 339);
+            this.cbtipo.Name = "cbtipo";
+            this.cbtipo.Size = new System.Drawing.Size(287, 28);
+            this.cbtipo.TabIndex = 328;
+            // 
+            // label20
+            // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(34, 343);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(46, 18);
+            this.label20.TabIndex = 327;
+            this.label20.Text = "Tipo:";
+            // 
             // Nomina_Recebera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(901, 698);
+            this.Controls.Add(this.cbtipo);
+            this.Controls.Add(this.label20);
             this.Controls.Add(this.exportar);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.Cb_tipo);
+            this.Controls.Add(this.Cb_idT);
             this.Controls.Add(this.dg_consulta);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
@@ -521,7 +550,9 @@
         private System.Windows.Forms.Button bt_Eliminar;
         private System.Windows.Forms.Button Bt_Ingresar;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox Cb_tipo;
+        private System.Windows.Forms.ComboBox Cb_idT;
         private System.Windows.Forms.Button exportar;
+        private System.Windows.Forms.ComboBox cbtipo;
+        private System.Windows.Forms.Label label20;
     }
 }

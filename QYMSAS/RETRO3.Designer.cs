@@ -58,6 +58,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.exportar = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Cbid_maquina = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -227,7 +229,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(432, 270);
+            this.label5.Location = new System.Drawing.Point(462, 271);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 18);
             this.label5.TabIndex = 201;
@@ -247,7 +249,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(429, 232);
+            this.label3.Location = new System.Drawing.Point(459, 233);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 18);
             this.label3.TabIndex = 199;
@@ -259,7 +261,7 @@
             this.textiva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textiva.Location = new System.Drawing.Point(166, 269);
             this.textiva.Name = "textiva";
-            this.textiva.Size = new System.Drawing.Size(247, 26);
+            this.textiva.Size = new System.Drawing.Size(284, 26);
             this.textiva.TabIndex = 198;
             // 
             // textNumH
@@ -268,7 +270,7 @@
             this.textNumH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textNumH.Location = new System.Drawing.Point(166, 186);
             this.textNumH.Name = "textNumH";
-            this.textNumH.Size = new System.Drawing.Size(247, 26);
+            this.textNumH.Size = new System.Drawing.Size(284, 26);
             this.textNumH.TabIndex = 197;
             // 
             // label1
@@ -299,7 +301,7 @@
             this.txt_des.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_des.Location = new System.Drawing.Point(166, 231);
             this.txt_des.Name = "txt_des";
-            this.txt_des.Size = new System.Drawing.Size(247, 26);
+            this.txt_des.Size = new System.Drawing.Size(284, 26);
             this.txt_des.TabIndex = 190;
             // 
             // label2
@@ -307,7 +309,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(429, 194);
+            this.label2.Location = new System.Drawing.Point(459, 195);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 18);
             this.label2.TabIndex = 194;
@@ -327,9 +329,9 @@
             this.dt_fecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dt_fecha.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dt_fecha.Location = new System.Drawing.Point(292, 148);
+            this.dt_fecha.Location = new System.Drawing.Point(166, 147);
             this.dt_fecha.Name = "dt_fecha";
-            this.dt_fecha.Size = new System.Drawing.Size(305, 26);
+            this.dt_fecha.Size = new System.Drawing.Size(284, 26);
             this.dt_fecha.TabIndex = 189;
             // 
             // label7
@@ -337,7 +339,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(227, 154);
+            this.label7.Location = new System.Drawing.Point(13, 153);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 18);
             this.label7.TabIndex = 193;
@@ -367,12 +369,39 @@
             this.exportar.UseVisualStyleBackColor = false;
             this.exportar.Click += new System.EventHandler(this.exportar_Click);
             // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(459, 150);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 18);
+            this.label6.TabIndex = 219;
+            this.label6.Text = "Maquina:";
+            // 
+            // Cbid_maquina
+            // 
+            this.Cbid_maquina.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Cbid_maquina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cbid_maquina.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Cbid_maquina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cbid_maquina.FormattingEnabled = true;
+            this.Cbid_maquina.Items.AddRange(new object[] {
+            "3- Retro 3"});
+            this.Cbid_maquina.Location = new System.Drawing.Point(545, 147);
+            this.Cbid_maquina.Name = "Cbid_maquina";
+            this.Cbid_maquina.Size = new System.Drawing.Size(247, 28);
+            this.Cbid_maquina.TabIndex = 220;
+            // 
             // RETRO3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(817, 698);
+            this.Controls.Add(this.Cbid_maquina);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.exportar);
             this.Controls.Add(this.dg_consulta);
             this.Controls.Add(this.pictureBox1);
@@ -441,5 +470,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button exportar;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox Cbid_maquina;
     }
 }

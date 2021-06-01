@@ -83,9 +83,12 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.cbtipo = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
+            this.cbApartado = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txt_idR = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -224,7 +227,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(617, 79);
+            this.label1.Location = new System.Drawing.Point(445, 107);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 18);
             this.label1.TabIndex = 228;
@@ -236,7 +239,7 @@
             this.txtfac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtfac.Location = new System.Drawing.Point(558, 101);
             this.txtfac.Name = "txtfac";
-            this.txtfac.Size = new System.Drawing.Size(199, 26);
+            this.txtfac.Size = new System.Drawing.Size(186, 26);
             this.txtfac.TabIndex = 227;
             // 
             // label10
@@ -661,18 +664,6 @@
             this.pictureBox8.TabIndex = 284;
             this.pictureBox8.TabStop = false;
             // 
-            // label19
-            // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(575, 55);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(175, 18);
-            this.label19.TabIndex = 285;
-            this.label19.Text = "FACTURA DE VENTA ";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // cbtipo
             // 
             this.cbtipo.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -681,7 +672,6 @@
             this.cbtipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbtipo.FormattingEnabled = true;
             this.cbtipo.Items.AddRange(new object[] {
-            "ACOPIO",
             "RECEBERA"});
             this.cbtipo.Location = new System.Drawing.Point(134, 334);
             this.cbtipo.Name = "cbtipo";
@@ -699,15 +689,63 @@
             this.label20.TabIndex = 325;
             this.label20.Text = "Tipo:";
             // 
+            // cbApartado
+            // 
+            this.cbApartado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbApartado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbApartado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbApartado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbApartado.FormattingEnabled = true;
+            this.cbApartado.Items.AddRange(new object[] {
+            "VENTA"});
+            this.cbApartado.Location = new System.Drawing.Point(558, 66);
+            this.cbApartado.Name = "cbApartado";
+            this.cbApartado.Size = new System.Drawing.Size(186, 28);
+            this.cbApartado.TabIndex = 328;
+            // 
+            // label21
+            // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(591, 45);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(126, 18);
+            this.label21.TabIndex = 327;
+            this.label21.Text = "Tipo de Factura";
+            // 
+            // label19
+            // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(445, 338);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(110, 18);
+            this.label19.TabIndex = 330;
+            this.label19.Text = "ID Resumen: ";
+            // 
+            // txt_idR
+            // 
+            this.txt_idR.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_idR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_idR.Location = new System.Drawing.Point(558, 336);
+            this.txt_idR.Name = "txt_idR";
+            this.txt_idR.Size = new System.Drawing.Size(305, 26);
+            this.txt_idR.TabIndex = 329;
+            // 
             // Facturas_recebera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(884, 698);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.txt_idR);
+            this.Controls.Add(this.cbApartado);
+            this.Controls.Add(this.label21);
             this.Controls.Add(this.cbtipo);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.label19);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.pictureBox6);
@@ -831,8 +869,11 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ComboBox cbtipo;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox cbApartado;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txt_idR;
     }
 }

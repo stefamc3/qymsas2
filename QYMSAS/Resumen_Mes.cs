@@ -26,37 +26,36 @@ namespace QYMSAS
         }
         private void busqueda()
         {
-            String busqueda = "select * from resumen_mes;";
+            String busqueda = "SELECT fecha,patio,tonelda_m,precio_tonelada FROM movimientos_foton2;";
             MySqlCommand comando = new MySqlCommand(busqueda, basededatos.ObtenerConexion());
             MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
             MyAdapter.SelectCommand = comando;
             DataTable dTable = new DataTable();
             MyAdapter.Fill(dTable);
             dg_consulta.DataSource = dTable;
-            dg_consulta.Columns[0].HeaderText = "ID RESUMEN MES";
-            dg_consulta.Columns[1].HeaderText = "FECHA";
-            dg_consulta.Columns[2].HeaderText = "MES";
-            dg_consulta.Columns[3].HeaderText = "VALOR";
-            dg_consulta.Columns[4].HeaderText = "TONELADAS";
-            dg_consulta.Columns[5].HeaderText = "TOTAL";
+            
+            dg_consulta.Columns[0].HeaderText = "FECHA";
+            dg_consulta.Columns[1].HeaderText = "PATIO";
+            dg_consulta.Columns[2].HeaderText = "VALOR";
+            dg_consulta.Columns[3].HeaderText = "TONELADAS";
+            
 
         }
 
         private void bt_nuevo_Click(object sender, EventArgs e)
         {
-            this.txt_Ton.Text = "";
-            this.textMes.Text = "";
+            /*this.txt_Ton.Text = "";
             this.textValor.Text = "";
-            this.textTot.Text = "";
+            this.textTot.Text = "";*/
         }
 
         private void Bt_Ingresar_Click(object sender, EventArgs e)
         {
-            try
+          /*  try
             {
                 string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
-                string Query = "INSERT INTO resumen_mes (fecha,mes,valor_RM,tonelada_RM,total_RM) values('" + fecha + "','" + this.textMes.Text + "','" + this.textValor.Text + "','" + this.txt_Ton.Text + "','" + this.textTot.Text + "',);";
+                string Query = "INSERT INTO resumen_mes (fecha,valor_RM,tonelada_RM,total_RM) values('" + fecha + "','" + this.textValor.Text + "','" + this.txt_Ton.Text + "','" + this.textTot.Text + "',);";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;
@@ -72,27 +71,27 @@ namespace QYMSAS
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
         }
 
         private void bt_Eliminar_Click(object sender, EventArgs e)
         {
-            String id = dg_consulta.Rows[dg_consulta.CurrentRow.Index].Cells[0].Value.ToString();
+          /*  String id = dg_consulta.Rows[dg_consulta.CurrentRow.Index].Cells[0].Value.ToString();
             if (MessageBox.Show("¿Realmente Desea Eliminar el registro '" + id + "' ?", "Eliminar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                string Borrar = "delete from resumen_mes where id_resumen_mes = '" + id + "';";
+                string Borrar = "delete from movimientos_foton2 where id_resumen_mes = '" + id + "';";
                 MySqlCommand ComandBorrar = new MySqlCommand(Borrar, basededatos.ObtenerConexion());
                 ComandBorrar.ExecuteReader();
                 busqueda();
-            }
+            }*/
         }
 
         private void busAce_TextChanged(object sender, EventArgs e)
         {
             if (busAce.Text != "")
-                dg_consulta.DataSource = basededatos.ConsultaGeneral("SELECT * FROM `resumen_mes` WHERE `mes` LIKE '%" + busAce.Text + "%'");
+                dg_consulta.DataSource = basededatos.ConsultaGeneral("SELECT fecha,patio,tonelda_m,precio_tonelada FROM movimientos_foton2 WHERE `patio` LIKE '%" + busAce.Text + "%'");
             else
-                dg_consulta.DataSource = basededatos.ConsultaGeneral("SELECT * FROM `resumen_mes` ");
+                dg_consulta.DataSource = basededatos.ConsultaGeneral("SELECT fecha,patio,tonelda_m,precio_tonelada FROM movimientos_foton2 ");
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

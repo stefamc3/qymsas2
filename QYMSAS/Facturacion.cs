@@ -26,47 +26,38 @@ namespace QYMSAS
         }
         private void limpia()
         {
-            this.txtnumf.Text = "";
-            this.txtdestino.Text = "";
-            this.txtnit.Text = "";
-            this.txtdireccion.Text = "";
-            this.txttelefono.Text = "";
-            this.txt_descripcionf.Text = "";
+            this.txt_valor.Text = "";
+            this.txt_idFac.Text = "";
             this.txt_cantidad.Text = "";
-            this.txtvaloru.Text = "";
-            this.txtsubt.Text = "";
-            this.txtivap.Text = "";
-            this.txtiva.Text = "";
-            this.txtretef.Text = "";
-            this.txtretefp.Text = "";
-            this.txtneto.Text = "";
-            Cbid_estadof.Focus();
-            cbtipo.Focus();
+            this.txt_descripcionf.Text = "";
+            this.Cbid_maquina.Text = "";
+            this.dt_fecha.Text = DateTime.Now.ToString();
+            this.cb_item.Text = "";
             Cbid_maquina.Focus();
+            cb_item.Focus();
         }
 
         private void Bt_Ingresar_Click(object sender, EventArgs e)
         {
             try
-            {
-                string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
+            { 
+            // string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;"; 
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
-                String tipo = Convert.ToString(cbtipo.SelectedItem);
-                String estado = Convert.ToString(Cbid_estadof.SelectedItem);
-                String id_maquina = Convert.ToString(Cbid_maquina.SelectedItem);
-                string Query = "INSERT INTO facturacion (fecha,Factura,señores,nit,direccion,telefono,Descripcion,cantidad,valor_unitario,subtotal,porcentaje_iva,iva,porcentaje_Rtefuente,neto,estado,tipo,id_maquina) values('" + fecha + "','" + this.txtnumf.Text + "','" + this.txtdestino.Text + "','" + this.txtnit.Text + "','" + this.txtdireccion.Text + "','" + this.txttelefono.Text + "','" + this.txt_descripcionf.Text + "','" + this.txt_cantidad.Text + "','" + this.txtvaloru.Text + "','" + this.txtsubt.Text + "','" + this.txtivap.Text + "','" + this.txtiva.Text + "','" + this.txtretefp.Text + "','" + this.txtretef.Text + "','" + this.txtneto.Text + "','" + estado + "','" + tipo + "','" + id_maquina + "');";
-                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
-                MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
-                MySqlDataReader MyReader2;
-                MyConn2.Open();
-                MyReader2 = MyCommand2.ExecuteReader();
-                MessageBox.Show("Se guardado el registro", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                while (MyReader2.Read())
-                {
-                }
-                MyConn2.Close();
-                busqueda();
-                limpia();
+            String id_maquina = Convert.ToString(Cbid_maquina.SelectedItem);
+            String item = Convert.ToString(cb_item.SelectedItem);
+            string Query = "INSERT INTO discriminacion (fecha,cantidad,descripcion,valor,maquinas_id_maquina,facturacion_id_facturacion,item) VALUES ('" + fecha + "','" + this.txt_cantidad.Text + "','" + this.txt_descripcionf.Text + "','" + this.txt_valor.Text + "','" + id_maquina + "', '" + this.txt_idFac.Text + "','" + item + "');";
+            // MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+            MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
+            MySqlDataReader MyReader2;
+            //MyConn2.Open();
+            MyReader2 = MyCommand2.ExecuteReader();
+            MessageBox.Show("Se guardado el registro", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            while (MyReader2.Read())
+            {
+            }
+            //  MyConn2.Close();
+            busqueda();
+            limpia();
             }
             catch (Exception ex)
             {
@@ -112,32 +103,21 @@ namespace QYMSAS
         }
         private void busqueda()
         {
-            String busqueda = "select * from facturacion;";
+            String busqueda = "SELECT * FROM discriminacion where item = 'FAC';";
             MySqlCommand comando = new MySqlCommand(busqueda, basededatos.ObtenerConexion());
             MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
             MyAdapter.SelectCommand = comando;
             DataTable dTable = new DataTable();
             MyAdapter.Fill(dTable);
             dg_consulta.DataSource = dTable;
-            dg_consulta.Columns[0].HeaderText = "ID FACTURACIÓN";
+            dg_consulta.Columns[0].HeaderText = "ID ACEITES";
             dg_consulta.Columns[1].HeaderText = "FECHA";
-            dg_consulta.Columns[2].HeaderText = "FACTURA";
-            dg_consulta.Columns[3].HeaderText = "SEÑORES";
-            dg_consulta.Columns[4].HeaderText = "NIT";
-            dg_consulta.Columns[5].HeaderText = "DIRECCION";
-            dg_consulta.Columns[6].HeaderText = "TELEFONO";
-            dg_consulta.Columns[7].HeaderText = "DESCRIPCION";
-            dg_consulta.Columns[8].HeaderText = "CANTIDAD";
-            dg_consulta.Columns[9].HeaderText = "VALOR UNITARIO";
-            dg_consulta.Columns[10].HeaderText = "SUBTOTAL";
-            dg_consulta.Columns[11].HeaderText = "IVA %";
-            dg_consulta.Columns[12].HeaderText = "IVA";
-            dg_consulta.Columns[13].HeaderText = "RETEFUENTE %";
-            dg_consulta.Columns[14].HeaderText = "RETEFUENTE";
-            dg_consulta.Columns[15].HeaderText = "NETO";
-            dg_consulta.Columns[16].HeaderText = "ESTADO";
-            dg_consulta.Columns[17].HeaderText = "TIPO";
-            dg_consulta.Columns[18].HeaderText = "ID MAQUINA";
+            dg_consulta.Columns[2].HeaderText = "CANTIDAD";
+            dg_consulta.Columns[3].HeaderText = "DESCRIPCIÓN";
+            dg_consulta.Columns[4].HeaderText = "VALOR";
+            dg_consulta.Columns[5].HeaderText = "ID MAQUINA";
+            dg_consulta.Columns[6].HeaderText = "ID FACTURA";
+            dg_consulta.Columns[7].HeaderText = "ITEM";
 
         }
 
@@ -150,26 +130,6 @@ namespace QYMSAS
         {
             exportExcel exc = new exportExcel();
             exc.exportaraexcel(dg_consulta);
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            txtsubt.Text = Convert.ToString(Convert.ToDecimal(txt_cantidad.Text) * Convert.ToDecimal(txtvaloru.Text));
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            txtiva.Text = Convert.ToString(Convert.ToDecimal(txtsubt.Text) * Convert.ToDecimal(txtivap.Text));
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            txtretef.Text = Convert.ToString(Convert.ToDecimal(txtsubt.Text) * Convert.ToDecimal(txtretefp.Text));
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-            txtneto.Text = Convert.ToString(Convert.ToDecimal(txtsubt.Text) - Convert.ToDecimal(txtretefp.Text) + Convert.ToDecimal(txtiva.Text));
         }
     }
 }

@@ -198,15 +198,15 @@
             this.Cbid_maquina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cbid_maquina.FormattingEnabled = true;
             this.Cbid_maquina.Items.AddRange(new object[] {
-            "1. Retro 2",
-            "2. Retro 3",
-            "3. Retro 4",
-            "4. Retro 6",
-            "5. Foton 1",
-            "6. Foton 2",
-            "7. SZN-114",
-            "8. Tuneleadora",
-            "9. Molino"});
+            "1- Retro 1",
+            "2- Retro 2",
+            "3- Retro 3",
+            "4- Retro 4",
+            "5- Retro 5",
+            "6- Retro 6",
+            "7- Foton 1",
+            "8- Foton 2",
+            "9- SZN-114"});
             this.Cbid_maquina.Location = new System.Drawing.Point(121, 154);
             this.Cbid_maquina.Name = "Cbid_maquina";
             this.Cbid_maquina.Size = new System.Drawing.Size(247, 28);

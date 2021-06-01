@@ -40,8 +40,6 @@
             this.txt_descripcionc = new System.Windows.Forms.TextBox();
             this.dt_fecha = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Cb_tipo = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txt_valor = new System.Windows.Forms.TextBox();
@@ -52,8 +50,10 @@
             this.busRc = new System.Windows.Forms.TextBox();
             this.dg_consulta = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_idMaquina = new System.Windows.Forms.ComboBox();
             this.exportar = new System.Windows.Forms.Button();
+            this.txt_Pagado = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -91,7 +91,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(12, 190);
+            this.label10.Location = new System.Drawing.Point(11, 225);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 18);
             this.label10.TabIndex = 134;
@@ -122,7 +122,7 @@
             this.dt_fecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dt_fecha.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dt_fecha.Location = new System.Drawing.Point(477, 148);
+            this.dt_fecha.Location = new System.Drawing.Point(283, 152);
             this.dt_fecha.Name = "dt_fecha";
             this.dt_fecha.Size = new System.Drawing.Size(305, 26);
             this.dt_fecha.TabIndex = 122;
@@ -132,45 +132,12 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(365, 148);
+            this.label7.Location = new System.Drawing.Point(171, 152);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 18);
             this.label7.TabIndex = 132;
             this.label7.Text = "Fecha:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 149);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 18);
-            this.label4.TabIndex = 131;
-            this.label4.Text = "Maquina:";
-            // 
-            // Cb_tipo
-            // 
-            this.Cb_tipo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Cb_tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cb_tipo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cb_tipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cb_tipo.FormattingEnabled = true;
-            this.Cb_tipo.Items.AddRange(new object[] {
-            "Retro 2",
-            "Retro 3",
-            "Retro 4",
-            "Retro 6",
-            "Tuneleadora",
-            "Foton 1",
-            "Foton 2",
-            "SZN-114",
-            "Molino"});
-            this.Cb_tipo.Location = new System.Drawing.Point(111, 145);
-            this.Cb_tipo.Name = "Cb_tipo";
-            this.Cb_tipo.Size = new System.Drawing.Size(247, 28);
-            this.Cb_tipo.TabIndex = 121;
             // 
             // pictureBox1
             // 
@@ -197,7 +164,7 @@
             // 
             this.txt_valor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_valor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_valor.Location = new System.Drawing.Point(111, 186);
+            this.txt_valor.Location = new System.Drawing.Point(110, 221);
             this.txt_valor.Name = "txt_valor";
             this.txt_valor.Size = new System.Drawing.Size(247, 26);
             this.txt_valor.TabIndex = 135;
@@ -309,33 +276,33 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(10, 226);
+            this.label3.Location = new System.Drawing.Point(365, 229);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 18);
             this.label3.TabIndex = 187;
             this.label3.Text = "Id Maquina:";
             // 
-            // comboBox1
+            // cb_idMaquina
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "1-Retro 2",
-            "2-Retro 3",
-            "3-Retro 4",
-            "4-Retro 6",
-            "5-Foton 1",
-            "6-Foton 2",
-            "7-SZN-114",
-            "8-Tuneleadora",
-            "9-Molino"});
-            this.comboBox1.Location = new System.Drawing.Point(111, 222);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(247, 28);
-            this.comboBox1.TabIndex = 186;
+            this.cb_idMaquina.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_idMaquina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_idMaquina.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cb_idMaquina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_idMaquina.FormattingEnabled = true;
+            this.cb_idMaquina.Items.AddRange(new object[] {
+            "1- Retro 1",
+            "2- Retro 2",
+            "3- Retro 3",
+            "4- Retro 4",
+            "5- Retro 5",
+            "6- Retro 6",
+            "7- Foton 1",
+            "8- Foton 2",
+            "9- SZN-114"});
+            this.cb_idMaquina.Location = new System.Drawing.Point(477, 225);
+            this.cb_idMaquina.Name = "cb_idMaquina";
+            this.cb_idMaquina.Size = new System.Drawing.Size(305, 28);
+            this.cb_idMaquina.TabIndex = 186;
             // 
             // exportar
             // 
@@ -349,15 +316,37 @@
             this.exportar.UseVisualStyleBackColor = false;
             this.exportar.Click += new System.EventHandler(this.exportar_Click);
             // 
+            // txt_Pagado
+            // 
+            this.txt_Pagado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Pagado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Pagado.Location = new System.Drawing.Point(111, 184);
+            this.txt_Pagado.Name = "txt_Pagado";
+            this.txt_Pagado.Size = new System.Drawing.Size(247, 26);
+            this.txt_Pagado.TabIndex = 217;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 188);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 18);
+            this.label5.TabIndex = 216;
+            this.label5.Text = "Pagado a:";
+            // 
             // ReciboDeCaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(803, 698);
+            this.Controls.Add(this.txt_Pagado);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.exportar);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cb_idMaquina);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.busRc);
             this.Controls.Add(this.dg_consulta);
@@ -372,8 +361,6 @@
             this.Controls.Add(this.txt_descripcionc);
             this.Controls.Add(this.dt_fecha);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.Cb_tipo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -401,8 +388,6 @@
         private System.Windows.Forms.TextBox txt_descripcionc;
         private System.Windows.Forms.DateTimePicker dt_fecha;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox Cb_tipo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox txt_valor;
@@ -413,7 +398,9 @@
         private System.Windows.Forms.TextBox busRc;
         public System.Windows.Forms.DataGridView dg_consulta;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_idMaquina;
         private System.Windows.Forms.Button exportar;
+        private System.Windows.Forms.TextBox txt_Pagado;
+        private System.Windows.Forms.Label label5;
     }
 }

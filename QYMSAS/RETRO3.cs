@@ -41,7 +41,7 @@ namespace QYMSAS
             dg_consulta.Columns[5].HeaderText = "IVA";
             dg_consulta.Columns[6].HeaderText = "RTE FUENTE";
             dg_consulta.Columns[7].HeaderText = "NETO";
-
+            dg_consulta.Columns[7].HeaderText = "ID MAQUINA";
 
         }
 
@@ -53,6 +53,7 @@ namespace QYMSAS
             this.textneto.Text = "";
             this.textNumH .Text = "";
             this.textret.Text = "";
+            Cbid_maquina.Focus();
         }
 
         private void Bt_Ingresar_Click(object sender, EventArgs e)
@@ -61,7 +62,8 @@ namespace QYMSAS
             {
                 string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
-                string Query = "INSERT INTO produccion_r3 (fecha,num_horas_p,destino_p,valor_p,iva_p,rte_fuente_p,neto_p) values('" + fecha + "','" + this.textNumH.Text + "','" + this.txt_des.Text + "','" + this.txt_val.Text + "','" + this.textiva.Text + "', '" + this.textret.Text + "', '" + this.textneto.Text + "');";
+                String id_maquina = Convert.ToString(Cbid_maquina.SelectedItem);
+                string Query = "INSERT INTO produccion_r3 (fecha,num_horas_p,destino_p,valor_p,iva_p,rte_fuente_p,neto_p,maquinas_id_maquina) values('" + fecha + "','" + this.textNumH.Text + "','" + this.txt_des.Text + "','" + this.txt_val.Text + "','" + this.textiva.Text + "', '" + this.textret.Text + "', '" + this.textneto.Text + "', '" + id_maquina + "');";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;

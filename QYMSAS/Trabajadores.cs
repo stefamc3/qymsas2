@@ -38,6 +38,10 @@ namespace QYMSAS
             dg_consulta.Columns[2].HeaderText = "CARGO";
             dg_consulta.Columns[3].HeaderText = "RH";
             dg_consulta.Columns[4].HeaderText = "EPS";
+            dg_consulta.Columns[5].HeaderText = "ARL";
+            dg_consulta.Columns[6].HeaderText = "TELEFONO";
+            dg_consulta.Columns[7].HeaderText = "TELEFONO EMERGENCIA";
+            dg_consulta.Columns[8].HeaderText = "EMAIL";       
         }
 
         private void bt_nuevo_Click(object sender, EventArgs e)
@@ -46,25 +50,31 @@ namespace QYMSAS
             this.txt_car.Text = "";
             this.textRH.Text = "";
             this.textEPS.Text = "";
-            this.textIdT.Text = "";
+            this.txtARL.Text = "";
+            this.txt_tel.Text = "";
+            this.txt_telE.Text = "";
+            this.txt_email.Text = "";
+            cb_idTra.Focus();
+
         }
 
         private void Bt_Ingresar_Click(object sender, EventArgs e)
         {
             try
             {
-                string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
-                string Query = "INSERT INTO trabajadores (id_trabajador,nombre_trabajador,cargo_trabajador,RH,EPS) values('" + this.textIdT.Text + "','" + this.txt_nom.Text + "','" + this.txt_car.Text + "','" + this.textRH.Text + "','" + this.textEPS.Text + "');";
-                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                //  string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
+                String id_trabajador = Convert.ToString(cb_idTra.SelectedItem);
+                string Query = "INSERT INTO trabajadores (id_trabajador,nombre_trabajador,cargo_trabajador,RH,EPS,ARL,telefono,tel_emergencia,email) values('" + id_trabajador + "','" + this.txt_nom.Text + "','" + this.txt_car.Text + "','" + this.textRH.Text + "','" + this.textEPS.Text + "','" + this.txtARL.Text + "','" + this.txt_tel.Text + "','" + this.txt_telE.Text + "','" + this.txt_email.Text + "');";
+              //  MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;
-                MyConn2.Open();
+             //   MyConn2.Open();
                 MyReader2 = MyCommand2.ExecuteReader();
                 MessageBox.Show("Se guardado el registro", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 while (MyReader2.Read())
                 {
                 }
-                MyConn2.Close();
+              //  MyConn2.Close();
                 busqueda();
             }
             catch (Exception ex)

@@ -26,14 +26,14 @@ namespace QYMSAS
         }
         private void busqueda()
         {
-            String busqueda = "select * from nomina_recebera;";
+            String busqueda = "select * from nomina WHERE tipo='ACOPIO';";
             MySqlCommand comando = new MySqlCommand(busqueda, basededatos.ObtenerConexion());
             MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
             MyAdapter.SelectCommand = comando;
             DataTable dTable = new DataTable();
             MyAdapter.Fill(dTable);
             dg_consulta.DataSource = dTable;
-            dg_consulta.Columns[0].HeaderText = "ID NOMINA ACOPIO";
+            dg_consulta.Columns[0].HeaderText = "ID NOMINA RECEBERA";
             dg_consulta.Columns[1].HeaderText = "FECHA";
             dg_consulta.Columns[2].HeaderText = "NOMBRE";
             dg_consulta.Columns[3].HeaderText = "ID TRABAJADOR";
@@ -44,6 +44,7 @@ namespace QYMSAS
             dg_consulta.Columns[8].HeaderText = "SEGURIDAD";
             dg_consulta.Columns[9].HeaderText = "BONIFICACIONES";
             dg_consulta.Columns[10].HeaderText = "NETO";
+            dg_consulta.Columns[11].HeaderText = "TIPO";
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -80,7 +81,7 @@ namespace QYMSAS
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
                 String identificacion = Convert.ToString(Cb_trabajador.SelectedItem);
                 String tipo = Convert.ToString(cbtipo.SelectedItem);
-                string Query = "INSERT INTO nomina_recebera (fecha,nombre_TR,id_trabajador,salario_rec,auxilio_de_transporte_rec,prestaciones_rec,seguro_rec,seguridad_rec,bonificaciones_rec,neto_rec,tipo) values('" + fecha + "','" + this.textNombre.Text + "','" + identificacion + "','" + this.txt_valor.Text + "','" + this.txt_Aux.Text + "','" + this.textprest.Text + "', '" + this.textSeg.Text + "', '" + this.textSegd.Text + "','" + this.textBon.Text + "','" + this.textNeto.Text + "','" + tipo + "');";
+                string Query = "INSERT INTO nomina (fecha,nombre_TR,id_trabajador,salario_rec,auxilio_de_transporte_rec,prestaciones_rec,seguro_rec,seguridad_rec,bonificaciones_rec,neto_rec,tipo) values('" + fecha + "','" + this.textNombre.Text + "','" + identificacion + "','" + this.txt_valor.Text + "','" + this.txt_Aux.Text + "','" + this.textprest.Text + "', '" + this.textSeg.Text + "', '" + this.textSegd.Text + "','" + this.textBon.Text + "','" + this.textNeto.Text + "','" + tipo + "');";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;
@@ -104,7 +105,7 @@ namespace QYMSAS
             String id = dg_consulta.Rows[dg_consulta.CurrentRow.Index].Cells[0].Value.ToString();
             if (MessageBox.Show("¿Realmente Desea Eliminar el registro '" + id + "' ?", "Eliminar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                string Borrar = "delete from nomina_recebera where id_nomina_recebera = '" + id + "';";
+                string Borrar = "delete from nomina where id_nomina = '" + id + "';";
                 MySqlCommand ComandBorrar = new MySqlCommand(Borrar, basededatos.ObtenerConexion());
                 ComandBorrar.ExecuteReader();
                 busqueda();
@@ -114,9 +115,9 @@ namespace QYMSAS
         private void busAce_TextChanged(object sender, EventArgs e)
         {
             if (busAce.Text != "")
-                dg_consulta.DataSource = basededatos.ConsultaGeneral("SELECT * FROM `nomina_recebera` WHERE `nombre_TR` LIKE '%" + busAce.Text + "%'");
+                dg_consulta.DataSource = basededatos.ConsultaGeneral("SELECT * FROM `nomina` WHERE `nombre_TR` LIKE '%" + busAce.Text + "%'");
             else
-                dg_consulta.DataSource = basededatos.ConsultaGeneral("SELECT * FROM `nomina_recebera` ");
+                dg_consulta.DataSource = basededatos.ConsultaGeneral("SELECT * FROM `nomina` ");
         }
 
         private void exportar_Click(object sender, EventArgs e)

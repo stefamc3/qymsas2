@@ -87,19 +87,19 @@ namespace QYMSAS
 
             try
             {
-                string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
+               // string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
-                string Query = "INSERT INTO produccion_acopio (fecha,quincena,cliente_A,toneladas_PA,precio_PA,total_PA) values('" + fecha + "','" + this.textQuin.Text + "','" + this.txt_cliente.Text + "','" + this.txt_ton.Text + "','" + this.textPre.Text + "','" + this.txt_ton.Text+"'); ";
-                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                string Query = "INSERT INTO produccion_acopio (fecha,quincena,clientes_A,toneladas_PA,precio_PA,total_PA) values('" + fecha + "','" + this.textQuin.Text + "','" + this.txt_cliente.Text + "','" + this.txt_ton.Text + "','" + this.textPre.Text + "','" + this.txt_ton.Text+"'); ";
+              //  MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;
-                MyConn2.Open();
+              //  MyConn2.Open();
                 MyReader2 = MyCommand2.ExecuteReader();
                 MessageBox.Show("Se guardado el registro", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 while (MyReader2.Read())
                 {
                 }
-                MyConn2.Close();
+             //   MyConn2.Close();
                 busqueda();
             }
             catch (Exception ex)
@@ -124,6 +124,11 @@ namespace QYMSAS
         {
             exportExcel exc = new exportExcel();
             exc.exportaraexcel(dg_consulta);
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            textTotal.Text = Convert.ToString(Convert.ToDecimal(txt_ton.Text) * Convert.ToDecimal(textPre.Text));
         }
     }
 }

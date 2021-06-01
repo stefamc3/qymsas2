@@ -31,28 +31,30 @@ namespace QYMSAS
         {
             this.txt_valor.Text = "";
             this.txt_descripcionc.Text = "";
-            Cb_tipo.Focus();
+            this.txt_Pagado.Text = "";
+            cb_idMaquina.Focus();
         }
 
         private void Bt_Ingresar_Click_1(object sender, EventArgs e)
         {
             try
             {
-                string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
+                //string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
-                String maquina = Convert.ToString(Cb_tipo.SelectedItem);
-                string Query = "INSERT INTO recibo_de_caja (fecha,descripcion,valor, maquina) values('" + fecha + "','" + this.txt_descripcionc.Text + "','" + this.txt_valor.Text + "','" + maquina + "');";
-                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                String id_maquina = Convert.ToString(cb_idMaquina.SelectedItem);
+                string Query = "INSERT INTO recibo_de_caja (fecha,pagado_a,descripcion,valor,reciboC_id_maquina) values('" + fecha + "','" + this.txt_Pagado.Text + "','" + this.txt_descripcionc.Text + "','" + this.txt_valor.Text + "','" + id_maquina + "');";
+              //MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;
-                MyConn2.Open();
+              //MyConn2.Open();
                 MyReader2 = MyCommand2.ExecuteReader();
                 MessageBox.Show("Se guardado el registro", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 while (MyReader2.Read())
                 {
                 }
-                MyConn2.Close();
+              //  MyConn2.Close();
                 busqueda();
+                
             }
             catch (Exception ex)
             {
@@ -94,9 +96,9 @@ namespace QYMSAS
             dg_consulta.DataSource = dTable;
             dg_consulta.Columns[0].HeaderText = "ID RECIBO DE CAJA";
             dg_consulta.Columns[1].HeaderText = "FECHA";
-            dg_consulta.Columns[2].HeaderText = "DESCRIPCIÓN";
-            dg_consulta.Columns[3].HeaderText = "VALOR";
-            dg_consulta.Columns[4].HeaderText = "MAQUINA";
+            dg_consulta.Columns[2].HeaderText = "PAGADO A";
+            dg_consulta.Columns[3].HeaderText = "DESCRIPCIÓN";
+            dg_consulta.Columns[4].HeaderText = "VALOR";
             dg_consulta.Columns[5].HeaderText = "ID MAQUINA";
         }
 
@@ -115,7 +117,7 @@ namespace QYMSAS
         private void busRc_TextChanged(object sender, EventArgs e)
         {
             if (busRc.Text != "")
-                dg_consulta.DataSource = basededatos.ConsultaGeneral("SELECT * FROM `recibo_de_caja` WHERE `maquina` LIKE '%" + busRc.Text + "%'");
+                dg_consulta.DataSource = basededatos.ConsultaGeneral("SELECT * FROM `recibo_de_caja` WHERE `reciboC_id_maquina` LIKE '%" + busRc.Text + "%'");
             else
                 dg_consulta.DataSource = basededatos.ConsultaGeneral("SELECT * FROM `recibo_de_caja` ");
         }

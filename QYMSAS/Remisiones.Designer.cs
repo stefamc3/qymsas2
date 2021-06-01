@@ -60,6 +60,8 @@
             this.dg_consulta = new System.Windows.Forms.DataGridView();
             this.textEstado = new System.Windows.Forms.ComboBox();
             this.exportar = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtidF = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -117,7 +119,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(445, 246);
+            this.label2.Location = new System.Drawing.Point(442, 197);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 18);
             this.label2.TabIndex = 133;
@@ -127,7 +129,7 @@
             // 
             this.txtmetrosr.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtmetrosr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmetrosr.Location = new System.Drawing.Point(535, 240);
+            this.txtmetrosr.Location = new System.Drawing.Point(532, 191);
             this.txtmetrosr.Name = "txtmetrosr";
             this.txtmetrosr.Size = new System.Drawing.Size(171, 26);
             this.txtmetrosr.TabIndex = 124;
@@ -159,7 +161,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(445, 196);
+            this.label1.Location = new System.Drawing.Point(442, 151);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 18);
             this.label1.TabIndex = 136;
@@ -169,7 +171,7 @@
             // 
             this.txtplaca.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtplaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtplaca.Location = new System.Drawing.Point(535, 190);
+            this.txtplaca.Location = new System.Drawing.Point(532, 145);
             this.txtplaca.Name = "txtplaca";
             this.txtplaca.Size = new System.Drawing.Size(171, 26);
             this.txtplaca.TabIndex = 135;
@@ -199,7 +201,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(445, 151);
+            this.label4.Location = new System.Drawing.Point(580, 89);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 18);
             this.label4.TabIndex = 140;
@@ -209,9 +211,9 @@
             // 
             this.txtremision.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtremision.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtremision.Location = new System.Drawing.Point(535, 145);
+            this.txtremision.Location = new System.Drawing.Point(532, 110);
             this.txtremision.Name = "txtremision";
-            this.txtremision.Size = new System.Drawing.Size(171, 26);
+            this.txtremision.Size = new System.Drawing.Size(174, 26);
             this.txtremision.TabIndex = 139;
             // 
             // label5
@@ -271,7 +273,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(445, 289);
+            this.label6.Location = new System.Drawing.Point(442, 242);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 18);
             this.label6.TabIndex = 145;
@@ -381,7 +383,7 @@
             this.textEstado.Items.AddRange(new object[] {
             "PAGO",
             "CREDITO"});
-            this.textEstado.Location = new System.Drawing.Point(535, 280);
+            this.textEstado.Location = new System.Drawing.Point(532, 236);
             this.textEstado.Name = "textEstado";
             this.textEstado.Size = new System.Drawing.Size(171, 28);
             this.textEstado.TabIndex = 186;
@@ -398,12 +400,34 @@
             this.exportar.UseVisualStyleBackColor = false;
             this.exportar.Click += new System.EventHandler(this.exportar_Click);
             // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(442, 285);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(88, 18);
+            this.label9.TabIndex = 217;
+            this.label9.Text = "Id Factura:";
+            // 
+            // txtidF
+            // 
+            this.txtidF.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtidF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidF.Location = new System.Drawing.Point(532, 281);
+            this.txtidF.Name = "txtidF";
+            this.txtidF.Size = new System.Drawing.Size(171, 26);
+            this.txtidF.TabIndex = 216;
+            // 
             // Remisiones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(757, 698);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtidF);
             this.Controls.Add(this.exportar);
             this.Controls.Add(this.textEstado);
             this.Controls.Add(this.label8);
@@ -476,5 +500,7 @@
         public System.Windows.Forms.DataGridView dg_consulta;
         private System.Windows.Forms.ComboBox textEstado;
         private System.Windows.Forms.Button exportar;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtidF;
     }
 }

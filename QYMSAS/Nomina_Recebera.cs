@@ -25,7 +25,7 @@ namespace QYMSAS
         }
         private void busqueda()
         {
-            String busqueda = "select * from nomina_recebera;";
+            String busqueda = "select * from nomina WHERE tipo='RECEBERA';";
             MySqlCommand comando = new MySqlCommand(busqueda, basededatos.ObtenerConexion());
             MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
             MyAdapter.SelectCommand = comando;
@@ -43,6 +43,7 @@ namespace QYMSAS
             dg_consulta.Columns[8].HeaderText = "SEGURIDAD";
             dg_consulta.Columns[9].HeaderText = "BONIFICACIONES";
             dg_consulta.Columns[10].HeaderText = "NETO";
+            dg_consulta.Columns[11].HeaderText = "TIPO";
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -60,28 +61,29 @@ namespace QYMSAS
             this.textprest.Text = "";
             this.textSeg.Text = "";
             this.textSegd.Text = "";
-            Cb_tipo.Focus();
-
+            Cb_idT.Focus();
+            cbtipo.Focus();
         }
 
         private void Bt_Ingresar_Click(object sender, EventArgs e)
         {
             try
             {
-                string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
+               // string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
-                String identificacion = Convert.ToString(Cb_tipo.SelectedItem);
-                string Query = "INSERT INTO nomina_recebera (fecha,nombre_TR,id_trabajador,salario_rec,auxilio_de_transporte_rec,prestaciones_rec,seguro_rec,seguridad_rec,bonificaciones_rec,neto_rec) values('" + fecha + "','" + this.textNombre.Text + "','" + identificacion + "','" + this.txt_valor.Text + "','" + this.txt_Aux.Text + "','" + this.textprest.Text + "', '" + this.textSeg.Text + "', '" + this.textSegd.Text + "','" + this.textBon.Text + "','" + this.textNeto.Text + "');";
-                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                String identificacion = Convert.ToString(Cb_idT.SelectedItem);
+                String tipo = Convert.ToString(cbtipo.SelectedItem);
+                string Query = "INSERT INTO nomina (fecha,nombre_TR,id_trabajador,salario_rec,auxilio_de_transporte_rec,prestaciones_rec,seguro_rec,seguridad_rec,bonificaciones_rec,neto_rec,tipo) values('" + fecha + "','" + this.textNombre.Text + "','" + identificacion + "','" + this.txt_valor.Text + "','" + this.txt_Aux.Text + "','" + this.textprest.Text + "', '" + this.textSeg.Text + "', '" + this.textSegd.Text + "','" + this.textBon.Text + "','" + this.textNeto.Text + "','" + tipo + "');";
+              //  MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;
-                MyConn2.Open();
+              //  MyConn2.Open();
                 MyReader2 = MyCommand2.ExecuteReader();
                 MessageBox.Show("Se guardado el registro", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 while (MyReader2.Read())
                 {
                 }
-                MyConn2.Close();
+             //   MyConn2.Close();
                 busqueda();
             }
             catch (Exception ex)
@@ -108,7 +110,7 @@ namespace QYMSAS
             String id = dg_consulta.Rows[dg_consulta.CurrentRow.Index].Cells[0].Value.ToString();
             if (MessageBox.Show("¿Realmente Desea Eliminar el registro '" + id + "' ?", "Eliminar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                string Borrar = "delete from nomina_recebera where id_nomina_recebera = '" + id + "';";
+                string Borrar = "delete from nomina where id_nomina = '" + id + "';";
                 MySqlCommand ComandBorrar = new MySqlCommand(Borrar, basededatos.ObtenerConexion());
                 ComandBorrar.ExecuteReader();
                 busqueda();

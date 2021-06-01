@@ -43,20 +43,20 @@ namespace QYMSAS
         {
             try
             {
-                string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
+               // string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
                 String id_maquina = Convert.ToString(Cbid_maquina.SelectedItem);
-                string Query = "INSERT INTO cuentas_de_cobro (fecha,descripcion,valor,id_maquina) values('" + fecha + "','" + this.txt_descripcionf.Text + "','" + this.txt_valor.Text + "','" + id_maquina + "');";
-                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                string Query = "INSERT INTO cuentas_de_cobro (fecha,descripcion,valor,cobro_id_maquina) values('" + fecha + "','" + this.txt_descripcionf.Text + "','" + this.txt_valor.Text + "','" + id_maquina + "');";
+               // MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;
-                MyConn2.Open();
+               // MyConn2.Open();
                 MyReader2 = MyCommand2.ExecuteReader();
                 MessageBox.Show("Se guardado el registro", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 while (MyReader2.Read())
                 {
                 }
-                MyConn2.Close();
+               // MyConn2.Close();
                 busqueda();
                 limpia();
             }

@@ -46,7 +46,6 @@
             this.Cbid_maquina = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.busAce = new System.Windows.Forms.TextBox();
-            this.dg_consulta = new System.Windows.Forms.DataGridView();
             this.bt_eliminar = new System.Windows.Forms.Button();
             this.exportar = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -58,10 +57,11 @@
             this.txt_idFac = new System.Windows.Forms.TextBox();
             this.txt_cantidad = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).BeginInit();
+            this.dg_consulta = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -185,15 +185,15 @@
             this.Cbid_maquina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cbid_maquina.FormattingEnabled = true;
             this.Cbid_maquina.Items.AddRange(new object[] {
-            "1- Retro 2",
-            "2- Retro 3",
-            "3- Retro 4",
-            "4- Retro 6",
-            "5- Foton 1",
-            "6- Foton 2",
-            "7- SZN-114",
-            "8- Tuneleadora",
-            "9- Molino"});
+            "1- Retro 1",
+            "2- Retro 2",
+            "3- Retro 3",
+            "4- Retro 4",
+            "5- Retro 5",
+            "6- Retro 6",
+            "7- Foton 1",
+            "8- Foton 2",
+            "9- SZN-114"});
             this.Cbid_maquina.Location = new System.Drawing.Point(123, 153);
             this.Cbid_maquina.Name = "Cbid_maquina";
             this.Cbid_maquina.Size = new System.Drawing.Size(247, 28);
@@ -216,56 +216,6 @@
             this.busAce.Size = new System.Drawing.Size(498, 20);
             this.busAce.TabIndex = 127;
             this.busAce.TextChanged += new System.EventHandler(this.busAce_TextChanged);
-            // 
-            // dg_consulta
-            // 
-            this.dg_consulta.AllowUserToAddRows = false;
-            this.dg_consulta.AllowUserToDeleteRows = false;
-            this.dg_consulta.AllowUserToOrderColumns = true;
-            this.dg_consulta.AllowUserToResizeColumns = false;
-            this.dg_consulta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dg_consulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dg_consulta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            this.dg_consulta.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.dg_consulta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_consulta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dg_consulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_consulta.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dg_consulta.EnableHeadersVisualStyles = false;
-            this.dg_consulta.Location = new System.Drawing.Point(39, 356);
-            this.dg_consulta.Name = "dg_consulta";
-            this.dg_consulta.ReadOnly = true;
-            this.dg_consulta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_consulta.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dg_consulta.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dg_consulta.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dg_consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_consulta.Size = new System.Drawing.Size(721, 287);
-            this.dg_consulta.TabIndex = 126;
             // 
             // bt_eliminar
             // 
@@ -355,10 +305,9 @@
             this.cb_item.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_item.FormattingEnabled = true;
             this.cb_item.Items.AddRange(new object[] {
-            "1- AF",
-            "2- COM",
-            "3- FAC",
-            ""});
+            "AF",
+            "COM ",
+            "FAC"});
             this.cb_item.Location = new System.Drawing.Point(123, 249);
             this.cb_item.Name = "cb_item";
             this.cb_item.Size = new System.Drawing.Size(247, 28);
@@ -393,12 +342,62 @@
             this.label6.TabIndex = 221;
             this.label6.Text = "Cantidad: ";
             // 
+            // dg_consulta
+            // 
+            this.dg_consulta.AllowUserToAddRows = false;
+            this.dg_consulta.AllowUserToDeleteRows = false;
+            this.dg_consulta.AllowUserToOrderColumns = true;
+            this.dg_consulta.AllowUserToResizeColumns = false;
+            this.dg_consulta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dg_consulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dg_consulta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dg_consulta.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dg_consulta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_consulta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dg_consulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_consulta.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dg_consulta.EnableHeadersVisualStyles = false;
+            this.dg_consulta.Location = new System.Drawing.Point(12, 351);
+            this.dg_consulta.Name = "dg_consulta";
+            this.dg_consulta.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_consulta.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dg_consulta.RowHeadersVisible = false;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dg_consulta.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dg_consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dg_consulta.Size = new System.Drawing.Size(781, 292);
+            this.dg_consulta.TabIndex = 402;
+            // 
             // Aceites
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(803, 698);
+            this.Controls.Add(this.dg_consulta);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txt_cantidad);
             this.Controls.Add(this.txt_idFac);
@@ -409,7 +408,6 @@
             this.Controls.Add(this.bt_eliminar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.busAce);
-            this.Controls.Add(this.dg_consulta);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Cbid_maquina);
             this.Controls.Add(this.btn_modificar);
@@ -431,10 +429,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aceites y Filtros";
             this.Load += new System.EventHandler(this.Aceites_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -458,7 +456,6 @@
         private System.Windows.Forms.ComboBox Cbid_maquina;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox busAce;
-        public System.Windows.Forms.DataGridView dg_consulta;
         private System.Windows.Forms.Button bt_eliminar;
         private System.Windows.Forms.Button exportar;
         private System.Windows.Forms.Label label4;
@@ -467,5 +464,6 @@
         private System.Windows.Forms.TextBox txt_idFac;
         private System.Windows.Forms.TextBox txt_cantidad;
         private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.DataGridView dg_consulta;
     }
 }

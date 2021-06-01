@@ -28,7 +28,6 @@ namespace QYMSAS
             this.txtcombustible.Text = "";
             this.txtpeaje.Text = "";
             this.txtdes.Text = "";
-            Cb_tipo.Focus();
             Cbid_maquina.Focus();
         }
 
@@ -36,21 +35,20 @@ namespace QYMSAS
         {
             try
             {
-                string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
+                //string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
-                String maquina = Convert.ToString(Cb_tipo.SelectedItem);
                 String id_maquina = Convert.ToString(Cbid_maquina.SelectedItem);
-                string Query = "INSERT INTO viaticos (fecha, almuerzo,combustible,peajes,otros_descripcion,otros_valor, maquina, id_maquina) values('" + fecha + "','" + this.txtalmuerzo.Text + "','" + this.txtcombustible.Text + "','" + this.txtpeaje.Text + "','" + this.txtdes.Text + "','" + this.txt_valord.Text + "','" + maquina + "','" + id_maquina + "');";
-                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                string Query = "INSERT INTO viaticos (fecha,almuerzo,combustible,peajes,otros_descripcion,otros_valor,viaticos_id_maquinaria) values('" + fecha + "','" + this.txtalmuerzo.Text + "','" + this.txtcombustible.Text + "','" + this.txtpeaje.Text + "','" + this.txtdes.Text + "','" + this.txt_valord.Text + "','" + id_maquina + "');";
+               // MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;
-                MyConn2.Open();
+               // MyConn2.Open();
                 MyReader2 = MyCommand2.ExecuteReader();
                 MessageBox.Show("Se guardado el registro", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 while (MyReader2.Read())
                 {
                 }
-                MyConn2.Close();
+               // MyConn2.Close();
                 busqueda();
             }
             catch (Exception ex)
@@ -110,8 +108,7 @@ namespace QYMSAS
             dg_consulta.Columns[4].HeaderText = "PEAJES";
             dg_consulta.Columns[5].HeaderText = "OTROS DESCRIPCION";
             dg_consulta.Columns[6].HeaderText = "OTROS VALOR";
-            dg_consulta.Columns[7].HeaderText = "MAQUINA";
-            dg_consulta.Columns[8].HeaderText = "ID MAQUINA";
+            dg_consulta.Columns[7].HeaderText = "ID MAQUINA";
         }
 
         private void busVi_TextChanged(object sender, EventArgs e)

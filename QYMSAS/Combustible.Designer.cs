@@ -47,9 +47,17 @@
             this.bt_eliminar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.dg_consulta = new System.Windows.Forms.DataGridView();
             this.busCom = new System.Windows.Forms.TextBox();
             this.exportar = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txt_cantidad = new System.Windows.Forms.TextBox();
+            this.txt_idFac = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cb_item = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_descripcionf = new System.Windows.Forms.TextBox();
+            this.dg_consulta = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -61,7 +69,7 @@
             this.bt_nuevo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bt_nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.bt_nuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_nuevo.Location = new System.Drawing.Point(130, 239);
+            this.bt_nuevo.Location = new System.Drawing.Point(129, 306);
             this.bt_nuevo.Name = "bt_nuevo";
             this.bt_nuevo.Size = new System.Drawing.Size(98, 36);
             this.bt_nuevo.TabIndex = 127;
@@ -74,7 +82,7 @@
             this.Bt_Ingresar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Bt_Ingresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.Bt_Ingresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bt_Ingresar.Location = new System.Drawing.Point(234, 239);
+            this.Bt_Ingresar.Location = new System.Drawing.Point(233, 306);
             this.Bt_Ingresar.Name = "Bt_Ingresar";
             this.Bt_Ingresar.Size = new System.Drawing.Size(98, 36);
             this.Bt_Ingresar.TabIndex = 125;
@@ -87,7 +95,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(397, 203);
+            this.label10.Location = new System.Drawing.Point(362, 200);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(57, 18);
             this.label10.TabIndex = 134;
@@ -98,7 +106,7 @@
             // 
             this.txt_valor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_valor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_valor.Location = new System.Drawing.Point(474, 199);
+            this.txt_valor.Location = new System.Drawing.Point(474, 196);
             this.txt_valor.Name = "txt_valor";
             this.txt_valor.Size = new System.Drawing.Size(305, 26);
             this.txt_valor.TabIndex = 123;
@@ -163,7 +171,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 203);
+            this.label1.Location = new System.Drawing.Point(5, 200);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 18);
             this.label1.TabIndex = 137;
@@ -177,16 +185,16 @@
             this.Cbid_maquina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cbid_maquina.FormattingEnabled = true;
             this.Cbid_maquina.Items.AddRange(new object[] {
-            "1- Retro 2",
-            "2- Retro 3",
-            "3- Retro 4",
-            "4- Retro 6",
-            "5- Foton 1",
-            "6- Foton 2",
-            "7-SZN-114",
-            "8-Tuneleadora",
-            "9-Molino"});
-            this.Cbid_maquina.Location = new System.Drawing.Point(133, 196);
+            "1- Retro 1",
+            "2- Retro 2",
+            "3- Retro 3",
+            "4- Retro 4",
+            "5- Retro 5",
+            "6- Retro 6",
+            "7- Foton 1",
+            "8- Foton 2",
+            "9- SZN-114"});
+            this.Cbid_maquina.Location = new System.Drawing.Point(109, 193);
             this.Cbid_maquina.Name = "Cbid_maquina";
             this.Cbid_maquina.Size = new System.Drawing.Size(247, 28);
             this.Cbid_maquina.TabIndex = 136;
@@ -196,7 +204,7 @@
             this.bt_eliminar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bt_eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.bt_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_eliminar.Location = new System.Drawing.Point(338, 239);
+            this.bt_eliminar.Location = new System.Drawing.Point(337, 306);
             this.bt_eliminar.Name = "bt_eliminar";
             this.bt_eliminar.Size = new System.Drawing.Size(98, 36);
             this.bt_eliminar.TabIndex = 139;
@@ -208,7 +216,7 @@
             // 
             this.btn_modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modificar.Location = new System.Drawing.Point(442, 239);
+            this.btn_modificar.Location = new System.Drawing.Point(441, 306);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(107, 36);
             this.btn_modificar.TabIndex = 138;
@@ -220,11 +228,118 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(105, 281);
+            this.label2.Location = new System.Drawing.Point(104, 348);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 18);
             this.label2.TabIndex = 141;
             this.label2.Text = "Buscar:";
+            // 
+            // busCom
+            // 
+            this.busCom.Location = new System.Drawing.Point(176, 348);
+            this.busCom.Name = "busCom";
+            this.busCom.Size = new System.Drawing.Size(498, 20);
+            this.busCom.TabIndex = 142;
+            this.busCom.TextChanged += new System.EventHandler(this.busCom_TextChanged);
+            // 
+            // exportar
+            // 
+            this.exportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.exportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exportar.Location = new System.Drawing.Point(554, 306);
+            this.exportar.Name = "exportar";
+            this.exportar.Size = new System.Drawing.Size(107, 36);
+            this.exportar.TabIndex = 215;
+            this.exportar.Text = "Exportar";
+            this.exportar.UseVisualStyleBackColor = false;
+            this.exportar.Click += new System.EventHandler(this.exportar_Click);
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(4, 235);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(84, 18);
+            this.label6.TabIndex = 229;
+            this.label6.Text = "Cantidad: ";
+            // 
+            // txt_cantidad
+            // 
+            this.txt_cantidad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cantidad.Location = new System.Drawing.Point(109, 231);
+            this.txt_cantidad.Name = "txt_cantidad";
+            this.txt_cantidad.Size = new System.Drawing.Size(247, 26);
+            this.txt_cantidad.TabIndex = 228;
+            // 
+            // txt_idFac
+            // 
+            this.txt_idFac.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_idFac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_idFac.Location = new System.Drawing.Point(474, 269);
+            this.txt_idFac.Name = "txt_idFac";
+            this.txt_idFac.Size = new System.Drawing.Size(305, 26);
+            this.txt_idFac.TabIndex = 227;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(4, 271);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 18);
+            this.label5.TabIndex = 226;
+            this.label5.Text = "Item";
+            // 
+            // cb_item
+            // 
+            this.cb_item.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_item.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_item.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cb_item.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_item.FormattingEnabled = true;
+            this.cb_item.Items.AddRange(new object[] {
+            "AF",
+            "COM ",
+            "FAC"});
+            this.cb_item.Location = new System.Drawing.Point(109, 267);
+            this.cb_item.Name = "cb_item";
+            this.cb_item.Size = new System.Drawing.Size(247, 28);
+            this.cb_item.TabIndex = 225;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(362, 271);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 18);
+            this.label4.TabIndex = 224;
+            this.label4.Text = "Id Factura: ";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(362, 235);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 18);
+            this.label3.TabIndex = 223;
+            this.label3.Text = "Descripción: ";
+            // 
+            // txt_descripcionf
+            // 
+            this.txt_descripcionf.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_descripcionf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_descripcionf.Location = new System.Drawing.Point(474, 231);
+            this.txt_descripcionf.Name = "txt_descripcionf";
+            this.txt_descripcionf.Size = new System.Drawing.Size(305, 26);
+            this.txt_descripcionf.TabIndex = 222;
             // 
             // dg_consulta
             // 
@@ -235,8 +350,8 @@
             this.dg_consulta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dg_consulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dg_consulta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.dg_consulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dg_consulta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dg_consulta.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dg_consulta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -257,7 +372,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dg_consulta.DefaultCellStyle = dataGridViewCellStyle2;
             this.dg_consulta.EnableHeadersVisualStyles = false;
-            this.dg_consulta.Location = new System.Drawing.Point(43, 310);
+            this.dg_consulta.Location = new System.Drawing.Point(7, 376);
             this.dg_consulta.Name = "dg_consulta";
             this.dg_consulta.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -272,28 +387,8 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dg_consulta.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dg_consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_consulta.Size = new System.Drawing.Size(719, 333);
-            this.dg_consulta.TabIndex = 140;
-            // 
-            // busCom
-            // 
-            this.busCom.Location = new System.Drawing.Point(177, 281);
-            this.busCom.Name = "busCom";
-            this.busCom.Size = new System.Drawing.Size(498, 20);
-            this.busCom.TabIndex = 142;
-            this.busCom.TextChanged += new System.EventHandler(this.busCom_TextChanged);
-            // 
-            // exportar
-            // 
-            this.exportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.exportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exportar.Location = new System.Drawing.Point(555, 239);
-            this.exportar.Name = "exportar";
-            this.exportar.Size = new System.Drawing.Size(107, 36);
-            this.exportar.TabIndex = 215;
-            this.exportar.Text = "Exportar";
-            this.exportar.UseVisualStyleBackColor = false;
-            this.exportar.Click += new System.EventHandler(this.exportar_Click);
+            this.dg_consulta.Size = new System.Drawing.Size(772, 267);
+            this.dg_consulta.TabIndex = 402;
             // 
             // Combustible
             // 
@@ -301,10 +396,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(803, 698);
+            this.Controls.Add(this.dg_consulta);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txt_cantidad);
+            this.Controls.Add(this.txt_idFac);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.cb_item);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txt_descripcionf);
             this.Controls.Add(this.exportar);
             this.Controls.Add(this.busCom);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dg_consulta);
             this.Controls.Add(this.bt_eliminar);
             this.Controls.Add(this.btn_modificar);
             this.Controls.Add(this.label1);
@@ -350,8 +453,16 @@
         private System.Windows.Forms.Button bt_eliminar;
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.DataGridView dg_consulta;
         private System.Windows.Forms.TextBox busCom;
         private System.Windows.Forms.Button exportar;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txt_cantidad;
+        private System.Windows.Forms.TextBox txt_idFac;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cb_item;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_descripcionf;
+        public System.Windows.Forms.DataGridView dg_consulta;
     }
 }

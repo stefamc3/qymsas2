@@ -25,18 +25,18 @@ namespace QYMSAS
             string[] series = { "Enero", "Febrero", "Marzo", "Abril" , "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre","Noviembre", "Diciembre" };
             int[] monto = new int[12]; ;
             chart1.Titles.Add("VENTAS DE RECEBO MENSUAL");
-            monto[0] = basededatos.sumaporplaca("2019/01/01","2019/01/31");
-            monto[1] = basededatos.sumaporplaca("2019/02/01", "2019/02/28");
-            monto[2] = basededatos.sumaporplaca("2019/03/01", "2019/03/31");
-            monto[3] = basededatos.sumaporplaca("2019/04/01", "2019/04/30");
-            monto[4] = basededatos.sumaporplaca("2019/05/01", "2019/05/31");
-            monto[5] = basededatos.sumaporplaca("2019/06/01", "2019/06/30");
-            monto[6] = basededatos.sumaporplaca("2019/07/01", "2019/07/31");
-            monto[7] = basededatos.sumaporplaca("2019/08/01", "2019/08/31");
-            monto[8] = basededatos.sumaporplaca("2019/09/01", "2019/09/30");
-            monto[9] = basededatos.sumaporplaca("2019/10/01", "2019/10/31");
-            monto[10] = basededatos.sumaporplaca("2019/11/01", "2019/11/30");
-            monto[11] = basededatos.sumaporplaca("2019/12/01", "2019/12/31");
+            monto[0] = basededatos.sumaporplaca("2021/01/01","2021/01/31");
+            monto[1] = basededatos.sumaporplaca("2021/02/01", "2021/02/28");
+            monto[2] = basededatos.sumaporplaca("2021/03/01", "2021/03/31");
+            monto[3] = basededatos.sumaporplaca("2021/04/01", "2021/04/30");
+            monto[4] = basededatos.sumaporplaca("2021/05/01", "2021/05/31");
+            monto[5] = basededatos.sumaporplaca("2021/06/01", "2021/06/30");
+            monto[6] = basededatos.sumaporplaca("2021/07/01", "2021/07/31");
+            monto[7] = basededatos.sumaporplaca("2021/08/01", "2021/08/31");
+            monto[8] = basededatos.sumaporplaca("2021/09/01", "2021/09/30");
+            monto[9] = basededatos.sumaporplaca("2021/10/01", "2021/10/31");
+            monto[10] = basededatos.sumaporplaca("2021/11/01", "2021/11/30");
+            monto[11] = basededatos.sumaporplaca("2021/12/01", "2021/12/31");
 
             chart1.Palette = ChartColorPalette.Pastel;
 

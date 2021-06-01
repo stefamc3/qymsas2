@@ -377,7 +377,6 @@
             this.cbtipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbtipo.FormattingEnabled = true;
             this.cbtipo.Items.AddRange(new object[] {
-            "ACOPIO",
             "RECEBERA"});
             this.cbtipo.Location = new System.Drawing.Point(127, 241);
             this.cbtipo.Name = "cbtipo";

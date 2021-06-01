@@ -39,20 +39,20 @@ namespace QYMSAS
         {
             try
             {
-                string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
+               // string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
                 String id_maquina = Convert.ToString(Cbid_maquinaria.SelectedItem);
-                string Query = "INSERT INTO horas (fecha, horometro_inicial, horometro_final, num_horas,metros_cubicos, valor_hora,valor_m3, valor_total, id_maquina) values('" + fecha + "','"+this.text_Hinicial.Text+ "','" + this.text_Hfinal.Text + "','" + this.txt_horas.Text + "', '"+ this.textM3.Text + "', '" + this.txt_valorh.Text + "','" + this.txVm3.Text + "','"+ this.textTotal.Text + "','" + id_maquina + "');";
-                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                string Query = "INSERT INTO horas (fecha, horometro_inicial, horometro_final, num_horas,metros_cubicos, valor_hora,valor_m3, valor_total,horas_id_maquina) values('" + fecha + "','"+this.text_Hinicial.Text+ "','" + this.text_Hfinal.Text + "','" + this.txt_horas.Text + "', '"+ this.textM3.Text + "', '" + this.txt_valorh.Text + "','" + this.txVm3.Text + "','"+ this.textTotal.Text + "','" + id_maquina + "');";
+               // MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;
-                MyConn2.Open();
+              //  MyConn2.Open();
                 MyReader2 = MyCommand2.ExecuteReader();
                 MessageBox.Show("Se guardado el registro", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 while (MyReader2.Read())
                 {
                 }
-                MyConn2.Close();
+              //  MyConn2.Close();
                 busqueda();
                 limpia();
             }

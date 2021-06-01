@@ -39,9 +39,8 @@ namespace QYMSAS
             dg_consulta.Columns[2].HeaderText = "PATIO";
             dg_consulta.Columns[3].HeaderText = "N° TRASLADOS";
             dg_consulta.Columns[4].HeaderText = "TONELADA";
-            dg_consulta.Columns[5].HeaderText = "TOTAL TONELADAS";
-            dg_consulta.Columns[6].HeaderText = "PRECIO TONELADA";
-
+            dg_consulta.Columns[5].HeaderText = "PRECIO TONELADA";
+            dg_consulta.Columns[6].HeaderText = "ID MAQUINA";
         }
 
         private void bt_nuevo_Click(object sender, EventArgs e)
@@ -53,8 +52,9 @@ namespace QYMSAS
             this.txt_Ton.Text = "";
             this.textPatio.Text = "";
             this.textPreTone.Text = "";
-            this.textTolTon.Text = "";
             this.textItem.Text = "";
+            this.txt_precioT.Text = "";
+            Cbid_maquina.Focus();
         }
 
 
@@ -62,19 +62,20 @@ namespace QYMSAS
         {
             try
             {
-                string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
+              //  string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
-                string Query = "INSERT INTO movimientos_foton2 (fecha,patio,item,tonelada_m,total_toneladas_m,precio_tonelada) values('" + fecha + "','" + this.textPatio.Text + "','"+ this.textItem.Text + "','" + this.txt_Ton.Text + "','"+ this.textTolTon.Text + "','"+ this.textPreTone.Text + "');";
-                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                String id_maquina = Convert.ToString(Cbid_maquina.SelectedItem);
+                string Query = "INSERT INTO movimientos_foton2 (fecha,patio,item,tonelda_m,precio_tonelada,precio_total,movimientos_id_maquina) values('" + fecha + "','" + this.textPatio.Text + "','"+ this.textItem.Text + "','" + this.txt_Ton.Text + "','"+ this.textPreTone.Text + "','" + this.txt_precioT.Text + "','" + id_maquina + "');";
+                //MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;
-                MyConn2.Open();
+               // MyConn2.Open();
                 MyReader2 = MyCommand2.ExecuteReader();
                 MessageBox.Show("Se guardado el registro", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 while (MyReader2.Read())
                 {
                 }
-                MyConn2.Close();
+               // MyConn2.Close();
                 busqueda();
                 limpia();
             }
@@ -135,6 +136,11 @@ namespace QYMSAS
             {
                 MessageBox.Show("No ha modificado el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            txt_precioT.Text = Convert.ToString(Convert.ToDecimal(txt_Ton.Text) * Convert.ToDecimal(textPreTone.Text));
         }
     }
 }

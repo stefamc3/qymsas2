@@ -27,7 +27,7 @@ namespace QYMSAS
         }
         private void busqueda()
         {
-            String busqueda = "select * from egreso;";
+            String busqueda = "select * from egreso WHERE tipo= 'ACOPIO';";
             MySqlCommand comando = new MySqlCommand(busqueda, basededatos.ObtenerConexion());
             MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
             MyAdapter.SelectCommand = comando;
@@ -43,7 +43,7 @@ namespace QYMSAS
             dg_consulta.Columns[6].HeaderText = "CIUDAD";
             dg_consulta.Columns[7].HeaderText = "DESCRIPCION";
             dg_consulta.Columns[8].HeaderText = "TOTAL";
-            dg_consulta.Columns[8].HeaderText = "TIPO";
+            dg_consulta.Columns[9].HeaderText = "TIPO";
         }
         private void bt_nuevo_Click(object sender, EventArgs e)
         {
