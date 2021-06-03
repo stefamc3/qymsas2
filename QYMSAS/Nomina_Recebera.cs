@@ -130,5 +130,20 @@ namespace QYMSAS
             exportExcel exc = new exportExcel();
             exc.exportaraexcel(dg_consulta);
         }
+
+        private void btn_modificar_Click(object sender, EventArgs e)
+        {
+            int modifica = basededatos.ModificaNomina(textNeto.Text, dg_consulta.Rows[dg_consulta.CurrentRow.Index].Cells[0].Value.ToString());
+            if (modifica > 0)
+            {
+                MessageBox.Show("Se ha modificado el registro", "Modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                busqueda();
+                // limpia();
+            }
+            else
+            {
+                MessageBox.Show("No ha modificado el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

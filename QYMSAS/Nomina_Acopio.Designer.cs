@@ -44,7 +44,6 @@
             this.Bt_Ingresar = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.Cb_trabajador = new System.Windows.Forms.ComboBox();
             this.textNeto = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBon = new System.Windows.Forms.TextBox();
@@ -66,6 +65,7 @@
             this.exportar = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.cbtipo = new System.Windows.Forms.ComboBox();
+            this.Cb_trabajador = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -232,18 +232,6 @@
             this.label11.Size = new System.Drawing.Size(112, 18);
             this.label11.TabIndex = 208;
             this.label11.Text = "Id Trabajador:";
-            // 
-            // Cb_trabajador
-            // 
-            this.Cb_trabajador.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Cb_trabajador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cb_trabajador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cb_trabajador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cb_trabajador.FormattingEnabled = true;
-            this.Cb_trabajador.Location = new System.Drawing.Point(580, 145);
-            this.Cb_trabajador.Name = "Cb_trabajador";
-            this.Cb_trabajador.Size = new System.Drawing.Size(287, 28);
-            this.Cb_trabajador.TabIndex = 207;
             // 
             // textNeto
             // 
@@ -465,17 +453,41 @@
             this.cbtipo.Size = new System.Drawing.Size(287, 28);
             this.cbtipo.TabIndex = 216;
             // 
+            // Cb_trabajador
+            // 
+            this.Cb_trabajador.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Cb_trabajador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cb_trabajador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Cb_trabajador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cb_trabajador.FormattingEnabled = true;
+            this.Cb_trabajador.Items.AddRange(new object[] {
+            "496960 - JOSE OSCAR RINCON",
+            "496988 - JHON JAIRO QUIROGA CANO",
+            "3102376 - LUIS REY MALDONADO",
+            "3188391 - WILLIAM MENDEZ ",
+            "3196143 - RAFAEL ANTONIO TRIANA",
+            "11340684 - LUIS TEODORO MONTAÑO",
+            "79170698 - JAIRO ENRIQUE CORTES",
+            "80395202 - LUIS ELADIO CASTILLO",
+            "1053332160 - GERMAN DARIO CASTILLO",
+            "1076662357 - PAOLA GAVILAN ",
+            "1076663850 - ANGELA QUIROGA"});
+            this.Cb_trabajador.Location = new System.Drawing.Point(580, 147);
+            this.Cb_trabajador.Name = "Cb_trabajador";
+            this.Cb_trabajador.Size = new System.Drawing.Size(287, 28);
+            this.Cb_trabajador.TabIndex = 226;
+            // 
             // Nomina_Acopio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(901, 698);
+            this.Controls.Add(this.Cb_trabajador);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.cbtipo);
             this.Controls.Add(this.exportar);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.Cb_trabajador);
             this.Controls.Add(this.textNeto);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBon);
@@ -533,7 +545,6 @@
         private System.Windows.Forms.Button Bt_Ingresar;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox Cb_trabajador;
         private System.Windows.Forms.TextBox textNeto;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBon;
@@ -555,5 +566,6 @@
         private System.Windows.Forms.Button exportar;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbtipo;
+        private System.Windows.Forms.ComboBox Cb_trabajador;
     }
 }

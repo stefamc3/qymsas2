@@ -146,18 +146,18 @@ namespace QYMSAS
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-           /* string modificar = "ubdate aceites set descripcion=" + txt_descripcionf.Text + "where valor=" + txt_valor.Text;
-
-             if (bd.executecommand(modificar))
+            int modifica = basededatos.ModificaFacturas(txtmaterial.Text, dg_consulta.Rows[dg_consulta.CurrentRow.Index].Cells[0].Value.ToString());
+            if (modifica > 0)
             {
-                MessageBox.Show("Se guardado el registro", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DataGridView.DataSource = bd.SelectDataTable("SELECT * FROM gastos_acopio ");
+                MessageBox.Show("Se ha modificado el registro", "Modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                busqueda();
+                limpia();
             }
             else
             {
-                MessageBox.Show("No se ha guardado el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }*/
-            
+                MessageBox.Show("No ha modificado el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
 
         private void exportar_Click(object sender, EventArgs e)

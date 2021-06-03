@@ -661,9 +661,9 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(431, 202);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 18);
+            this.label10.Size = new System.Drawing.Size(79, 18);
             this.label10.TabIndex = 411;
-            this.label10.Text = "Metros:";
+            this.label10.Text = "Cantidad:";
             // 
             // txtmetros
             // 
@@ -681,9 +681,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(18, 201);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 18);
+            this.label5.Size = new System.Drawing.Size(103, 18);
             this.label5.TabIndex = 410;
-            this.label5.Text = "Material:";
+            this.label5.Text = "Descripción:";
             // 
             // txtmaterial
             // 

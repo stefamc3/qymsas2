@@ -40,13 +40,11 @@
             this.bt_nuevo = new System.Windows.Forms.Button();
             this.bt_Eliminar = new System.Windows.Forms.Button();
             this.Bt_Ingresar = new System.Windows.Forms.Button();
-            this.textUtiS = new System.Windows.Forms.TextBox();
             this.textUti = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textProd = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_Gast = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.dt_fecha = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -177,15 +175,6 @@
             this.Bt_Ingresar.UseVisualStyleBackColor = false;
             this.Bt_Ingresar.Click += new System.EventHandler(this.Bt_Ingresar_Click);
             // 
-            // textUtiS
-            // 
-            this.textUtiS.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textUtiS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textUtiS.Location = new System.Drawing.Point(592, 245);
-            this.textUtiS.Name = "textUtiS";
-            this.textUtiS.Size = new System.Drawing.Size(247, 26);
-            this.textUtiS.TabIndex = 225;
-            // 
             // textUti
             // 
             this.textUti.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -234,17 +223,6 @@
             this.txt_Gast.Name = "txt_Gast";
             this.txt_Gast.Size = new System.Drawing.Size(247, 26);
             this.txt_Gast.TabIndex = 216;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(459, 249);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 18);
-            this.label2.TabIndex = 219;
-            this.label2.Text = "Utilidad Socios:";
             // 
             // dt_fecha
             // 
@@ -339,14 +317,12 @@
             this.Controls.Add(this.bt_nuevo);
             this.Controls.Add(this.bt_Eliminar);
             this.Controls.Add(this.Bt_Ingresar);
-            this.Controls.Add(this.textUtiS);
             this.Controls.Add(this.textUti);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textProd);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txt_Gast);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.dt_fecha);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
@@ -377,14 +353,12 @@
         private System.Windows.Forms.Button bt_nuevo;
         private System.Windows.Forms.Button bt_Eliminar;
         private System.Windows.Forms.Button Bt_Ingresar;
-        private System.Windows.Forms.TextBox textUtiS;
         private System.Windows.Forms.TextBox textUti;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textProd;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_Gast;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dt_fecha;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;

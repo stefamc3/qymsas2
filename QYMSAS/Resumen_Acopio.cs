@@ -44,7 +44,7 @@ namespace QYMSAS
 
         private void bt_nuevo_Click(object sender, EventArgs e)
         {
-            this.textMes.Text = "";
+            
             this.textUtil.Text = "";
             this.txt_prod.Text = "";
             this.txt_gast.Text = "";
@@ -56,7 +56,7 @@ namespace QYMSAS
             {
                 string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
-                string Query = "INSERT INTO resumen_acopio (fecha,mes,produccion_A,gastos_A,utilidad_A) values('" + fecha + "','" + this.textMes.Text + "','" + this.txt_prod.Text + "','" + this.txt_gast.Text + "','" + this.textUtil.Text + "'); ";
+                string Query = "INSERT INTO resumen_acopio (fecha,produccion_A,gastos_A,utilidad_A) values('" + fecha + "','" + this.txt_prod.Text + "','" + this.txt_gast.Text + "','" + this.textUtil.Text + "'); ";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;

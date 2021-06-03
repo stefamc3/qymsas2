@@ -149,8 +149,6 @@ namespace QYMSAS
             {
                 MessageBox.Show("No ha modificado el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-
         }
 
         private void txt_valor_TextChanged(object sender, EventArgs e)

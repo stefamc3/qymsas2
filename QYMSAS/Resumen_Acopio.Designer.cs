@@ -33,8 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Resumen_Acopio));
-            this.label5 = new System.Windows.Forms.Label();
-            this.textMes = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textUtil = new System.Windows.Forms.TextBox();
             this.dg_consulta = new System.Windows.Forms.DataGridView();
@@ -59,26 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(448, 177);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 18);
-            this.label5.TabIndex = 195;
-            this.label5.Text = "Mes:";
-            // 
-            // textMes
-            // 
-            this.textMes.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textMes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textMes.Location = new System.Drawing.Point(526, 174);
-            this.textMes.Name = "textMes";
-            this.textMes.Size = new System.Drawing.Size(254, 26);
-            this.textMes.TabIndex = 194;
             // 
             // label4
             // 
@@ -294,7 +272,7 @@
             this.dt_fecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dt_fecha.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dt_fecha.Location = new System.Drawing.Point(129, 174);
+            this.dt_fecha.Location = new System.Drawing.Point(306, 175);
             this.dt_fecha.Name = "dt_fecha";
             this.dt_fecha.Size = new System.Drawing.Size(306, 26);
             this.dt_fecha.TabIndex = 174;
@@ -304,7 +282,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(25, 177);
+            this.label7.Location = new System.Drawing.Point(202, 178);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 18);
             this.label7.TabIndex = 176;
@@ -330,8 +308,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(819, 698);
             this.Controls.Add(this.exportar);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textMes);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textUtil);
             this.Controls.Add(this.dg_consulta);
@@ -367,9 +343,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textMes;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textUtil;
         public System.Windows.Forms.DataGridView dg_consulta;

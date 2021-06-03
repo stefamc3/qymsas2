@@ -31,7 +31,7 @@ namespace QYMSAS
         {
             try
             {
-                int status = basededatos.RegistrarUsuario(txt_nombre.Text, txt_apellido.Text, txt_usuario.Text, txt_contraseña.Text,txt_email.Text);
+                int status = basededatos.RegistrarUsuario(txt_nombre.Text, txt_apellido.Text, txt_usuario.Text, txt_contraseña.Text,txt_email.Text,cb_tipo.Text);
                 if (status == 1)
                 {
                     MessageBox.Show("Se ha ingresado el usuario correctamente");

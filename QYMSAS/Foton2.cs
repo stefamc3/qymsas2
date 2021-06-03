@@ -38,13 +38,6 @@ namespace QYMSAS
             log.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-            Resumen_Año log = new Resumen_Año(iduss);
-            log.Show();
-        }
-
         private void pictureBox10_Click(object sender, EventArgs e)
         {
             this.Dispose();
