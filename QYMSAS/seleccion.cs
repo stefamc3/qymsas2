@@ -47,7 +47,7 @@ namespace QYMSAS
 
         private void Selección_Load(object sender, EventArgs e)
         {
-            
+            Lus.Text = basededatos.ConsultanombresUsuario(iduss);
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)

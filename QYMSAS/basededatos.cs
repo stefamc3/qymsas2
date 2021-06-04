@@ -454,6 +454,24 @@ namespace QYMSAS
             }
             return registro;
         }
+        public static String ConsultanombresUsuario(int usuario)
+        {
+            String status = "0";
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select concat(nombre,' ' , apellido) from usuarios where id_us='{0}';", usuario), basededatos.ObtenerConexion());
+                MySqlDataReader leer = comando.ExecuteReader();
+                while (leer.Read())
+                {
+                    status = leer.GetString(0);
+                }
+            }
+            catch
+            {
+                status = "0";
+            }
+            return status;
+        }
     }
 }
     

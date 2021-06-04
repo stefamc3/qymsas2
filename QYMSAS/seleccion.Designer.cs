@@ -50,6 +50,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Lus = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -67,7 +68,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(547, 451);
+            this.label2.Location = new System.Drawing.Point(547, 456);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 20);
             this.label2.TabIndex = 23;
@@ -77,7 +78,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(73, 159);
+            this.label1.Location = new System.Drawing.Point(73, 164);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 20);
             this.label1.TabIndex = 27;
@@ -87,7 +88,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(77, 298);
+            this.label3.Location = new System.Drawing.Point(77, 303);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 20);
             this.label3.TabIndex = 28;
@@ -97,7 +98,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(551, 298);
+            this.label4.Location = new System.Drawing.Point(551, 303);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 20);
             this.label4.TabIndex = 115;
@@ -107,7 +108,7 @@
             // 
             this.Reportes.AutoSize = true;
             this.Reportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Reportes.Location = new System.Drawing.Point(557, 159);
+            this.Reportes.Location = new System.Drawing.Point(557, 164);
             this.Reportes.Name = "Reportes";
             this.Reportes.Size = new System.Drawing.Size(83, 20);
             this.Reportes.TabIndex = 117;
@@ -117,7 +118,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(93, 449);
+            this.label5.Location = new System.Drawing.Point(93, 454);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 20);
             this.label5.TabIndex = 119;
@@ -127,7 +128,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(319, 33);
+            this.label6.Location = new System.Drawing.Point(323, 25);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 22);
             this.label6.TabIndex = 120;
@@ -137,7 +138,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Lucida Handwriting", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(313, 12);
+            this.label7.Location = new System.Drawing.Point(313, 4);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(120, 21);
             this.label7.TabIndex = 121;
@@ -147,7 +148,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(224, 449);
+            this.label8.Location = new System.Drawing.Point(224, 454);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(114, 20);
             this.label8.TabIndex = 125;
@@ -157,7 +158,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(420, 451);
+            this.label9.Location = new System.Drawing.Point(420, 456);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(77, 40);
             this.label9.TabIndex = 123;
@@ -166,7 +167,7 @@
             // pictureBox11
             // 
             this.pictureBox11.Image = global::QYMSAS.Properties.Resources.logo;
-            this.pictureBox11.Location = new System.Drawing.Point(229, 73);
+            this.pictureBox11.Location = new System.Drawing.Point(229, 78);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(277, 245);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -176,7 +177,7 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = global::QYMSAS.Properties.Resources.campana_de_notificacion;
-            this.pictureBox10.Location = new System.Drawing.Point(694, 12);
+            this.pictureBox10.Location = new System.Drawing.Point(12, 12);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(28, 28);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -187,7 +188,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::QYMSAS.Properties.Resources.trabajo_en_equipo;
-            this.pictureBox8.Location = new System.Drawing.Point(229, 340);
+            this.pictureBox8.Location = new System.Drawing.Point(229, 345);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(104, 106);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -198,7 +199,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = global::QYMSAS.Properties.Resources.excavadora;
-            this.pictureBox9.Location = new System.Drawing.Point(404, 342);
+            this.pictureBox9.Location = new System.Drawing.Point(404, 347);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(104, 106);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -209,7 +210,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::QYMSAS.Properties.Resources.carbon;
-            this.pictureBox7.Location = new System.Drawing.Point(70, 340);
+            this.pictureBox7.Location = new System.Drawing.Point(70, 345);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(104, 106);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -220,7 +221,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::QYMSAS.Properties.Resources.reportar;
-            this.pictureBox6.Location = new System.Drawing.Point(550, 50);
+            this.pictureBox6.Location = new System.Drawing.Point(550, 55);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(104, 106);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -231,7 +232,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::QYMSAS.Properties.Resources.carta_de_barras;
-            this.pictureBox5.Location = new System.Drawing.Point(550, 189);
+            this.pictureBox5.Location = new System.Drawing.Point(550, 194);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(104, 106);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -253,7 +254,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::QYMSAS.Properties.Resources.carro;
-            this.pictureBox3.Location = new System.Drawing.Point(70, 189);
+            this.pictureBox3.Location = new System.Drawing.Point(70, 194);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(104, 106);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -264,7 +265,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::QYMSAS.Properties.Resources.construccion_y_herramientas;
-            this.pictureBox2.Location = new System.Drawing.Point(70, 50);
+            this.pictureBox2.Location = new System.Drawing.Point(70, 55);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(104, 106);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -275,7 +276,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::QYMSAS.Properties.Resources.anadir;
-            this.pictureBox1.Location = new System.Drawing.Point(555, 342);
+            this.pictureBox1.Location = new System.Drawing.Point(555, 347);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(104, 106);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -283,12 +284,22 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // Lus
+            // 
+            this.Lus.AutoSize = true;
+            this.Lus.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lus.Location = new System.Drawing.Point(589, 13);
+            this.Lus.Name = "Lus";
+            this.Lus.Size = new System.Drawing.Size(0, 18);
+            this.Lus.TabIndex = 146;
+            // 
             // Selección
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(734, 501);
+            this.Controls.Add(this.Lus);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.label8);
@@ -355,5 +366,6 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.Label Lus;
     }
 }
