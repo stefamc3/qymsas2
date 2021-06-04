@@ -26,9 +26,13 @@ namespace QYMSAS.SqlServer
                         MySqlDataReader reader = command.ExecuteReader();
                         if (reader.Read() == true)
                         {
-                            string userName = reader.GetString(1) + ", " + reader.GetString(2);
+                            string userName = reader.GetString(1) + " " + reader.GetString(2);
                             string userMail = reader.GetString(5);
-                            string accountPassword = reader.GetString(4);
+                        //En este punto todo se fue alv
+                        //string accountPassword = reader.GetString(4);
+                        string accountPassword = randomcontraseña();
+
+                        basededatos.Modificarcontraseña(reader.GetString(3), accountPassword);
                             var mailService = new MailServices.SystemSupportMail();
                             mailService.sendMail(
                               subject: "SISTEMA: solicitud de recuperación de contraseña",
@@ -46,6 +50,23 @@ namespace QYMSAS.SqlServer
                     }
                 }
             }
+
+        private string randomcontraseña()
+        {
+            string contraseña = "";
+            var random = new Random();
+            int numero = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                numero = random.Next(48, 122);
+                while ((numero >= 58 && numero <=64) || (numero >= 91 && numero <= 96))
+                {
+                    numero = random.Next(48, 122);
+                }
+                contraseña += "" +(char)numero;
+            }
+            return contraseña;
+        }
 
         }
     
