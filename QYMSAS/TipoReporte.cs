@@ -50,7 +50,7 @@ namespace QYMSAS
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            ReporteAcopio sel = new ReporteAcopio(iduss);
+            ReporteAcopioPro sel = new ReporteAcopioPro(iduss);
             sel.Show();
         }
     }
