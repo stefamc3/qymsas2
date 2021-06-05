@@ -76,6 +76,7 @@ D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\bin\Debug\pt\Microsoft.Re
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.csprojResolveAssemblyReference.cache
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.csproj.ResolveComReference.cache
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.Aceites.resources
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.AgregarMaquina.resources
@@ -99,6 +100,7 @@ D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.Inicio.r
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.Login.resources
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.Maquinaria.resources
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.Menu.resources
+D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.ReporteAcopioPro.resources
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.ReporteRecebera.resources
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.Menu_Acopio.resources
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.Menu_Recebera.resources
@@ -130,4 +132,3 @@ D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\RdlCompile.cach
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\RdlCompile.compiled
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.exe
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.pdb
-D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.csprojResolveAssemblyReference.cache

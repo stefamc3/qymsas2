@@ -134,6 +134,27 @@ namespace QYMSAS
             return suma;
         }
 
+        public static int sumaingresosacopio(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(total_PA) from produccion_acopio where (fecha between '{0}' and '{1}')", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+
         public static int sumametrosremision(String fechainicial, String fechafinal)
         {
             int suma;
@@ -155,12 +176,54 @@ namespace QYMSAS
             return suma;
         }
 
+        public static int sumametrosacopio(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(toneladas_PA) from produccion_acopio where (fecha between '{0}' and '{1}')", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
         public static int sumamegastosadministrativos(String fechainicial, String fechafinal)
         {
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(neto_rec) from nomina where (fecha between '{0}' and '{1}')", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(neto_rec) from nomina where (fecha between '{0}' and '{1}') and tipo='RECEBERA'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch (Exception)
+            {
+
+                suma = 0;
+            }
+            return suma;
+        }
+
+        public static int sumamegastosadministrativosacopio(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(neto_rec) from nomina where (fecha between '{0}' and '{1}') and tipo='ACOPIO'", fechainicial, fechafinal), basededatos.ObtenerConexion());
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -181,7 +244,7 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(neto) from facturacion where (fecha between '{0}' and '{1}')", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(neto) from facturacion where (fecha between '{0}' and '{1}') and tipo = 'RECEBERA' and Apartado = 'COMPRA'", fechainicial, fechafinal), basededatos.ObtenerConexion());
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -197,6 +260,26 @@ namespace QYMSAS
             return suma;
         }
 
+        public static int sumamegastosoperativosacopio(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(neto) from facturacion where (fecha between '{0}' and '{1}') and tipo='ACOPIO' and Apartado='COMPRA'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
         public static DataTable ConsultaGeneral(string Q)
         {
             //MySqlConnection conectar = new MySqlConnection("server=localhost; database=qymsas; Uid=root; pwd=;");
