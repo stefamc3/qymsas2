@@ -103,5 +103,12 @@ namespace QYMSAS
         {
             Application.Exit();
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            CambiarContraseña  log = new CambiarContraseña(iduss);
+            log.Show();
+        }
     }
 }

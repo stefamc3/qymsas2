@@ -20,14 +20,6 @@ namespace QYMSAS
             InitializeComponent();
             iduss = idusuario;
         }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-            FacturaC_Acopio creus = new FacturaC_Acopio(iduss);
-            creus.Show();
-        }
-
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -38,7 +30,7 @@ namespace QYMSAS
         private void pictureBox10_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            Selección log = new Selección(iduss);
+            TipoReporte log = new TipoReporte(iduss);
             log.Show();
         }
 
@@ -50,27 +42,6 @@ namespace QYMSAS
         private void Menu_Acopio_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-            Produccion_Acopio men = new Produccion_Acopio(iduss);
-            men.Show();
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-            this.Dispose();
-            Resumen_Acopio men = new Resumen_Acopio(iduss);
-            men.Show();
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-            Facturacion_Acopio men = new Facturacion_Acopio(iduss);
-            men.Show();
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)

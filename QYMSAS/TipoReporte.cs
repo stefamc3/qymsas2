@@ -22,7 +22,7 @@ namespace QYMSAS
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             this.Dispose();
-            TipoR creus = new TipoR(iduss);
+            ReporteMaquina creus = new ReporteMaquina(iduss);
             creus.Show();
         }
 

@@ -84,7 +84,6 @@ D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.Alerta.r
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.bascula.resources
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.Combustible.resources
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.Contraseña.resources
-D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.CrearUsuario.resources
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.CuentasCobro.resources
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.C_egreso_acopio.resources
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.C_Egreso_Recebera.resources
@@ -132,3 +131,6 @@ D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\RdlCompile.cach
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\RdlCompile.compiled
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.exe
 D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.pdb
+D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.CambiarContraseña.resources
+D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.CrearUsuario.resources
+D:\datos\Documents\programa YA\QYMSASej - copia\QYMSAS\obj\Debug\QYMSAS.ReporteMaquina.resources

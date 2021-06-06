@@ -145,6 +145,12 @@
       <DependentUpon>bascula.cs</DependentUpon>
     </Compile>
     <Compile Include="basededatos.cs" />
+    <Compile Include="CambiarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiarContraseña.Designer.cs">
+      <DependentUpon>CambiarContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="Combustible.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +261,12 @@
     </Compile>
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteMaquina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteMaquina.Designer.cs">
+      <DependentUpon>ReporteMaquina.cs</DependentUpon>
     </Compile>
     <Compile Include="ReporteAcopioPro.cs">
       <SubType>Form</SubType>
@@ -429,6 +441,9 @@
     <EmbeddedResource Include="bascula.resx">
       <DependentUpon>bascula.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CambiarContraseña.resx">
+      <DependentUpon>CambiarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Combustible.resx">
       <DependentUpon>Combustible.cs</DependentUpon>
     </EmbeddedResource>
@@ -482,6 +497,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteMaquina.resx">
+      <DependentUpon>ReporteMaquina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteAcopioPro.resx">
       <DependentUpon>ReporteAcopioPro.cs</DependentUpon>
@@ -742,6 +760,7 @@
     <None Include="Resources\campana-de-notificacion.png" />
     <None Include="Resources\logo.PNG" />
     <None Include="Resources\generar reporte boton.png" />
+    <None Include="Resources\editar.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

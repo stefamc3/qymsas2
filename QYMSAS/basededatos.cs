@@ -398,7 +398,7 @@ namespace QYMSAS
             int registro = 1;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("update greso set descripcion = '{0}' where id_comprobante='{1}'", descripcion, id_comprobante), ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("update egreso set descripcion = '{0}' where id_comprobante='{1}'", descripcion, id_comprobante), ObtenerConexion());
                 registro = comando.ExecuteNonQuery();
             }
             catch (Exception)
@@ -523,12 +523,12 @@ namespace QYMSAS
             }
             return registro;
         }
-        public static int ModificaViaticos(String id_maquina, String id_viaticos)
+        public static int ModificaViaticos(String descripcion, String id_viaticos)
         {
             int registro = 1;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("update viaticos set id_maquina= '{0}' where id_viaticos ='{1}'", id_maquina, id_viaticos), ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("update viaticos set descripcion= '{0}' where id_viaticos ='{1}'", descripcion, id_viaticos), ObtenerConexion());
                 registro = comando.ExecuteNonQuery();
             }
             catch (Exception)
@@ -554,6 +554,1626 @@ namespace QYMSAS
                 status = "0";
             }
             return status;
+        }
+        public static int sumaaceitef1(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='7' and item='AF'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumaaceitef2(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='8' and item='AF'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumaaceiter1(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='1' and item='AF'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumaaceiter2(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='2' and item='AF'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumaaceiter3(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='3' and item='AF'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumaaceiter4(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='4' and item='AF'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumaaceiter5(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='5' and item='AF'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumaaceiter6(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='6' and item='AF'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumaaceiteSZN(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='9' and item='AF'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumacombustiblef1(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='7' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumacombustiblef2(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='8' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumacombustibler1(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='1' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumacombustibler2(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='2' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumacombustibler3(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='3' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumacombustibler4(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='4' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumacombustibler5(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='5' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumacombustibler6(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='6' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumacombustibleSZN(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='9' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumagalonesf1(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='7' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumagalonesf2(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='8' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumagalonesr1(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='1' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumagalonesr2(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='2' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumagalonesr3(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='3' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumagalonesr4(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='4' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumagalonesr5(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='5' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumagalonesr6(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='6' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumagalonesSZN(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='9' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumahorasf1(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='7'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumahorasf2(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='8'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumahorasr1(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='1'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumahorasr2(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='2'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumahorasr3(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='3'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumahorasr4(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='4'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumahorasr5(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='5'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumahorasr6(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='6'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumahorasSZN(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='9'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumametros3f1(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='7'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumametros3f2(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='8'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumametros3r1(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='1'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumametros3r2(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='2'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumametros3r3(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='3'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumametros3r4(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='4'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumametros3r5(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='5'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumametros3r6(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='6'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumametros3SZN(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='9'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumacuentas_cobrof1(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from cuentas_de_cobro where (fecha between '{0}' and '{1}') and cobro_id_maquina='7'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumacuentas_cobrof2(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from cuentas_de_cobro where (fecha between '{0}' and '{1}') and cobro_id_maquina='8'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumacuentas_cobror1(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from cuentas_de_cobro where (fecha between '{0}' and '{1}') and cobro_id_maquina='1'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumacuentas_cobror2(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from cuentas_de_cobro where (fecha between '{0}' and '{1}') and cobro_id_maquina='2'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumacuentas_cobror3(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from cuentas_de_cobro where (fecha between '{0}' and '{1}') and cobro_id_maquina='3'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumacuentas_cobror4(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from cuentas_de_cobro where (fecha between '{0}' and '{1}') and cobro_id_maquina='4'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumacuentas_cobror5(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from cuentas_de_cobro where (fecha between '{0}' and '{1}') and cobro_id_maquina='5'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumacuentas_cobror6(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from cuentas_de_cobro where (fecha between '{0}' and '{1}') and cobro_id_maquina='6'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumacuentas_cobroSZN(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from cuentas_de_cobro where (fecha between '{0}' and '{1}') and cobro_id_maquina='9'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumarecibo_cajaf1(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from recibo_de_caja where (fecha between '{0}' and '{1}') and reciboC_id_maquina='7'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumarecibo_cajaf2(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from recibo_de_caja where (fecha between '{0}' and '{1}') and reciboC_id_maquina='8'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumarecibo_cajar1(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from recibo_de_caja where (fecha between '{0}' and '{1}') and reciboC_id_maquina='1'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumarecibo_cajar2(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from recibo_de_caja where (fecha between '{0}' and '{1}') and reciboC_id_maquina='2'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumarecibo_cajar3(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from recibo_de_caja where (fecha between '{0}' and '{1}') and reciboC_id_maquina='3'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumarecibo_cajar4(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from recibo_de_caja where (fecha between '{0}' and '{1}') and reciboC_id_maquina='4'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumarecibo_cajar5(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from recibo_de_caja where (fecha between '{0}' and '{1}') and reciboC_id_maquina='5'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumarecibo_cajar6(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from recibo_de_caja where (fecha between '{0}' and '{1}') and reciboC_id_maquina='6'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumarecibo_cajaSZN(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from recibo_de_caja where (fecha between '{0}' and '{1}') and reciboC_id_maquina='9'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumafacturasf1(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='7' and item='FAC'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumafacturasf2(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='8' and item='FAC'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumafacturasr1(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='1' and item='FAC'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumafacturasr2(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='2' and item='FAC'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumafacturasr3(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='3' and item='FAC'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumafacturasr4(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='4' and item='FAC'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumafacturasr5(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='5' and item='FAC'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumafacturasr6(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='6' and item='FAC'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumafacturasSZN(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='9' and item='FAC'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+          public static int sumaviaticosf1(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquina='7'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+          }
+        public static int sumaviaticosf2(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquina='8'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumaviaticosr1(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquina='1'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumaviaticosr2(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquina='2'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumaviaticosr3(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquina='3'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumaviaticosr4(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquina='4'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumaviaticosr5(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquina='5'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumaviaticosr6(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquina='6'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
+        }
+        public static int sumaviaticosSNZ(String fechainicial, String fechafinal)
+        {
+            int suma;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquina='9'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlDataReader _reader = comando.ExecuteReader();
+                Int64 Suma = 0;
+                while (_reader.Read())
+                {
+                    Suma = _reader.GetInt32(0);
+                }
+                suma = (Int32)Suma;
+            }
+            catch
+            {
+                suma = 0;
+            }
+            return suma;
         }
     }
 }

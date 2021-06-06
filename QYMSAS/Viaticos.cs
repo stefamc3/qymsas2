@@ -23,10 +23,8 @@ namespace QYMSAS
 
         private void bt_nuevo_Click(object sender, EventArgs e)
         {
-            this.txtalmuerzo.Text = "";
-            this.txt_valord.Text = "";
-            this.txtcombustible.Text = "";
-            this.txtpeaje.Text = "";
+
+            this.txt_valord.Text = "";  
             this.txtdes.Text = "";
             Cbid_maquina.Focus();
         }
@@ -38,7 +36,7 @@ namespace QYMSAS
                 //string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
                 String id_maquina = Convert.ToString(Cbid_maquina.SelectedItem);
-                string Query = "INSERT INTO viaticos (fecha,almuerzo,combustible,peajes,otros_descripcion,otros_valor,viaticos_id_maquinaria) values('" + fecha + "','" + this.txtalmuerzo.Text + "','" + this.txtcombustible.Text + "','" + this.txtpeaje.Text + "','" + this.txtdes.Text + "','" + this.txt_valord.Text + "','" + id_maquina + "');";
+                string Query = "INSERT INTO viaticos (fecha,descripcion,valor,viaticos_id_maquinaria) values('" + fecha + "','" + this.txtdes.Text + "','" + this.txt_valord.Text + "','" + id_maquina + "');";
                // MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;
@@ -103,12 +101,9 @@ namespace QYMSAS
             dg_consulta.DataSource = dTable;
             dg_consulta.Columns[0].HeaderText = "ID VIATICOS";
             dg_consulta.Columns[1].HeaderText = "FECHA";
-            dg_consulta.Columns[2].HeaderText = "ALMUERZO";
-            dg_consulta.Columns[3].HeaderText = "COMBUSTIBLE";
-            dg_consulta.Columns[4].HeaderText = "PEAJES";
-            dg_consulta.Columns[5].HeaderText = "OTROS DESCRIPCION";
-            dg_consulta.Columns[6].HeaderText = "OTROS VALOR";
-            dg_consulta.Columns[7].HeaderText = "ID MAQUINA";
+            dg_consulta.Columns[2].HeaderText = "DESCRIPCION";
+            dg_consulta.Columns[3].HeaderText = "VALOR";
+            dg_consulta.Columns[4].HeaderText = "ID MAQUINA";
         }
 
         private void busVi_TextChanged(object sender, EventArgs e)
@@ -132,7 +127,7 @@ namespace QYMSAS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int modifica = basededatos.ModificaViaticos(Cbid_maquina.Text, dg_consulta.Rows[dg_consulta.CurrentRow.Index].Cells[0].Value.ToString());
+            int modifica = basededatos.ModificaViaticos(txtdes.Text, dg_consulta.Rows[dg_consulta.CurrentRow.Index].Cells[0].Value.ToString());
             if (modifica > 0)
             {
                 MessageBox.Show("Se ha modificado el registro", "Modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -143,6 +138,11 @@ namespace QYMSAS
             {
                 MessageBox.Show("No ha modificado el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

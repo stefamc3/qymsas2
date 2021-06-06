@@ -33,20 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Viaticos));
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtalmuerzo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_valord = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtcombustible = new System.Windows.Forms.TextBox();
             this.bt_nuevo = new System.Windows.Forms.Button();
             this.Bt_Ingresar = new System.Windows.Forms.Button();
             this.dt_fecha = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtdes = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtpeaje = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -64,72 +58,32 @@
             ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 210);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 18);
-            this.label1.TabIndex = 187;
-            this.label1.Text = "Almuerzo:";
-            // 
-            // txtalmuerzo
-            // 
-            this.txtalmuerzo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtalmuerzo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtalmuerzo.Location = new System.Drawing.Point(134, 207);
-            this.txtalmuerzo.Name = "txtalmuerzo";
-            this.txtalmuerzo.Size = new System.Drawing.Size(247, 26);
-            this.txtalmuerzo.TabIndex = 186;
-            // 
             // label10
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(29, 289);
+            this.label10.Location = new System.Drawing.Point(31, 208);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 18);
+            this.label10.Size = new System.Drawing.Size(52, 18);
             this.label10.TabIndex = 185;
-            this.label10.Text = "Otros Valor:";
+            this.label10.Text = "Valor:";
             // 
             // txt_valord
             // 
             this.txt_valord.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_valord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_valord.Location = new System.Drawing.Point(134, 286);
+            this.txt_valord.Location = new System.Drawing.Point(89, 208);
             this.txt_valord.Name = "txt_valord";
-            this.txt_valord.Size = new System.Drawing.Size(247, 26);
+            this.txt_valord.Size = new System.Drawing.Size(305, 26);
             this.txt_valord.TabIndex = 182;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(387, 208);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 18);
-            this.label2.TabIndex = 184;
-            this.label2.Text = "Combustible:";
-            // 
-            // txtcombustible
-            // 
-            this.txtcombustible.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtcombustible.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcombustible.Location = new System.Drawing.Point(542, 204);
-            this.txtcombustible.Name = "txtcombustible";
-            this.txtcombustible.Size = new System.Drawing.Size(305, 26);
-            this.txtcombustible.TabIndex = 183;
             // 
             // bt_nuevo
             // 
             this.bt_nuevo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bt_nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.bt_nuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_nuevo.Location = new System.Drawing.Point(166, 331);
+            this.bt_nuevo.Location = new System.Drawing.Point(169, 252);
             this.bt_nuevo.Name = "bt_nuevo";
             this.bt_nuevo.Size = new System.Drawing.Size(98, 36);
             this.bt_nuevo.TabIndex = 176;
@@ -142,7 +96,7 @@
             this.Bt_Ingresar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Bt_Ingresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.Bt_Ingresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bt_Ingresar.Location = new System.Drawing.Point(270, 331);
+            this.Bt_Ingresar.Location = new System.Drawing.Point(273, 252);
             this.Bt_Ingresar.Name = "Bt_Ingresar";
             this.Bt_Ingresar.Size = new System.Drawing.Size(98, 36);
             this.Bt_Ingresar.TabIndex = 174;
@@ -155,7 +109,7 @@
             this.dt_fecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dt_fecha.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dt_fecha.Location = new System.Drawing.Point(339, 158);
+            this.dt_fecha.Location = new System.Drawing.Point(89, 164);
             this.dt_fecha.Name = "dt_fecha";
             this.dt_fecha.Size = new System.Drawing.Size(305, 26);
             this.dt_fecha.TabIndex = 173;
@@ -165,52 +119,33 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(184, 155);
+            this.label7.Location = new System.Drawing.Point(31, 170);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 18);
             this.label7.TabIndex = 180;
             this.label7.Text = "Fecha:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(387, 250);
+            this.label5.Location = new System.Drawing.Point(403, 170);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(151, 18);
+            this.label5.Size = new System.Drawing.Size(103, 18);
             this.label5.TabIndex = 193;
-            this.label5.Text = "Otros Descripción:";
+            this.label5.Text = "Descripción:";
             // 
             // txtdes
             // 
             this.txtdes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtdes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdes.Location = new System.Drawing.Point(542, 247);
+            this.txtdes.Location = new System.Drawing.Point(512, 166);
             this.txtdes.Name = "txtdes";
-            this.txtdes.Size = new System.Drawing.Size(305, 26);
+            this.txtdes.Size = new System.Drawing.Size(336, 26);
             this.txtdes.TabIndex = 192;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(29, 250);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 18);
-            this.label6.TabIndex = 191;
-            this.label6.Text = "Peajes:";
-            // 
-            // txtpeaje
-            // 
-            this.txtpeaje.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtpeaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpeaje.Location = new System.Drawing.Point(134, 247);
-            this.txtpeaje.Name = "txtpeaje";
-            this.txtpeaje.Size = new System.Drawing.Size(247, 26);
-            this.txtpeaje.TabIndex = 190;
             // 
             // pictureBox1
             // 
@@ -249,7 +184,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(387, 293);
+            this.label3.Location = new System.Drawing.Point(403, 213);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 18);
             this.label3.TabIndex = 196;
@@ -272,16 +207,16 @@
             "7- Foton 1",
             "8- Foton 2",
             "9- SZN-114"});
-            this.Cbid_maquina.Location = new System.Drawing.Point(543, 289);
+            this.Cbid_maquina.Location = new System.Drawing.Point(512, 208);
             this.Cbid_maquina.Name = "Cbid_maquina";
-            this.Cbid_maquina.Size = new System.Drawing.Size(304, 28);
+            this.Cbid_maquina.Size = new System.Drawing.Size(336, 28);
             this.Cbid_maquina.TabIndex = 195;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(478, 331);
+            this.button1.Location = new System.Drawing.Point(481, 252);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 36);
             this.button1.TabIndex = 197;
@@ -294,7 +229,7 @@
             this.bt_eliminar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bt_eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.bt_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_eliminar.Location = new System.Drawing.Point(374, 331);
+            this.bt_eliminar.Location = new System.Drawing.Point(377, 252);
             this.bt_eliminar.Name = "bt_eliminar";
             this.bt_eliminar.Size = new System.Drawing.Size(98, 36);
             this.bt_eliminar.TabIndex = 198;
@@ -306,7 +241,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(138, 373);
+            this.label8.Location = new System.Drawing.Point(141, 294);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(66, 18);
             this.label8.TabIndex = 201;
@@ -315,7 +250,7 @@
             // 
             // busVi
             // 
-            this.busVi.Location = new System.Drawing.Point(210, 373);
+            this.busVi.Location = new System.Drawing.Point(213, 294);
             this.busVi.Name = "busVi";
             this.busVi.Size = new System.Drawing.Size(498, 20);
             this.busVi.TabIndex = 200;
@@ -352,7 +287,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dg_consulta.DefaultCellStyle = dataGridViewCellStyle2;
             this.dg_consulta.EnableHeadersVisualStyles = false;
-            this.dg_consulta.Location = new System.Drawing.Point(38, 403);
+            this.dg_consulta.Location = new System.Drawing.Point(38, 320);
             this.dg_consulta.Name = "dg_consulta";
             this.dg_consulta.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -367,14 +302,14 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dg_consulta.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dg_consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_consulta.Size = new System.Drawing.Size(798, 240);
+            this.dg_consulta.Size = new System.Drawing.Size(798, 323);
             this.dg_consulta.TabIndex = 199;
             // 
             // exportar
             // 
             this.exportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.exportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exportar.Location = new System.Drawing.Point(592, 331);
+            this.exportar.Location = new System.Drawing.Point(595, 252);
             this.exportar.Name = "exportar";
             this.exportar.Size = new System.Drawing.Size(107, 36);
             this.exportar.TabIndex = 215;
@@ -399,14 +334,8 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtdes);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtpeaje);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtalmuerzo);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txt_valord);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtcombustible);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bt_nuevo);
             this.Controls.Add(this.Bt_Ingresar);
@@ -430,13 +359,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtalmuerzo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_valord;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtcombustible;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button bt_nuevo;
         private System.Windows.Forms.Button Bt_Ingresar;
@@ -445,8 +369,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtdes;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtpeaje;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox Cbid_maquina;
