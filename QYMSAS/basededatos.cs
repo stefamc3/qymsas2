@@ -11,6 +11,8 @@ namespace QYMSAS
 {
     class basededatos
     {
+        public static MySqlConnection con = new MySqlConnection("server=mysql.freehostia.com; database=qymqym_bd; Uid=qymqym_bd; pwd=qymsas3103369882;");
+
 
         public static MySqlConnection ObtenerConexion()
         {
@@ -24,6 +26,22 @@ namespace QYMSAS
                 MessageBox.Show(ex.Message);
             }
             return conectar;
+        }
+
+        public static void abrir()
+        {
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+        }
+
+        public static void cerrar()
+        {
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
         }
 
         public static String ConsultaStatusUsuario(String usuario, String contraseña)
@@ -300,8 +318,6 @@ namespace QYMSAS
                 //conectar.Close();
             }
             return TB;
-
-
         }
 
         public static int ModificaDiscriminacion(String descripcion, String iddiscriminacion)
@@ -560,7 +576,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='7' and item='AF'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='7' and item='AF'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -568,6 +585,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar();
             }
             catch
             {
@@ -580,7 +598,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='8' and item='AF'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='8' and item='AF'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -588,6 +607,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar();
             }
             catch
             {
@@ -600,7 +620,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='1' and item='AF'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='1' and item='AF'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -608,6 +629,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -620,7 +642,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='2' and item='AF'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='2' and item='AF'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -628,6 +651,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -640,7 +664,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='3' and item='AF'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='3' and item='AF'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -648,6 +673,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -660,7 +686,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='4' and item='AF'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='4' and item='AF'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -668,6 +695,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -680,7 +708,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='5' and item='AF'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='5' and item='AF'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -688,6 +717,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -700,7 +730,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='6' and item='AF'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='6' and item='AF'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -708,6 +739,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -720,7 +752,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='9' and item='AF'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='9' and item='AF'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -728,6 +761,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -740,7 +774,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='7' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='7' and item='COM'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -748,6 +783,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -760,7 +796,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='8' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='8' and item='COM'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -768,6 +805,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -780,7 +818,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='1' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='1' and item='COM'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -788,6 +827,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -800,7 +840,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='2' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='2' and item='COM'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -808,6 +849,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -820,7 +862,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='3' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='3' and item='COM'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -828,6 +871,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -840,7 +884,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='4' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='4' and item='COM'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -848,6 +893,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -860,7 +906,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='5' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='5' and item='COM'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -868,6 +915,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -880,7 +928,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='6' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='6' and item='COM'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -888,6 +937,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -900,7 +950,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='9' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='9' and item='COM'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -908,6 +959,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -920,7 +972,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='7' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='7' and item='COM'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -928,6 +981,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -940,7 +994,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='8' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='8' and item='COM'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -948,6 +1003,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -960,7 +1016,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='1' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='1' and item='COM'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -968,6 +1025,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -980,7 +1038,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='2' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='2' and item='COM'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -988,6 +1047,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1000,7 +1060,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='3' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='3' and item='COM'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1008,6 +1069,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1020,7 +1082,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='4' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='4' and item='COM'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1028,6 +1091,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1040,7 +1104,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='5' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='5' and item='COM'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1048,6 +1113,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1060,7 +1126,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='6' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='6' and item='COM'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1068,6 +1135,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1080,7 +1148,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='9' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(cantidad) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='9' and item='COM'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1088,6 +1157,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1100,7 +1170,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='7'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='7'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1108,6 +1179,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1120,7 +1192,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='8'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='8'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1128,6 +1201,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar();
             }
             catch
             {
@@ -1140,7 +1214,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='1'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='1'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1148,6 +1223,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1160,7 +1236,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='2'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='2'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1168,6 +1245,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1180,7 +1258,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='3'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='3'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1188,6 +1267,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1200,7 +1280,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='4'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='4'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1208,6 +1289,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1220,7 +1302,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='5'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='5'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1228,6 +1311,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1240,7 +1324,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='6'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='6'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1248,6 +1333,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1260,7 +1346,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='9'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(horas) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='9'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1268,6 +1355,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1280,7 +1368,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='7'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='7'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1288,6 +1377,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1300,7 +1390,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='8'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='8'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1308,6 +1399,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1320,7 +1412,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='1'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='1'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1328,6 +1421,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1340,7 +1434,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='2'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='2'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1348,6 +1443,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1360,7 +1456,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='3'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='3'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1368,6 +1465,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1380,7 +1478,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='4'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='4'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1388,6 +1487,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1400,7 +1500,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='5'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='5'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1408,6 +1509,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1420,7 +1522,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='6'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='6'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1428,6 +1531,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1440,7 +1544,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='9'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(metros_cubicos) from horas where (fecha between '{0}' and '{1}') and horas_id_maquina='9'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1448,6 +1553,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1460,7 +1566,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from cuentas_de_cobro where (fecha between '{0}' and '{1}') and cobro_id_maquina='7'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from cuentas_de_cobro where (fecha between '{0}' and '{1}') and cobro_id_maquina='7'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1468,6 +1575,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1480,7 +1588,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from cuentas_de_cobro where (fecha between '{0}' and '{1}') and cobro_id_maquina='8'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from cuentas_de_cobro where (fecha between '{0}' and '{1}') and cobro_id_maquina='8'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1488,6 +1597,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1500,7 +1610,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from cuentas_de_cobro where (fecha between '{0}' and '{1}') and cobro_id_maquina='1'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from cuentas_de_cobro where (fecha between '{0}' and '{1}') and cobro_id_maquina='1'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1508,6 +1619,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1520,7 +1632,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from cuentas_de_cobro where (fecha between '{0}' and '{1}') and cobro_id_maquina='2'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from cuentas_de_cobro where (fecha between '{0}' and '{1}') and cobro_id_maquina='2'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1528,6 +1641,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
@@ -1540,7 +1654,8 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from cuentas_de_cobro where (fecha between '{0}' and '{1}') and cobro_id_maquina='3'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from cuentas_de_cobro where (fecha between '{0}' and '{1}') and cobro_id_maquina='3'", fechainicial, fechafinal), basededatos.con);
+                basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
                 while (_reader.Read())
@@ -1548,6 +1663,7 @@ namespace QYMSAS
                     Suma = _reader.GetInt32(0);
                 }
                 suma = (Int32)Suma;
+                basededatos.cerrar(); 
             }
             catch
             {
