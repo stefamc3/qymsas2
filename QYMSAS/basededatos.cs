@@ -81,13 +81,13 @@ namespace QYMSAS
         }
 
 
-        public static int RegistrarUsuario(String nombre, String apellido, String usuario, String contraseña, String email, String tipo)
+        public static int RegistrarUsuario(String nombre, String apellido, String usuario, String contraseña, String email, String tipo, String idTrabajador)
         {
             int registro;
             try
             {
                 String estado = "Habilitado";
-                MySqlCommand comando = new MySqlCommand(String.Format("insert into usuarios(nombre,apellido,usuario,contraseña,email,estado,tipo) values ('{0}','{1}','{2}',md5('{3}'),'{4}','{5}','{6}')", nombre, apellido, usuario, contraseña, estado, email, tipo), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("insert into usuarios(nombre,apellido,usuario,contraseña,email,tipo,estado,usuarios_id_trabajador) values ('{0}','{1}','{2}',md5('{3}'),'{4}','{5}','{6}','{7}')", nombre, apellido, usuario, contraseña,email,tipo,estado,idTrabajador), basededatos.ObtenerConexion());
                 registro = comando.ExecuteNonQuery();
             }
             catch
@@ -383,7 +383,7 @@ namespace QYMSAS
             int registro = 1;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("update usuarios set contraseña = '{0}' where id_us ='{1}'", contraseña, id_us), ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("update usuarios set contraseña = md5('{0}') where id_us ='{1}'", contraseña, id_us), ObtenerConexion());
                 registro = comando.ExecuteNonQuery();
             }
             catch (Exception)
