@@ -47,6 +47,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txt_idus = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -58,7 +60,7 @@
             // 
             this.txt_contraseña.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_contraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_contraseña.Location = new System.Drawing.Point(180, 256);
+            this.txt_contraseña.Location = new System.Drawing.Point(177, 227);
             this.txt_contraseña.Name = "txt_contraseña";
             this.txt_contraseña.PasswordChar = '*';
             this.txt_contraseña.Size = new System.Drawing.Size(246, 29);
@@ -70,7 +72,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(55, 262);
+            this.label4.Location = new System.Drawing.Point(52, 233);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 20);
             this.label4.TabIndex = 106;
@@ -81,7 +83,7 @@
             // 
             this.txt_usuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_usuario.Location = new System.Drawing.Point(180, 221);
+            this.txt_usuario.Location = new System.Drawing.Point(177, 192);
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.Size = new System.Drawing.Size(246, 29);
             this.txt_usuario.TabIndex = 104;
@@ -92,7 +94,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(55, 227);
+            this.label3.Location = new System.Drawing.Point(52, 198);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 20);
             this.label3.TabIndex = 105;
@@ -103,7 +105,7 @@
             // 
             this.txt_apellido.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_apellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_apellido.Location = new System.Drawing.Point(180, 186);
+            this.txt_apellido.Location = new System.Drawing.Point(177, 157);
             this.txt_apellido.Name = "txt_apellido";
             this.txt_apellido.Size = new System.Drawing.Size(246, 29);
             this.txt_apellido.TabIndex = 102;
@@ -114,7 +116,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(55, 192);
+            this.label2.Location = new System.Drawing.Point(52, 163);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 20);
             this.label2.TabIndex = 103;
@@ -125,7 +127,7 @@
             // 
             this.txt_nombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombre.Location = new System.Drawing.Point(180, 151);
+            this.txt_nombre.Location = new System.Drawing.Point(177, 122);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(246, 29);
             this.txt_nombre.TabIndex = 100;
@@ -136,7 +138,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(55, 157);
+            this.label1.Location = new System.Drawing.Point(52, 128);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 20);
             this.label1.TabIndex = 101;
@@ -148,7 +150,7 @@
             this.Bt_Ingresar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Bt_Ingresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.Bt_Ingresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bt_Ingresar.Location = new System.Drawing.Point(177, 359);
+            this.Bt_Ingresar.Location = new System.Drawing.Point(177, 367);
             this.Bt_Ingresar.Name = "Bt_Ingresar";
             this.Bt_Ingresar.Size = new System.Drawing.Size(126, 40);
             this.Bt_Ingresar.TabIndex = 110;
@@ -161,7 +163,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(55, 298);
+            this.label5.Location = new System.Drawing.Point(52, 269);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 20);
             this.label5.TabIndex = 113;
@@ -172,7 +174,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(55, 329);
+            this.label6.Location = new System.Drawing.Point(52, 300);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 20);
             this.label6.TabIndex = 115;
@@ -188,7 +190,7 @@
             this.cb_tipo.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.cb_tipo.Location = new System.Drawing.Point(180, 327);
+            this.cb_tipo.Location = new System.Drawing.Point(177, 298);
             this.cb_tipo.Name = "cb_tipo";
             this.cb_tipo.Size = new System.Drawing.Size(247, 28);
             this.cb_tipo.TabIndex = 218;
@@ -197,7 +199,7 @@
             // 
             this.txt_email.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_email.Location = new System.Drawing.Point(180, 291);
+            this.txt_email.Location = new System.Drawing.Point(177, 262);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(246, 29);
             this.txt_email.TabIndex = 219;
@@ -216,7 +218,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::QYMSAS.Properties.Resources.en_espera;
-            this.pictureBox4.Location = new System.Drawing.Point(265, 405);
+            this.pictureBox4.Location = new System.Drawing.Point(265, 408);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(38, 37);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -227,7 +229,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::QYMSAS.Properties.Resources.login;
-            this.pictureBox3.Location = new System.Drawing.Point(221, 405);
+            this.pictureBox3.Location = new System.Drawing.Point(221, 408);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(38, 37);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -238,7 +240,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::QYMSAS.Properties.Resources.izquierda;
-            this.pictureBox2.Location = new System.Drawing.Point(177, 405);
+            this.pictureBox2.Location = new System.Drawing.Point(177, 408);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 37);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -257,12 +259,34 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // txt_idus
+            // 
+            this.txt_idus.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_idus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_idus.Location = new System.Drawing.Point(177, 332);
+            this.txt_idus.Name = "txt_idus";
+            this.txt_idus.Size = new System.Drawing.Size(246, 29);
+            this.txt_idus.TabIndex = 222;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(52, 338);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(122, 20);
+            this.label7.TabIndex = 221;
+            this.label7.Text = "Identificación:";
+            // 
             // CrearUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(479, 447);
+            this.Controls.Add(this.txt_idus);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.cb_tipo);
@@ -287,6 +311,7 @@
             this.Name = "CrearUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crear Usuario";
+            this.Load += new System.EventHandler(this.CrearUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -317,5 +342,7 @@
         private System.Windows.Forms.ComboBox cb_tipo;
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.TextBox txt_idus;
+        private System.Windows.Forms.Label label7;
     }
 }

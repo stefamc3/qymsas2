@@ -31,7 +31,7 @@ namespace QYMSAS
         {
             try
             {
-                int status = basededatos.RegistrarUsuario(txt_nombre.Text, txt_apellido.Text, txt_usuario.Text, txt_contraseña.Text,txt_email.Text,cb_tipo.Text);
+                int status = basededatos.RegistrarUsuario(txt_nombre.Text, txt_apellido.Text, txt_usuario.Text, txt_contraseña.Text,txt_email.Text,cb_tipo.Text,txt_idus.Text);
                 if (status == 1)
                 {
                     MessageBox.Show("Se ha ingresado el usuario correctamente");
@@ -109,6 +109,11 @@ namespace QYMSAS
             this.Dispose();
             CambiarContraseña  log = new CambiarContraseña(iduss);
             log.Show();
+        }
+
+        private void CrearUsuario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

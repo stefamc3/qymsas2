@@ -50,8 +50,8 @@
             this.bt_eliminar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.busVi = new System.Windows.Forms.TextBox();
-            this.dg_consulta = new System.Windows.Forms.DataGridView();
             this.exportar = new System.Windows.Forms.Button();
+            this.dg_consulta = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -256,6 +256,18 @@
             this.busVi.TabIndex = 200;
             this.busVi.TextChanged += new System.EventHandler(this.busVi_TextChanged);
             // 
+            // exportar
+            // 
+            this.exportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.exportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exportar.Location = new System.Drawing.Point(595, 252);
+            this.exportar.Name = "exportar";
+            this.exportar.Size = new System.Drawing.Size(107, 36);
+            this.exportar.TabIndex = 215;
+            this.exportar.Text = "Exportar";
+            this.exportar.UseVisualStyleBackColor = false;
+            this.exportar.Click += new System.EventHandler(this.exportar_Click);
+            // 
             // dg_consulta
             // 
             this.dg_consulta.AllowUserToAddRows = false;
@@ -265,7 +277,7 @@
             this.dg_consulta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dg_consulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dg_consulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dg_consulta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.dg_consulta.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dg_consulta.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -287,7 +299,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dg_consulta.DefaultCellStyle = dataGridViewCellStyle2;
             this.dg_consulta.EnableHeadersVisualStyles = false;
-            this.dg_consulta.Location = new System.Drawing.Point(38, 320);
+            this.dg_consulta.Location = new System.Drawing.Point(34, 320);
             this.dg_consulta.Name = "dg_consulta";
             this.dg_consulta.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -302,20 +314,8 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dg_consulta.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dg_consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_consulta.Size = new System.Drawing.Size(798, 323);
-            this.dg_consulta.TabIndex = 199;
-            // 
-            // exportar
-            // 
-            this.exportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.exportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exportar.Location = new System.Drawing.Point(595, 252);
-            this.exportar.Name = "exportar";
-            this.exportar.Size = new System.Drawing.Size(107, 36);
-            this.exportar.TabIndex = 215;
-            this.exportar.Text = "Exportar";
-            this.exportar.UseVisualStyleBackColor = false;
-            this.exportar.Click += new System.EventHandler(this.exportar_Click);
+            this.dg_consulta.Size = new System.Drawing.Size(814, 323);
+            this.dg_consulta.TabIndex = 216;
             // 
             // Viaticos
             // 
@@ -323,10 +323,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(874, 698);
+            this.Controls.Add(this.dg_consulta);
             this.Controls.Add(this.exportar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.busVi);
-            this.Controls.Add(this.dg_consulta);
             this.Controls.Add(this.bt_eliminar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
@@ -376,7 +376,7 @@
         private System.Windows.Forms.Button bt_eliminar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox busVi;
-        public System.Windows.Forms.DataGridView dg_consulta;
         private System.Windows.Forms.Button exportar;
+        public System.Windows.Forms.DataGridView dg_consulta;
     }
 }
