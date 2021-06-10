@@ -2159,7 +2159,7 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquina='7'", fechainicial, fechafinal), basededatos.con);
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquinaria='7'", fechainicial, fechafinal), basededatos.con);
                 basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
@@ -2181,7 +2181,7 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquina='8'", fechainicial, fechafinal), basededatos.con);
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquinaria='8'", fechainicial, fechafinal), basededatos.con);
                 basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
@@ -2203,7 +2203,7 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquina='1'", fechainicial, fechafinal), basededatos.con);
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquinaria='1'", fechainicial, fechafinal), basededatos.con);
                 basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
@@ -2225,7 +2225,7 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquina='2'", fechainicial, fechafinal), basededatos.con);
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquinaria='2'", fechainicial, fechafinal), basededatos.con);
                 basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
@@ -2247,7 +2247,7 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquina='3'", fechainicial, fechafinal), basededatos.con);
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquinaria='3'", fechainicial, fechafinal), basededatos.con);
                 basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
@@ -2269,7 +2269,7 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquina='4'", fechainicial, fechafinal), basededatos.con);
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquinaria='4'", fechainicial, fechafinal), basededatos.con);
                 basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
@@ -2291,7 +2291,7 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquina='5'", fechainicial, fechafinal), basededatos.con);
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquinaria='5'", fechainicial, fechafinal), basededatos.con);
                 basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
@@ -2313,7 +2313,7 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquina='6'", fechainicial, fechafinal), basededatos.con);
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquinaria='6'", fechainicial, fechafinal), basededatos.con);
                 basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
@@ -2335,7 +2335,7 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquina='9'", fechainicial, fechafinal), basededatos.con);
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from viaticos where (fecha between '{0}' and '{1}') and viaticos_id_maquinaria='9'", fechainicial, fechafinal), basededatos.con);
                 basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
