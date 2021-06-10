@@ -31,10 +31,7 @@ namespace QYMSAS
         public static void abrir()
         {
             con.Close();
-            if (con.State == ConnectionState.Closed)
-            {
-                con.Open();
-            }
+            con.Open();
         }
 
         public static void cerrar()
