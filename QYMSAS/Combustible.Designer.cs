@@ -303,7 +303,7 @@
             this.cb_item.FormattingEnabled = true;
             this.cb_item.Items.AddRange(new object[] {
             "AF",
-            "COM ",
+            "COM",
             "FAC"});
             this.cb_item.Location = new System.Drawing.Point(109, 267);
             this.cb_item.Name = "cb_item";
