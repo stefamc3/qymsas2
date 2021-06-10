@@ -634,7 +634,7 @@ namespace QYMSAS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                
                 suma = 0;
             }
             return suma;
@@ -855,7 +855,6 @@ namespace QYMSAS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
                 suma = 0;
             }
             return suma;
