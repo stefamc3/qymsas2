@@ -30,6 +30,7 @@ namespace QYMSAS
 
         public static void abrir()
         {
+            con.Close();
             if (con.State == ConnectionState.Closed)
             {
                 con.Open();
@@ -620,7 +621,7 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='1' and item='AF'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='1' and item='AF'", fechainicial, fechafinal), basededatos.con);
                 basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
@@ -631,8 +632,9 @@ namespace QYMSAS
                 suma = (Int32)Suma;
                 basededatos.cerrar();
             }
-            catch
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 suma = 0;
             }
             return suma;
@@ -774,7 +776,7 @@ namespace QYMSAS
             int suma;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='7' and item='COM'", fechainicial, fechafinal), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select sum(valor) from discriminacion where (fecha between '{0}' and '{1}') and maquinas_id_maquina='7' and item='COM'", fechainicial, fechafinal), basededatos.con);
                 basededatos.abrir();
                 MySqlDataReader _reader = comando.ExecuteReader();
                 Int64 Suma = 0;
@@ -851,8 +853,9 @@ namespace QYMSAS
                 suma = (Int32)Suma;
                 basededatos.cerrar(); 
             }
-            catch
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 suma = 0;
             }
             return suma;
