@@ -182,7 +182,7 @@
             this.MinimumSize = new System.Drawing.Size(550, 500);
             this.Name = "ReporteMaquina";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Rerporte Acopio";
+            this.Text = "Rerporte Maquinaria";
             this.Load += new System.EventHandler(this.Menu_Acopio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
