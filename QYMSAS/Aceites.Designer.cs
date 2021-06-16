@@ -58,10 +58,12 @@
             this.txt_cantidad = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dg_consulta = new System.Windows.Forms.DataGridView();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -305,9 +307,7 @@
             this.cb_item.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_item.FormattingEnabled = true;
             this.cb_item.Items.AddRange(new object[] {
-            "AF",
-            "COM ",
-            "FAC"});
+            "AF"});
             this.cb_item.Location = new System.Drawing.Point(123, 249);
             this.cb_item.Name = "cb_item";
             this.cb_item.Size = new System.Drawing.Size(247, 28);
@@ -391,12 +391,24 @@
             this.dg_consulta.Size = new System.Drawing.Size(781, 292);
             this.dg_consulta.TabIndex = 402;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::QYMSAS.Properties.Resources.editar;
+            this.pictureBox5.Location = new System.Drawing.Point(753, 14);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(38, 37);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 403;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
             // Aceites
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(803, 698);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.dg_consulta);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txt_cantidad);
@@ -433,6 +445,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -465,5 +478,6 @@
         private System.Windows.Forms.TextBox txt_cantidad;
         private System.Windows.Forms.Label label6;
         public System.Windows.Forms.DataGridView dg_consulta;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

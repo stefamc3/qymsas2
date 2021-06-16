@@ -361,7 +361,7 @@
             this.txt_precioT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_precioT.Location = new System.Drawing.Point(130, 281);
             this.txt_precioT.Name = "txt_precioT";
-            this.txt_precioT.Size = new System.Drawing.Size(247, 26);
+            this.txt_precioT.Size = new System.Drawing.Size(272, 26);
             this.txt_precioT.TabIndex = 219;
             // 
             // label2

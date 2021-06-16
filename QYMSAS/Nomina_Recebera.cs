@@ -55,7 +55,6 @@ namespace QYMSAS
         {
             this.txt_valor.Text = "";
             this.txt_Aux.Text = "";
-            this.textNombre.Text = "";
             this.textBon.Text = "";
             this.textNeto.Text = "";
             this.textprest.Text = "";
@@ -63,6 +62,7 @@ namespace QYMSAS
             this.textSegd.Text = "";
             Cb_idT.Focus();
             cbtipo.Focus();
+            cb_nombre.Focus();
         }
 
         private void Bt_Ingresar_Click(object sender, EventArgs e)
@@ -73,7 +73,8 @@ namespace QYMSAS
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
                 String identificacion = Convert.ToString(Cb_idT.SelectedItem);
                 String tipo = Convert.ToString(cbtipo.SelectedItem);
-                string Query = "INSERT INTO nomina (fecha,nombre_TR,id_trabajador,salario_rec,auxilio_de_transporte_rec,prestaciones_rec,seguro_rec,seguridad_rec,bonificaciones_rec,neto_rec,tipo) values('" + fecha + "','" + this.textNombre.Text + "','" + identificacion + "','" + this.txt_valor.Text + "','" + this.txt_Aux.Text + "','" + this.textprest.Text + "', '" + this.textSeg.Text + "', '" + this.textSegd.Text + "','" + this.textBon.Text + "','" + this.textNeto.Text + "','" + tipo + "');";
+                String nombre = Convert.ToString(cb_nombre.SelectedItem);
+                string Query = "INSERT INTO nomina (fecha,nombre_TR,id_trabajador,salario_rec,auxilio_de_transporte_rec,prestaciones_rec,seguro_rec,seguridad_rec,bonificaciones_rec,neto_rec,tipo) values('" + fecha + "','" + nombre + "','" + identificacion + "','" + this.txt_valor.Text + "','" + this.txt_Aux.Text + "','" + this.textprest.Text + "', '" + this.textSeg.Text + "', '" + this.textSegd.Text + "','" + this.textBon.Text + "','" + this.textNeto.Text + "','" + tipo + "');";
               //  MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;

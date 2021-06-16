@@ -46,10 +46,12 @@
             this.txt_nom = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.exportar = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // bt_eliminar
@@ -145,6 +147,7 @@
             this.btn_modificar.TabIndex = 150;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = false;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // pictureBox3
             // 
@@ -236,12 +239,24 @@
             this.exportar.UseVisualStyleBackColor = false;
             this.exportar.Click += new System.EventHandler(this.exportar_Click);
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::QYMSAS.Properties.Resources.editar;
+            this.pictureBox5.Location = new System.Drawing.Point(753, 12);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(38, 37);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 404;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
             // AgregarMaquina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(803, 698);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.exportar);
             this.Controls.Add(this.bt_eliminar);
             this.Controls.Add(this.label3);
@@ -266,6 +281,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,5 +302,6 @@
         private System.Windows.Forms.TextBox txt_nom;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button exportar;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

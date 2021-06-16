@@ -53,7 +53,6 @@
             this.textSeg = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textprest = new System.Windows.Forms.TextBox();
-            this.textNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_valor = new System.Windows.Forms.TextBox();
@@ -66,6 +65,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.cbtipo = new System.Windows.Forms.ComboBox();
             this.Cb_trabajador = new System.Windows.Forms.ComboBox();
+            this.cb_nombre = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -322,15 +322,6 @@
             this.textprest.Size = new System.Drawing.Size(287, 26);
             this.textprest.TabIndex = 198;
             // 
-            // textNombre
-            // 
-            this.textNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textNombre.Location = new System.Drawing.Point(153, 186);
-            this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(287, 26);
-            this.textNombre.TabIndex = 197;
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -477,12 +468,37 @@
             this.Cb_trabajador.Size = new System.Drawing.Size(287, 28);
             this.Cb_trabajador.TabIndex = 226;
             // 
+            // cb_nombre
+            // 
+            this.cb_nombre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_nombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_nombre.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cb_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_nombre.FormattingEnabled = true;
+            this.cb_nombre.Items.AddRange(new object[] {
+            "ANGELA QUIROGA",
+            "GERMAN DARIO CASTILLO",
+            "JAIRO ENRIQUE CORTES",
+            "JOSE OSCAR RINCON",
+            "JHON JAIRO QUIROGA CANO",
+            "LUIS ELADIO CASTILLO",
+            "LUIS REY MALDONADO",
+            "LUIS TEODORO MONTAÑO",
+            "PAOLA GAVILAN ",
+            "RAFAEL ANTONIO TRIANA",
+            "WILLIAM MENDEZ "});
+            this.cb_nombre.Location = new System.Drawing.Point(153, 184);
+            this.cb_nombre.Name = "cb_nombre";
+            this.cb_nombre.Size = new System.Drawing.Size(287, 28);
+            this.cb_nombre.TabIndex = 330;
+            // 
             // Nomina_Acopio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(901, 698);
+            this.Controls.Add(this.cb_nombre);
             this.Controls.Add(this.Cb_trabajador);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.cbtipo);
@@ -497,7 +513,6 @@
             this.Controls.Add(this.textSeg);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textprest);
-            this.Controls.Add(this.textNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txt_valor);
@@ -554,7 +569,6 @@
         private System.Windows.Forms.TextBox textSeg;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textprest;
-        private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_valor;
@@ -567,5 +581,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbtipo;
         private System.Windows.Forms.ComboBox Cb_trabajador;
+        private System.Windows.Forms.ComboBox cb_nombre;
     }
 }

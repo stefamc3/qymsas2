@@ -138,7 +138,7 @@ namespace QYMSAS
             //   else
             //   {
             //   }     string mod = "ubdate aceites set descripcion =" + txt_descripcionf.Text + "";
-            int modifica = basededatos.ModificaDiscriminacion(txt_descripcionf.Text, dg_consulta.Rows[dg_consulta.CurrentRow.Index].Cells[0].Value.ToString());
+            int modifica = basededatos.ModificaDiscriminacion(txt_descripcionf.Text, txt_cantidad.Text, txt_valor.Text, Cbid_maquina.Text, txt_idFac.Text, dg_consulta.Rows[dg_consulta.CurrentRow.Index].Cells[0].Value.ToString());
             if(modifica > 0)
             {
                 MessageBox.Show("Se ha modificado el registro", "Modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -181,6 +181,20 @@ namespace QYMSAS
         {
             exportExcel exc = new exportExcel();
             exc.exportaraexcel(dg_consulta);
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            if (dg_consulta.SelectedRows.Count > 0)
+            {
+                txt_cantidad.Text = dg_consulta.CurrentRow.Cells["cantidad"].Value.ToString();
+                txt_descripcionf.Text = dg_consulta.CurrentRow.Cells["descripcion"].Value.ToString();
+                txt_valor.Text = dg_consulta.CurrentRow.Cells["valor"].Value.ToString();
+                Cbid_maquina.Text = dg_consulta.CurrentRow.Cells["maquinas_id_maquina"].Value.ToString();
+                txt_idFac.Text = dg_consulta.CurrentRow.Cells["facturacion_id_facturacion"].Value.ToString();
+            }
+            else
+                MessageBox.Show("Seleccione una fila");
         }
     }
 }

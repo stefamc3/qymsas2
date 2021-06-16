@@ -67,7 +67,7 @@ namespace QYMSAS
             Int32 tipo = 0;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select tipo, usuario, contraseña from usuarios where (usuario='{0}' and contraseña= md5('{1}') )", usuario, contraseña), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select tipo, usuario, contraseña from usuarios where (usuario='{0}' and contraseña= md5('{1}'))", usuario, contraseña), basededatos.ObtenerConexion());
                 tipo = (Int32)comando.ExecuteScalar();
 
             }
@@ -85,7 +85,7 @@ namespace QYMSAS
             Int32 Id = 0;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select id_us, usuario, contraseña from usuarios where (usuario='{0}' and contraseña= md5('{1}') )", usuario, contraseña), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select id_us, usuario, contraseña from usuarios where (usuario='{0}' and contraseña= md5('{1}'))", usuario, contraseña), basededatos.ObtenerConexion());
                 Id = (int)comando.ExecuteScalar();
 
             }
@@ -318,12 +318,12 @@ namespace QYMSAS
             return TB;
         }
 
-        public static int ModificaDiscriminacion(String descripcion, String iddiscriminacion)
+        public static int ModificaDiscriminacion(String descripcion, String cantidad,String valor,String id_maquina, String id_factura, String iddiscriminacion)
         {
             int registro = 1;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("update discriminacion set descripcion = '{0}' where id_discriminacion='{1}'", descripcion, iddiscriminacion), ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("update discriminacion set descripcion = '{0}', cantidad = '{1}', valor ='{2}',maquinas_id_maquina = '{3}', facturacion_id_facturacion ='{4}' where id_discriminacion='{5}'", descripcion, cantidad, valor, id_maquina, id_factura, iddiscriminacion), ObtenerConexion());
                 registro = comando.ExecuteNonQuery();
             }
             catch (Exception)
@@ -543,6 +543,20 @@ namespace QYMSAS
             try
             {
                 MySqlCommand comando = new MySqlCommand(String.Format("update viaticos set descripcion= '{0}' where id_viaticos ='{1}'", descripcion, id_viaticos), ObtenerConexion());
+                registro = comando.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                registro = 0;
+            }
+            return registro;
+        }
+        public static int ModificaMaquina(String nombre, String id_maquina)
+        {
+            int registro = 1;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("update maquinas set nombre = '{0}' where id_maquina ='{1}'", nombre, id_maquina), ObtenerConexion());
                 registro = comando.ExecuteNonQuery();
             }
             catch (Exception)

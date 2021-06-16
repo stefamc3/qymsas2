@@ -64,10 +64,12 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
             this.dg_consulta = new System.Windows.Forms.DataGridView();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // cbtipo
@@ -159,7 +161,7 @@
             // 
             this.txtNumF.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNumF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumF.Location = new System.Drawing.Point(619, 67);
+            this.txtNumF.Location = new System.Drawing.Point(619, 77);
             this.txtNumF.Name = "txtNumF";
             this.txtNumF.Size = new System.Drawing.Size(145, 26);
             this.txtNumF.TabIndex = 424;
@@ -191,9 +193,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(30, 143);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 18);
+            this.label1.Size = new System.Drawing.Size(81, 18);
             this.label1.TabIndex = 421;
-            this.label1.Text = "Señor: ";
+            this.label1.Text = "Señores: ";
             // 
             // txt_señor
             // 
@@ -222,7 +224,7 @@
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(576, 71);
+            this.label13.Location = new System.Drawing.Point(576, 81);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(37, 18);
             this.label13.TabIndex = 418;
@@ -314,7 +316,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(427, 207);
+            this.label10.Location = new System.Drawing.Point(431, 207);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(57, 18);
             this.label10.TabIndex = 410;
@@ -388,7 +390,7 @@
             this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(554, 46);
+            this.label19.Location = new System.Drawing.Point(554, 56);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(236, 18);
             this.label19.TabIndex = 433;
@@ -444,12 +446,24 @@
             this.dg_consulta.Size = new System.Drawing.Size(730, 306);
             this.dg_consulta.TabIndex = 434;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::QYMSAS.Properties.Resources.editar;
+            this.pictureBox5.Location = new System.Drawing.Point(753, 12);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(38, 37);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 435;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
             // C_egreso_acopio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(803, 687);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.dg_consulta);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.cbtipo);
@@ -492,6 +506,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -530,5 +545,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label19;
         public System.Windows.Forms.DataGridView dg_consulta;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

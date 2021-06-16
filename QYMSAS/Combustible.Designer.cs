@@ -302,9 +302,7 @@
             this.cb_item.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_item.FormattingEnabled = true;
             this.cb_item.Items.AddRange(new object[] {
-            "AF",
-            "COM",
-            "FAC"});
+            "COM"});
             this.cb_item.Location = new System.Drawing.Point(109, 267);
             this.cb_item.Name = "cb_item";
             this.cb_item.Size = new System.Drawing.Size(247, 28);

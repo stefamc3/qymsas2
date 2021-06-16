@@ -105,6 +105,31 @@ namespace QYMSAS
             exportExcel exc = new exportExcel();
             exc.exportaraexcel(dg_consulta);
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            if (dg_consulta.SelectedRows.Count > 0)
+            {
+                txt_nom.Text = dg_consulta.CurrentRow.Cells["nombre"].Value.ToString();              
+            }
+            else
+                MessageBox.Show("Seleccione una fila");
+        }
+
+        private void btn_modificar_Click(object sender, EventArgs e)
+        {
+            int modifica = basededatos.ModificaMaquina(txt_nom.Text, dg_consulta.Rows[dg_consulta.CurrentRow.Index].Cells[0].Value.ToString());
+            if (modifica > 0)
+            {
+                MessageBox.Show("Se ha modificado el registro", "Modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                busqueda();
+                limpia();
+            }
+            else
+            {
+                MessageBox.Show("No ha modificado el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 
 }

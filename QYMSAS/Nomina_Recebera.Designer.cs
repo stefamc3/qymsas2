@@ -41,7 +41,6 @@
             this.dt_fecha = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textNombre = new System.Windows.Forms.TextBox();
             this.textprest = new System.Windows.Forms.TextBox();
             this.textSeg = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -66,6 +65,7 @@
             this.exportar = new System.Windows.Forms.Button();
             this.cbtipo = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
+            this.cb_nombre = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -156,15 +156,6 @@
             this.label4.Size = new System.Drawing.Size(73, 18);
             this.label4.TabIndex = 129;
             this.label4.Text = "Nombre:";
-            // 
-            // textNombre
-            // 
-            this.textNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textNombre.Location = new System.Drawing.Point(153, 186);
-            this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(287, 26);
-            this.textNombre.TabIndex = 135;
             // 
             // textprest
             // 
@@ -423,6 +414,18 @@
             this.Cb_idT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Cb_idT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb_idT.FormattingEnabled = true;
+            this.Cb_idT.Items.AddRange(new object[] {
+            "496960 - JOSE OSCAR RINCON",
+            "496988 - JHON JAIRO QUIROGA CANO",
+            "3102376 - LUIS REY MALDONADO",
+            "3188391 - WILLIAM MENDEZ ",
+            "3196143 - RAFAEL ANTONIO TRIANA",
+            "11340684 - LUIS TEODORO MONTAÑO",
+            "79170698 - JAIRO ENRIQUE CORTES",
+            "80395202 - LUIS ELADIO CASTILLO",
+            "1053332160 - GERMAN DARIO CASTILLO",
+            "1076662357 - PAOLA GAVILAN ",
+            "1076663850 - ANGELA QUIROGA"});
             this.Cb_idT.Location = new System.Drawing.Point(580, 145);
             this.Cb_idT.Name = "Cb_idT";
             this.Cb_idT.Size = new System.Drawing.Size(287, 28);
@@ -465,12 +468,37 @@
             this.label20.TabIndex = 327;
             this.label20.Text = "Tipo:";
             // 
+            // cb_nombre
+            // 
+            this.cb_nombre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_nombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_nombre.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cb_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_nombre.FormattingEnabled = true;
+            this.cb_nombre.Items.AddRange(new object[] {
+            "ANGELA QUIROGA",
+            "GERMAN DARIO CASTILLO",
+            "JAIRO ENRIQUE CORTES",
+            "JOSE OSCAR RINCON",
+            "JHON JAIRO QUIROGA CANO",
+            "LUIS ELADIO CASTILLO",
+            "LUIS REY MALDONADO",
+            "LUIS TEODORO MONTAÑO",
+            "PAOLA GAVILAN ",
+            "RAFAEL ANTONIO TRIANA",
+            "WILLIAM MENDEZ "});
+            this.cb_nombre.Location = new System.Drawing.Point(153, 182);
+            this.cb_nombre.Name = "cb_nombre";
+            this.cb_nombre.Size = new System.Drawing.Size(287, 28);
+            this.cb_nombre.TabIndex = 329;
+            // 
             // Nomina_Recebera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(901, 698);
+            this.Controls.Add(this.cb_nombre);
             this.Controls.Add(this.cbtipo);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.exportar);
@@ -495,7 +523,6 @@
             this.Controls.Add(this.textSeg);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textprest);
-            this.Controls.Add(this.textNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txt_valor);
@@ -530,7 +557,6 @@
         private System.Windows.Forms.DateTimePicker dt_fecha;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.TextBox textprest;
         private System.Windows.Forms.TextBox textSeg;
         private System.Windows.Forms.Label label3;
@@ -555,5 +581,6 @@
         private System.Windows.Forms.Button exportar;
         private System.Windows.Forms.ComboBox cbtipo;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox cb_nombre;
     }
 }

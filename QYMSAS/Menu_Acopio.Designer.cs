@@ -58,7 +58,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(156, 407);
+            this.label4.Location = new System.Drawing.Point(319, 407);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 20);
             this.label4.TabIndex = 47;
@@ -78,7 +78,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(300, 407);
+            this.label5.Location = new System.Drawing.Point(139, 407);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 20);
             this.label5.TabIndex = 135;
@@ -129,7 +129,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::QYMSAS.Properties.Resources.carbon1;
-            this.pictureBox5.Location = new System.Drawing.Point(293, 294);
+            this.pictureBox5.Location = new System.Drawing.Point(132, 294);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(111, 110);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -162,7 +162,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::QYMSAS.Properties.Resources.cheque;
-            this.pictureBox4.Location = new System.Drawing.Point(135, 294);
+            this.pictureBox4.Location = new System.Drawing.Point(298, 294);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(111, 110);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

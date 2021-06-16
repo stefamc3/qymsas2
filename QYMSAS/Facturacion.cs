@@ -123,7 +123,7 @@ namespace QYMSAS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int modifica = basededatos.ModificaDiscriminacion(txt_descripcionf.Text, dg_consulta.Rows[dg_consulta.CurrentRow.Index].Cells[0].Value.ToString());
+            int modifica = basededatos.ModificaDiscriminacion(txt_descripcionf.Text, txt_cantidad.Text, txt_valor.Text, Cbid_maquina.Text, txt_idFac.Text, dg_consulta.Rows[dg_consulta.CurrentRow.Index].Cells[0].Value.ToString());
             if (modifica > 0)
             {
                 MessageBox.Show("Se ha modificado el registro", "Modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);

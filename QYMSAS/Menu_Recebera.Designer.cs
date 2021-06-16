@@ -58,7 +58,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(226, 233);
+            this.label3.Location = new System.Drawing.Point(138, 400);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 20);
             this.label3.TabIndex = 35;
@@ -68,7 +68,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(344, 400);
+            this.label4.Location = new System.Drawing.Point(341, 400);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 20);
             this.label4.TabIndex = 43;
@@ -77,7 +77,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::QYMSAS.Properties.Resources.cheque;
-            this.pictureBox4.Location = new System.Drawing.Point(320, 287);
+            this.pictureBox4.Location = new System.Drawing.Point(317, 287);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(111, 110);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -88,7 +88,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::QYMSAS.Properties.Resources.analisis;
-            this.pictureBox3.Location = new System.Drawing.Point(386, 120);
+            this.pictureBox3.Location = new System.Drawing.Point(229, 120);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(111, 110);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -121,7 +121,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::QYMSAS.Properties.Resources.factura;
-            this.pictureBox2.Location = new System.Drawing.Point(221, 120);
+            this.pictureBox2.Location = new System.Drawing.Point(133, 287);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(111, 110);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -153,7 +153,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::QYMSAS.Properties.Resources.cuenta;
-            this.pictureBox7.Location = new System.Drawing.Point(131, 287);
+            this.pictureBox7.Location = new System.Drawing.Point(393, 120);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(111, 110);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -165,7 +165,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(121, 400);
+            this.label7.Location = new System.Drawing.Point(383, 233);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(127, 40);
             this.label7.TabIndex = 142;
@@ -175,7 +175,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(392, 233);
+            this.label8.Location = new System.Drawing.Point(235, 233);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(96, 40);
             this.label8.TabIndex = 144;

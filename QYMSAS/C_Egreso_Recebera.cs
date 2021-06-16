@@ -70,7 +70,7 @@ namespace QYMSAS
               //  string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
                 String tipo = Convert.ToString(cbtipo.SelectedItem);
-                string Query = "INSERT INTO egreso (fecha,Num_comprobante,señores,telefono,direccion,ciudad,descripcion,valor,tipo) values('" + fecha + "','" + this.txtNumF.Text + "','" + this.txt_señor.Text + "','" + this.txt_direccion.Text + "','" + this.txt_ciudad.Text + "','" + this.txt_telefono.Text + "','" + this.txt_descripcion.Text + "','" + this.txt_valor.Text + "','" + tipo + "');";
+                string Query = "INSERT INTO egreso (fecha,Num_comprobante,señores,telefono,direccion,ciudad,descripcion,valor,tipo) values('" + fecha + "','" + this.txtNumF.Text + "','" + this.txt_señor.Text + "','" + this.txt_telefono.Text + "','" + this.txt_direccion.Text + "','" + this.txt_ciudad.Text + "','" + this.txt_descripcion.Text + "','" + this.txt_valor.Text + "','" + tipo + "');";
              //   MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;

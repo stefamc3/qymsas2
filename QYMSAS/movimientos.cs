@@ -40,7 +40,8 @@ namespace QYMSAS
             dg_consulta.Columns[3].HeaderText = "N° TRASLADOS";
             dg_consulta.Columns[4].HeaderText = "TONELADA";
             dg_consulta.Columns[5].HeaderText = "PRECIO TONELADA";
-            dg_consulta.Columns[6].HeaderText = "ID MAQUINA";
+            dg_consulta.Columns[6].HeaderText = "PRECIO TOTAL";
+            dg_consulta.Columns[7].HeaderText = "ID MAQUINA";
         }
 
         private void bt_nuevo_Click(object sender, EventArgs e)
