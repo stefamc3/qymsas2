@@ -123,7 +123,7 @@ namespace QYMSAS
             {
                 MessageBox.Show("Se ha modificado el registro", "Modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 busqueda();
-                limpia();
+                //limpia();
             }
             else
             {
