@@ -33,12 +33,28 @@ namespace QYMSAS
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-
+            this.Dispose();
+            estadisticas repo = new estadisticas(iduss);
+            repo.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            this.Dispose();
+            CrearUsuario repo = new CrearUsuario(iduss);
+            repo.Show();
+        }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            Login repo = new Login();
+            repo.Show();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

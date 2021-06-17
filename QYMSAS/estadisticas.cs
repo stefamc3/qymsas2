@@ -52,9 +52,19 @@ namespace QYMSAS
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            Selección men = new Selección(iduss);
-            men.Show();
+            int id = basededatos.ObtenerTipoUS(iduss);
+            if (id == 1)
+            {
+                this.Dispose();
+                Selección sel = new Selección(iduss);
+                sel.Show();
+            }
+            else if (id == 3)
+            {
+                this.Dispose();
+                Menu_Gerente men = new Menu_Gerente(iduss);
+                men.Show();
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
