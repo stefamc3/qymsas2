@@ -95,7 +95,22 @@ namespace QYMSAS
             }
             return Id;
         }
+        public static Int32 ObtenerTipoUS(int idusuario)
+        {
 
+            Int32 Id = 0;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("select tipo from usuarios where id_us='{0}'", idusuario), basededatos.ObtenerConexion());
+                Id = (int)comando.ExecuteScalar();
+
+            }
+            catch (Exception)
+            {
+                Id = 0;
+            }
+            return Id;
+        }
 
         public static int RegistrarUsuario(String nombre, String apellido, String usuario, String contraseña, String email, String tipo, String idTrabajador)
         {

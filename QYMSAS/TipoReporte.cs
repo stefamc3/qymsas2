@@ -37,9 +37,19 @@ namespace QYMSAS
 
         private void pictureBox10_Click_1(object sender, EventArgs e)
         {
+            int id = basededatos.ObtenerTipoUS(iduss);
+            if (id == 1)
+            {
             this.Dispose();
             Selección sel = new Selección(iduss);
             sel.Show();
+            }else if (id == 3)
+            {
+                this.Dispose();
+                Menu_Gerente men = new Menu_Gerente(iduss);
+                men.Show();
+            }
+                
         }
 
         private void pictureBox4_Click_1(object sender, EventArgs e)
