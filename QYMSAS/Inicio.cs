@@ -26,7 +26,7 @@ namespace QYMSAS
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            timer1.Interval = 40;
+            timer1.Interval = 18;
             progressBar1.Minimum = 0;
             progressBar1.Maximum = 100;
             label2.Text = "Cargando el sistema al " + progressBar1.Value + " %";

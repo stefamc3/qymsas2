@@ -23,7 +23,7 @@ namespace QYMSAS
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
             }
             return conectar;
         }
@@ -47,7 +47,7 @@ namespace QYMSAS
             String status = "0";
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select estado, usuario, contraseña from usuarios where (usuario='{0}' and contraseña= sha1(md5('{1}')) )", usuario, contraseña), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select estado, usuario, contraseña from usuarios where (usuario='{0}' and contraseña= sha2('{1}',256) )", usuario, contraseña), basededatos.ObtenerConexion());
                 MySqlDataReader leer = comando.ExecuteReader();
                 while (leer.Read())
                 {
@@ -67,13 +67,13 @@ namespace QYMSAS
             Int32 tipo = 0;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select tipo, usuario, contraseña from usuarios where (usuario='{0}' and contraseña= sha1(md5('{1}')))", usuario, contraseña), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select tipo, usuario, contraseña from usuarios where (usuario='{0}' and contraseña= sha2('{1}',256))", usuario, contraseña), basededatos.ObtenerConexion());
                 tipo = (Int32)comando.ExecuteScalar();
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
                 tipo = 3;
             }
             return tipo;
@@ -85,7 +85,7 @@ namespace QYMSAS
             Int32 Id = 0;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("select id_us, usuario, contraseña from usuarios where (usuario='{0}' and contraseña= sha1(md5('{1}')))", usuario, contraseña), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("select id_us, usuario, contraseña from usuarios where (usuario='{0}' and contraseña= sha2('{1}',256))", usuario, contraseña), basededatos.ObtenerConexion());
                 Id = (int)comando.ExecuteScalar();
 
             }
@@ -103,7 +103,7 @@ namespace QYMSAS
             try
             {
                 String estado = "Habilitado";
-                MySqlCommand comando = new MySqlCommand(String.Format("insert into usuarios(nombre,apellido,usuario,contraseña,email,tipo,estado,usuarios_id_trabajador) values ('{0}','{1}','{2}',sha1(md5('{3}')),'{4}','{5}','{6}','{7}')", nombre, apellido, usuario, contraseña,email,tipo,estado,idTrabajador), basededatos.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("insert into usuarios(nombre,apellido,usuario,contraseña,email,tipo,estado,usuarios_id_trabajador) values ('{0}','{1}','{2}',sha2('{3}',256),'{4}','{5}','{6}','{7}')", nombre, apellido, usuario, contraseña,email,tipo,estado,idTrabajador), basededatos.ObtenerConexion());
                 registro = comando.ExecuteNonQuery();
             }
             catch
@@ -119,7 +119,7 @@ namespace QYMSAS
             int registro = 1;
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("update usuarios set contraseña = sha1(md5('{0}')) where usuario='{1}'", contraseña, usuario), ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("update usuarios set contraseña = sha2('{0}',256) where usuario='{1}'", contraseña, usuario), ObtenerConexion());
                 registro = comando.ExecuteNonQuery();
             }
             catch (Exception)

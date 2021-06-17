@@ -24,5 +24,21 @@ namespace QYMSAS
             Lus.Text = basededatos.ConsultanombresUsuario(iduss);
         }
 
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            TipoReporte repo = new TipoReporte(iduss);
+            repo.Show();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
