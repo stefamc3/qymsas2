@@ -34,6 +34,8 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txt_año = new System.Windows.Forms.TextBox();
+            this.bt_nuevo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -74,12 +76,36 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // txt_año
+            // 
+            this.txt_año.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_año.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_año.Location = new System.Drawing.Point(126, 378);
+            this.txt_año.Name = "txt_año";
+            this.txt_año.Size = new System.Drawing.Size(305, 26);
+            this.txt_año.TabIndex = 225;
+            // 
+            // bt_nuevo
+            // 
+            this.bt_nuevo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bt_nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.bt_nuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_nuevo.Location = new System.Drawing.Point(455, 378);
+            this.bt_nuevo.Name = "bt_nuevo";
+            this.bt_nuevo.Size = new System.Drawing.Size(98, 36);
+            this.bt_nuevo.TabIndex = 226;
+            this.bt_nuevo.Text = "Nuevo";
+            this.bt_nuevo.UseVisualStyleBackColor = false;
+            this.bt_nuevo.Click += new System.EventHandler(this.bt_nuevo_Click);
+            // 
             // estadisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(609, 460);
+            this.Controls.Add(this.bt_nuevo);
+            this.Controls.Add(this.txt_año);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.chart1);
@@ -94,6 +120,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -102,5 +129,7 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox txt_año;
+        private System.Windows.Forms.Button bt_nuevo;
     }
 }
