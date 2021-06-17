@@ -248,6 +248,7 @@
             this.txtfac.Name = "txtfac";
             this.txtfac.Size = new System.Drawing.Size(186, 26);
             this.txtfac.TabIndex = 1;
+            this.txtfac.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label10
             // 
@@ -268,6 +269,7 @@
             this.txtmetros.Name = "txtmetros";
             this.txtmetros.Size = new System.Drawing.Size(305, 26);
             this.txtmetros.TabIndex = 7;
+            this.txtmetros.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label2
             // 
@@ -571,6 +573,7 @@
             this.txtvaloru.Name = "txtvaloru";
             this.txtvaloru.Size = new System.Drawing.Size(305, 26);
             this.txtvaloru.TabIndex = 8;
+            this.txtvaloru.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             this.txtvaloru.Leave += new System.EventHandler(this.txtvaloru_Leave);
             // 
             // pictureBox5
@@ -592,6 +595,7 @@
             this.txtnit.Name = "txtnit";
             this.txtnit.Size = new System.Drawing.Size(306, 26);
             this.txtnit.TabIndex = 4;
+            this.txtnit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label13
             // 
@@ -623,6 +627,7 @@
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(306, 26);
             this.txttelefono.TabIndex = 5;
+            this.txttelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label18
             // 
