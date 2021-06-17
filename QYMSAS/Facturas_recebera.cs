@@ -42,6 +42,7 @@ namespace QYMSAS
         private void Facturas_recebera_Load(object sender, EventArgs e)
         {
             busqueda();
+            busqueda2();
         }
         private void busqueda()
         {
@@ -72,7 +73,17 @@ namespace QYMSAS
             dg_consulta.Columns[17].HeaderText = "TIPO";
             dg_consulta.Columns[18].HeaderText = "TIPO DE FACTURA";
             dg_consulta.Columns[19].HeaderText = "ID";
+        }
 
+        private void busqueda2()
+        {
+            String busqueda = "SELECT * FROM facturacion WHERE tipo='RECEBERA' and Apartado = 'VENTA';";
+            MySqlCommand comando = new MySqlCommand(busqueda, basededatos.ObtenerConexion());
+            MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+            MyAdapter.SelectCommand = comando;
+            DataTable dTable = new DataTable();
+            MyAdapter.Fill(dTable);
+            dg_siigo.DataSource = dTable; 
         }
         private void Bt_Ingresar_Click(object sender, EventArgs e)
         {
@@ -167,6 +178,47 @@ namespace QYMSAS
             {
                 MessageBox.Show("No ha modificado el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void txtvaloru_Leave(object sender, EventArgs e)
+        {
+            txtsubt.Text = Convert.ToString(Convert.ToDecimal(txtmetros.Text) * Convert.ToDecimal(txtvaloru.Text));
+        }
+
+        private void txtivap_DragLeave(object sender, EventArgs e)
+        {
+            txtiva.Text = Convert.ToString(Convert.ToDecimal(txtsubt.Text) * Convert.ToDecimal(txtivap.Text));
+
+        }
+
+        private void txtretefp_DragLeave(object sender, EventArgs e)
+        {
+            txtretef.Text = Convert.ToString(Convert.ToDecimal(txtsubt.Text) * Convert.ToDecimal(txtretefp.Text));
+
+        }
+
+        private void txtretef_DragLeave(object sender, EventArgs e)
+        {
+            txtneto.Text = Convert.ToString(Convert.ToDecimal(txtsubt.Text) - Convert.ToDecimal(txtretefp.Text) + Convert.ToDecimal(txtiva.Text));
+
+        }
+
+        private void txtretefp_Leave(object sender, EventArgs e)
+        {
+            txtretef.Text = Convert.ToString(Convert.ToDecimal(txtsubt.Text) * Convert.ToDecimal(txtretefp.Text));
+
+        }
+
+        private void txtivap_Leave(object sender, EventArgs e)
+        {
+            txtiva.Text = Convert.ToString(Convert.ToDecimal(txtsubt.Text) * Convert.ToDecimal(txtivap.Text));
+
+        }
+
+        private void txtretef_Leave(object sender, EventArgs e)
+        {
+            txtneto.Text = Convert.ToString(Convert.ToDecimal(txtsubt.Text) - Convert.ToDecimal(txtretefp.Text) + Convert.ToDecimal(txtiva.Text));
+
         }
     }
 }

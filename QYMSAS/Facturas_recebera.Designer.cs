@@ -32,6 +32,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Facturas_recebera));
             this.btn_exportar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
@@ -89,6 +93,7 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.txt_idR = new System.Windows.Forms.TextBox();
+            this.dg_siigo = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -98,6 +103,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_siigo)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_exportar
@@ -106,9 +112,9 @@
             this.btn_exportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_exportar.Location = new System.Drawing.Point(617, 368);
             this.btn_exportar.Name = "btn_exportar";
-            this.btn_exportar.Size = new System.Drawing.Size(107, 36);
-            this.btn_exportar.TabIndex = 237;
-            this.btn_exportar.Text = "Exportar";
+            this.btn_exportar.Size = new System.Drawing.Size(152, 36);
+            this.btn_exportar.TabIndex = 21;
+            this.btn_exportar.Text = "Exportar Siigo";
             this.btn_exportar.UseVisualStyleBackColor = false;
             this.btn_exportar.Click += new System.EventHandler(this.btn_exportar_Click);
             // 
@@ -119,7 +125,7 @@
             this.btn_modificar.Location = new System.Drawing.Point(506, 368);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(105, 36);
-            this.btn_modificar.TabIndex = 236;
+            this.btn_modificar.TabIndex = 20;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = false;
             this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
@@ -158,7 +164,7 @@
             this.bt_eliminar.Location = new System.Drawing.Point(402, 368);
             this.bt_eliminar.Name = "bt_eliminar";
             this.bt_eliminar.Size = new System.Drawing.Size(98, 36);
-            this.bt_eliminar.TabIndex = 232;
+            this.bt_eliminar.TabIndex = 18;
             this.bt_eliminar.Text = "Eliminar";
             this.bt_eliminar.UseVisualStyleBackColor = false;
             this.bt_eliminar.Click += new System.EventHandler(this.bt_eliminar_Click);
@@ -241,7 +247,7 @@
             this.txtfac.Location = new System.Drawing.Point(558, 101);
             this.txtfac.Name = "txtfac";
             this.txtfac.Size = new System.Drawing.Size(186, 26);
-            this.txtfac.TabIndex = 227;
+            this.txtfac.TabIndex = 1;
             // 
             // label10
             // 
@@ -261,7 +267,7 @@
             this.txtmetros.Location = new System.Drawing.Point(558, 197);
             this.txtmetros.Name = "txtmetros";
             this.txtmetros.Size = new System.Drawing.Size(305, 26);
-            this.txtmetros.TabIndex = 223;
+            this.txtmetros.TabIndex = 7;
             // 
             // label2
             // 
@@ -281,7 +287,7 @@
             this.txtmaterial.Location = new System.Drawing.Point(134, 197);
             this.txtmaterial.Name = "txtmaterial";
             this.txtmaterial.Size = new System.Drawing.Size(305, 26);
-            this.txtmaterial.TabIndex = 224;
+            this.txtmaterial.TabIndex = 6;
             // 
             // bt_nuevo
             // 
@@ -291,7 +297,7 @@
             this.bt_nuevo.Location = new System.Drawing.Point(194, 368);
             this.bt_nuevo.Name = "bt_nuevo";
             this.bt_nuevo.Size = new System.Drawing.Size(98, 36);
-            this.bt_nuevo.TabIndex = 219;
+            this.bt_nuevo.TabIndex = 19;
             this.bt_nuevo.Text = "Nuevo";
             this.bt_nuevo.UseVisualStyleBackColor = false;
             this.bt_nuevo.Click += new System.EventHandler(this.bt_nuevo_Click);
@@ -304,7 +310,7 @@
             this.Bt_Ingresar.Location = new System.Drawing.Point(298, 368);
             this.Bt_Ingresar.Name = "Bt_Ingresar";
             this.Bt_Ingresar.Size = new System.Drawing.Size(98, 36);
-            this.Bt_Ingresar.TabIndex = 218;
+            this.Bt_Ingresar.TabIndex = 16;
             this.Bt_Ingresar.Text = "Ingresar";
             this.Bt_Ingresar.UseVisualStyleBackColor = false;
             this.Bt_Ingresar.Click += new System.EventHandler(this.Bt_Ingresar_Click);
@@ -317,7 +323,7 @@
             this.dt_fecha.Location = new System.Drawing.Point(134, 101);
             this.dt_fecha.Name = "dt_fecha";
             this.dt_fecha.Size = new System.Drawing.Size(305, 26);
-            this.dt_fecha.TabIndex = 217;
+            this.dt_fecha.TabIndex = 0;
             // 
             // label7
             // 
@@ -338,7 +344,7 @@
             this.txtdestino.Location = new System.Drawing.Point(134, 133);
             this.txtdestino.Name = "txtdestino";
             this.txtdestino.Size = new System.Drawing.Size(305, 26);
-            this.txtdestino.TabIndex = 240;
+            this.txtdestino.TabIndex = 2;
             // 
             // txtretef
             // 
@@ -347,7 +353,9 @@
             this.txtretef.Location = new System.Drawing.Point(618, 269);
             this.txtretef.Name = "txtretef";
             this.txtretef.Size = new System.Drawing.Size(245, 26);
-            this.txtretef.TabIndex = 248;
+            this.txtretef.TabIndex = 11;
+            this.txtretef.DragLeave += new System.EventHandler(this.txtretef_DragLeave);
+            this.txtretef.Leave += new System.EventHandler(this.txtretef_Leave);
             // 
             // label6
             // 
@@ -367,7 +375,7 @@
             this.txtsubt.Location = new System.Drawing.Point(558, 234);
             this.txtsubt.Name = "txtsubt";
             this.txtsubt.Size = new System.Drawing.Size(305, 26);
-            this.txtsubt.TabIndex = 245;
+            this.txtsubt.TabIndex = 9;
             // 
             // label11
             // 
@@ -398,7 +406,7 @@
             this.txtneto.Location = new System.Drawing.Point(134, 301);
             this.txtneto.Name = "txtneto";
             this.txtneto.Size = new System.Drawing.Size(305, 26);
-            this.txtneto.TabIndex = 249;
+            this.txtneto.TabIndex = 12;
             // 
             // Cbid_estadof
             // 
@@ -413,7 +421,7 @@
             this.Cbid_estadof.Location = new System.Drawing.Point(558, 299);
             this.Cbid_estadof.Name = "Cbid_estadof";
             this.Cbid_estadof.Size = new System.Drawing.Size(305, 28);
-            this.Cbid_estadof.TabIndex = 252;
+            this.Cbid_estadof.TabIndex = 13;
             // 
             // pictureBox3
             // 
@@ -455,6 +463,8 @@
             this.txtretefp.Name = "txtretefp";
             this.txtretefp.Size = new System.Drawing.Size(38, 26);
             this.txtretefp.TabIndex = 259;
+            this.txtretefp.DragLeave += new System.EventHandler(this.txtretefp_DragLeave);
+            this.txtretefp.Leave += new System.EventHandler(this.txtretefp_Leave);
             // 
             // label15
             // 
@@ -508,6 +518,8 @@
             this.txtivap.Name = "txtivap";
             this.txtivap.Size = new System.Drawing.Size(38, 26);
             this.txtivap.TabIndex = 268;
+            this.txtivap.DragLeave += new System.EventHandler(this.txtivap_DragLeave);
+            this.txtivap.Leave += new System.EventHandler(this.txtivap_Leave);
             // 
             // label14
             // 
@@ -527,7 +539,7 @@
             this.txtiva.Location = new System.Drawing.Point(194, 269);
             this.txtiva.Name = "txtiva";
             this.txtiva.Size = new System.Drawing.Size(245, 26);
-            this.txtiva.TabIndex = 266;
+            this.txtiva.TabIndex = 10;
             // 
             // label9
             // 
@@ -558,7 +570,8 @@
             this.txtvaloru.Location = new System.Drawing.Point(134, 234);
             this.txtvaloru.Name = "txtvaloru";
             this.txtvaloru.Size = new System.Drawing.Size(305, 26);
-            this.txtvaloru.TabIndex = 270;
+            this.txtvaloru.TabIndex = 8;
+            this.txtvaloru.Leave += new System.EventHandler(this.txtvaloru_Leave);
             // 
             // pictureBox5
             // 
@@ -578,7 +591,7 @@
             this.txtnit.Location = new System.Drawing.Point(558, 133);
             this.txtnit.Name = "txtnit";
             this.txtnit.Size = new System.Drawing.Size(306, 26);
-            this.txtnit.TabIndex = 274;
+            this.txtnit.TabIndex = 4;
             // 
             // label13
             // 
@@ -609,7 +622,7 @@
             this.txttelefono.Location = new System.Drawing.Point(558, 165);
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(306, 26);
-            this.txttelefono.TabIndex = 278;
+            this.txttelefono.TabIndex = 5;
             // 
             // label18
             // 
@@ -677,7 +690,7 @@
             this.cbtipo.Location = new System.Drawing.Point(134, 334);
             this.cbtipo.Name = "cbtipo";
             this.cbtipo.Size = new System.Drawing.Size(305, 28);
-            this.cbtipo.TabIndex = 326;
+            this.cbtipo.TabIndex = 14;
             // 
             // label20
             // 
@@ -733,7 +746,56 @@
             this.txt_idR.Location = new System.Drawing.Point(558, 336);
             this.txt_idR.Name = "txt_idR";
             this.txt_idR.Size = new System.Drawing.Size(305, 26);
-            this.txt_idR.TabIndex = 329;
+            this.txt_idR.TabIndex = 15;
+            // 
+            // dg_siigo
+            // 
+            this.dg_siigo.AllowUserToAddRows = false;
+            this.dg_siigo.AllowUserToDeleteRows = false;
+            this.dg_siigo.AllowUserToOrderColumns = true;
+            this.dg_siigo.AllowUserToResizeColumns = false;
+            this.dg_siigo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dg_siigo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dg_siigo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dg_siigo.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dg_siigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_siigo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dg_siigo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_siigo.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dg_siigo.EnableHeadersVisualStyles = false;
+            this.dg_siigo.Location = new System.Drawing.Point(28, 12);
+            this.dg_siigo.Name = "dg_siigo";
+            this.dg_siigo.ReadOnly = true;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_siigo.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dg_siigo.RowHeadersVisible = false;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dg_siigo.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dg_siigo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dg_siigo.Size = new System.Drawing.Size(835, 94);
+            this.dg_siigo.TabIndex = 331;
             // 
             // Facturas_recebera
             // 
@@ -741,6 +803,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(884, 698);
+            this.Controls.Add(this.dg_siigo);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.txt_idR);
             this.Controls.Add(this.cbApartado);
@@ -813,6 +876,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_siigo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -876,5 +940,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txt_idR;
+        public System.Windows.Forms.DataGridView dg_siigo;
     }
 }
