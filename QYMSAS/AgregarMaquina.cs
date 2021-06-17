@@ -35,6 +35,7 @@ namespace QYMSAS
             dg_consulta.DataSource = dTable;
             dg_consulta.Columns[0].HeaderText = "ID MAQUINA";
             dg_consulta.Columns[1].HeaderText = "MAQUINA";
+            dg_consulta.Columns[2].HeaderText = "TARGETA DE PROPIEDAD";
         }
 
         private void bt_nuevo_Click(object sender, EventArgs e)
@@ -47,18 +48,18 @@ namespace QYMSAS
         {
             try
             {
-                string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
-                string Query = "INSERT INTO maquinas (nombre) values('" + this.txt_nom.Text + "');";
-                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+               // string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
+                string Query = "INSERT INTO maquinas (nombre,Tarjeta_propiedad) values('" + this.txt_nom.Text + "', '" + this.txt_tarjeta.Text + "');";
+              //  MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;
-                MyConn2.Open();
+              //  MyConn2.Open();
                 MyReader2 = MyCommand2.ExecuteReader();
                 MessageBox.Show("Se guardado el registro", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 while (MyReader2.Read())
                 {
                 }
-                MyConn2.Close();
+              //  MyConn2.Close();
                 busqueda();
             }
             catch (Exception ex)
@@ -110,7 +111,8 @@ namespace QYMSAS
         {
             if (dg_consulta.SelectedRows.Count > 0)
             {
-                txt_nom.Text = dg_consulta.CurrentRow.Cells["nombre"].Value.ToString();              
+                txt_nom.Text = dg_consulta.CurrentRow.Cells["nombre"].Value.ToString();
+                txt_tarjeta.Text = dg_consulta.CurrentRow.Cells["Tarjeta_propiedad"].Value.ToString();
             }
             else
                 MessageBox.Show("Seleccione una fila");
@@ -123,7 +125,7 @@ namespace QYMSAS
             {
                 MessageBox.Show("Se ha modificado el registro", "Modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 busqueda();
-                limpia();
+                //limpia();
             }
             else
             {

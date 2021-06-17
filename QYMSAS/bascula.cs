@@ -35,5 +35,17 @@ namespace QYMSAS
             Login log = new Login();
             log.Show();
         }
+
+        private void bascula_Load(object sender, EventArgs e)
+        {
+            Lus.Text = basededatos.ConsultanombresUsuario(iduss);
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            Cambiar_contraseña_bascula log = new Cambiar_contraseña_bascula(iduss);
+            log.Show();
+        }
     }
 }

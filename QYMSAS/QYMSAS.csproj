@@ -162,6 +162,12 @@
     <Compile Include="CambiarContraseña.Designer.cs">
       <DependentUpon>CambiarContraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cambiar_contraseña_bascula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cambiar_contraseña_bascula.Designer.cs">
+      <DependentUpon>Cambiar_contraseña_bascula.cs</DependentUpon>
+    </Compile>
     <Compile Include="Combustible.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -454,6 +460,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CambiarContraseña.resx">
       <DependentUpon>CambiarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cambiar_contraseña_bascula.resx">
+      <DependentUpon>Cambiar_contraseña_bascula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Combustible.resx">
       <DependentUpon>Combustible.cs</DependentUpon>
@@ -773,6 +782,7 @@
     <None Include="Resources\logo.PNG" />
     <None Include="Resources\generar reporte boton.png" />
     <None Include="Resources\editar.png" />
+    <None Include="Resources\cerrar-sesion.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

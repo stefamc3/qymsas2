@@ -49,14 +49,28 @@ namespace QYMSAS
         private void Bt_Ingresar_Click(object sender, EventArgs e)
         {
             int modifica = basededatos.ModificaContraseña(txt_contraseña.Text, dg_consulta.Rows[dg_consulta.CurrentRow.Index].Cells[0].Value.ToString());
-            if (modifica > 0)
+            if (txt_contraseña.Text.Length >= 5)
             {
-                MessageBox.Show("Se ha modificado el registro", "Modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+                if (txt_contraseña.Text == txt_confirma.Text)
+                {
+                    if (modifica > 0)
+                    {
+                        MessageBox.Show("Se ha modificado el registro", "Modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No ha modificado el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("La contraseñas no coinciden", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {
-                MessageBox.Show("No ha modificado el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("La contraseña debe ser mayor a 5 caracteres", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -70,6 +84,19 @@ namespace QYMSAS
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String id = dg_consulta.Rows[dg_consulta.CurrentRow.Index].Cells[0].Value.ToString();
+            if (MessageBox.Show("¿Realmente Desea Eliminar el registro '" + id + "' ?", "Eliminar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                string Borrar = "delete from usuarios where id_us = '" + id + "';";
+                MySqlCommand ComandBorrar = new MySqlCommand(Borrar, basededatos.ObtenerConexion());
+                ComandBorrar.ExecuteReader();
+                busqueda();
+                
+            }
         }
     }
 }

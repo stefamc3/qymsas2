@@ -93,5 +93,12 @@ namespace QYMSAS
             Notifica noti = new Notifica();
             noti.Show();
         }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            Login log = new Login();
+            log.Show();
+        }
     }
 }

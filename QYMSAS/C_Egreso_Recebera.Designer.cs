@@ -64,10 +64,12 @@
             this.cbtipo = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.dg_consulta = new System.Windows.Forms.DataGridView();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // exportar
@@ -230,7 +232,7 @@
             this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(549, 42);
+            this.label19.Location = new System.Drawing.Point(549, 57);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(236, 18);
             this.label19.TabIndex = 374;
@@ -255,7 +257,7 @@
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(580, 73);
+            this.label13.Location = new System.Drawing.Point(580, 88);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(37, 18);
             this.label13.TabIndex = 371;
@@ -305,7 +307,7 @@
             // 
             this.txtNumF.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNumF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumF.Location = new System.Drawing.Point(623, 73);
+            this.txtNumF.Location = new System.Drawing.Point(623, 88);
             this.txtNumF.Name = "txtNumF";
             this.txtNumF.Size = new System.Drawing.Size(145, 26);
             this.txtNumF.TabIndex = 379;
@@ -444,12 +446,24 @@
             this.dg_consulta.Size = new System.Drawing.Size(730, 295);
             this.dg_consulta.TabIndex = 403;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::QYMSAS.Properties.Resources.editar;
+            this.pictureBox5.Location = new System.Drawing.Point(753, 12);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(38, 37);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 436;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
             // C_Egreso_Recebera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(803, 687);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.dg_consulta);
             this.Controls.Add(this.cbtipo);
             this.Controls.Add(this.label20);
@@ -492,6 +506,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -530,5 +545,6 @@
         private System.Windows.Forms.ComboBox cbtipo;
         private System.Windows.Forms.Label label20;
         public System.Windows.Forms.DataGridView dg_consulta;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

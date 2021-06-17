@@ -142,5 +142,22 @@ namespace QYMSAS
                 MessageBox.Show("No ha modificado el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            if (dg_consulta.SelectedRows.Count > 0)
+            {
+                txtNumF.Text = dg_consulta.CurrentRow.Cells["Num_comprobante"].Value.ToString();
+                txt_señor.Text = dg_consulta.CurrentRow.Cells["señores"].Value.ToString();
+                txt_valor.Text = dg_consulta.CurrentRow.Cells["valor"].Value.ToString();
+                txt_telefono.Text = dg_consulta.CurrentRow.Cells["telefono"].Value.ToString();
+                txt_direccion.Text = dg_consulta.CurrentRow.Cells["direccion"].Value.ToString();
+                txt_ciudad.Text = dg_consulta.CurrentRow.Cells["ciudad"].Value.ToString();
+                txt_descripcion.Text = dg_consulta.CurrentRow.Cells["descripcion"].Value.ToString();
+
+            }
+            else
+                MessageBox.Show("Seleccione una fila");
+        }
     }
 }

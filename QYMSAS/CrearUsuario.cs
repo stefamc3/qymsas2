@@ -32,14 +32,29 @@ namespace QYMSAS
             try
             {
                 int status = basededatos.RegistrarUsuario(txt_nombre.Text, txt_apellido.Text, txt_usuario.Text, txt_contraseña.Text,txt_email.Text,cb_tipo.Text,txt_idus.Text);
-                if (status == 1)
+                if (txt_contraseña.Text.Length >= 5)
                 {
-                    MessageBox.Show("Se ha ingresado el usuario correctamente");
+                    if (txt_contraseña.Text == txt_confirma.Text)
+                    {
+                        if (status == 1)
+                        {
+                            MessageBox.Show("Se ha ingresado el usuario correctamente");
+                        }
+                        else if (status == 0)
+                        {
+                            MessageBox.Show("Error al ingresar el usuario");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("La contraseñas no coinciden", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-                else if (status == 0)
+                else
                 {
-                    MessageBox.Show("Error al ingresar el usuario");
+                    MessageBox.Show("La contraseña debe ser mayor a 5 caracteres", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                
             }
             catch (Exception ex)
             {

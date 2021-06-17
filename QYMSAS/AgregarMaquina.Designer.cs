@@ -47,6 +47,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.exportar = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_tarjeta = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -202,7 +204,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(193, 156);
+            this.label2.Location = new System.Drawing.Point(47, 158);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 18);
             this.label2.TabIndex = 144;
@@ -212,15 +214,15 @@
             // 
             this.txt_nom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nom.Location = new System.Drawing.Point(277, 151);
+            this.txt_nom.Location = new System.Drawing.Point(131, 153);
             this.txt_nom.Name = "txt_nom";
-            this.txt_nom.Size = new System.Drawing.Size(336, 26);
+            this.txt_nom.Size = new System.Drawing.Size(267, 26);
             this.txt_nom.TabIndex = 141;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::QYMSAS.Properties.Resources.excavadora;
-            this.pictureBox1.Location = new System.Drawing.Point(332, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(360, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(135, 125);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -250,12 +252,34 @@
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(404, 141);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 36);
+            this.label1.TabIndex = 406;
+            this.label1.Text = "Tarjeta de \r\nPropiedad:";
+            // 
+            // txt_tarjeta
+            // 
+            this.txt_tarjeta.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_tarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_tarjeta.Location = new System.Drawing.Point(498, 154);
+            this.txt_tarjeta.Name = "txt_tarjeta";
+            this.txt_tarjeta.Size = new System.Drawing.Size(272, 26);
+            this.txt_tarjeta.TabIndex = 405;
+            // 
             // AgregarMaquina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(803, 698);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txt_tarjeta);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.exportar);
             this.Controls.Add(this.bt_eliminar);
@@ -303,5 +327,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button exportar;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_tarjeta;
     }
 }
