@@ -779,7 +779,7 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dg_siigo.DefaultCellStyle = dataGridViewCellStyle6;
             this.dg_siigo.EnableHeadersVisualStyles = false;
-            this.dg_siigo.Location = new System.Drawing.Point(28, 12);
+            this.dg_siigo.Location = new System.Drawing.Point(154, 12);
             this.dg_siigo.Name = "dg_siigo";
             this.dg_siigo.ReadOnly = true;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -794,8 +794,9 @@
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dg_siigo.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dg_siigo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_siigo.Size = new System.Drawing.Size(835, 94);
+            this.dg_siigo.Size = new System.Drawing.Size(54, 39);
             this.dg_siigo.TabIndex = 331;
+            this.dg_siigo.Visible = false;
             // 
             // Facturas_recebera
             // 
@@ -803,7 +804,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(884, 698);
-            this.Controls.Add(this.dg_siigo);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.txt_idR);
             this.Controls.Add(this.cbApartado);
@@ -860,6 +860,7 @@
             this.Controls.Add(this.Bt_Ingresar);
             this.Controls.Add(this.dt_fecha);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.dg_siigo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(900, 737);
             this.MinimumSize = new System.Drawing.Size(900, 726);
