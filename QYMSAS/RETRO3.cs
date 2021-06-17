@@ -55,7 +55,21 @@ namespace QYMSAS
             this.textret.Text = "";
             Cbid_maquina.Focus();
         }
-
+        private void solonumeros(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
         private void Bt_Ingresar_Click(object sender, EventArgs e)
         {
             try

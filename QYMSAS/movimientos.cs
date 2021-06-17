@@ -41,7 +41,7 @@ namespace QYMSAS
             dg_consulta.Columns[4].HeaderText = "TONELADA";
             dg_consulta.Columns[5].HeaderText = "PRECIO TONELADA";
             dg_consulta.Columns[6].HeaderText = "PRECIO TOTAL";
-            dg_consulta.Columns[7].HeaderText = "ID MAQUINA";
+            dg_consulta.Columns[7].HeaderText = "MAQUINA";
         }
 
         private void bt_nuevo_Click(object sender, EventArgs e)
@@ -55,18 +55,32 @@ namespace QYMSAS
             this.textPreTone.Text = "";
             this.textItem.Text = "";
             this.txt_precioT.Text = "";
-            Cbid_maquina.Focus();
+         //   Cbid_maquina.Focus();
         }
 
-
+        private void solonumeros(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
         private void Bt_Ingresar_Click(object sender, EventArgs e)
         {
             try
             {
               //  string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
-                String id_maquina = Convert.ToString(Cbid_maquina.SelectedItem);
-                string Query = "INSERT INTO movimientos_foton2 (fecha,patio,item,tonelda_m,precio_tonelada,precio_total,movimientos_id_maquina) values('" + fecha + "','" + this.textPatio.Text + "','"+ this.textItem.Text + "','" + this.txt_Ton.Text + "','"+ this.textPreTone.Text + "','" + this.txt_precioT.Text + "','" + id_maquina + "');";
+             //   String id_maquina = Convert.ToString(Cbid_maquina.SelectedItem);
+                string Query = "INSERT INTO movimientos_foton2 (fecha,patio,item,tonelda_m,precio_tonelada,precio_total,movimientos_id_maquina) values('" + fecha + "','" + this.textPatio.Text + "','"+ this.textItem.Text + "','" + this.txt_Ton.Text + "','"+ this.textPreTone.Text + "','" + this.txt_precioT.Text + "','" +"8"+ "');";
                 //MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;

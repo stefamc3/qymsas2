@@ -19,22 +19,36 @@ namespace QYMSAS
             InitializeComponent();
             iduss = idusuario;
         }
-        
+
         private void solonumeros(object sender, KeyPressEventArgs e)
         {
-
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
 
 
 
         private void bt_nuevo_Click_1(object sender, EventArgs e)
         {
+            limpia();
+        }
+        private void limpia()
+        {
             this.txt_valor.Text = "";
             this.txt_descripcionc.Text = "";
             this.txt_Pagado.Text = "";
             cb_idMaquina.Focus();
         }
-
         private void Bt_Ingresar_Click_1(object sender, EventArgs e)
         {
             try
@@ -54,6 +68,7 @@ namespace QYMSAS
                 }
               //  MyConn2.Close();
                 busqueda();
+                limpia();
                 
             }
             catch (Exception ex)
@@ -99,7 +114,7 @@ namespace QYMSAS
             dg_consulta.Columns[2].HeaderText = "PAGADO A";
             dg_consulta.Columns[3].HeaderText = "DESCRIPCIÓN";
             dg_consulta.Columns[4].HeaderText = "VALOR";
-            dg_consulta.Columns[5].HeaderText = "ID MAQUINA";
+            dg_consulta.Columns[5].HeaderText = "MAQUINA";
         }
 
         private void bt_eliminar_Click(object sender, EventArgs e)
@@ -135,7 +150,7 @@ namespace QYMSAS
             {
                 MessageBox.Show("Se ha modificado el registro", "Modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 busqueda();
-             //   limpia();
+                limpia();
             }
             else
             {

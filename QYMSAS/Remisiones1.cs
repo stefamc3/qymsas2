@@ -31,24 +31,38 @@ namespace QYMSAS
             this.txtremision.Text = "";
             this.txt_rvalor.Text = "";
         }
-
+        private void solonumeros(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
         private void Bt_Ingresar_Click(object sender, EventArgs e)
         {
             try
             {
-                string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
+                // string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
-                string Query = "INSERT INTO remisiones (fecha,placa,destino,material,metros,remision,precio,estado) values('" + fecha + "','" + this.txtplaca.Text + "','" + this.txtdestinor.Text + "','" + this.txtmaterialr.Text + "','" + this.txtmetrosr.Text + "','" + this.txtremision.Text + "','" + this.txt_rvalor.Text + "','" + this.textEstado.Text + "');";
-                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                string Query = "INSERT INTO remisiones (fecha,placa,destino,material,metros,remision,precio,estado,facturacion_id_facturacion) values('" + fecha + "','" + this.txtplaca.Text + "','" + this.txtdestinor.Text + "','" + this.txtmaterialr.Text + "','" + this.txtmetrosr.Text + "','" + this.txtremision.Text + "','" + this.txt_rvalor.Text + "','" + this.textEstado.Text + "','" + this.txtidF.Text + "');";
+              //  MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;
-                MyConn2.Open();
+              //  MyConn2.Open();
                 MyReader2 = MyCommand2.ExecuteReader();
                 MessageBox.Show("Se guardado el registro", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 while (MyReader2.Read())
                 {
                 }
-                MyConn2.Close();
+              //  MyConn2.Close();
                 busqueda();
             }
             catch (Exception ex)
@@ -114,6 +128,7 @@ namespace QYMSAS
             dg_consulta.Columns[6].HeaderText = "REMISIONE";
             dg_consulta.Columns[7].HeaderText = "PRECIO";
             dg_consulta.Columns[8].HeaderText = "ESTADO";
+            dg_consulta.Columns[9].HeaderText = "FACTURA";
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

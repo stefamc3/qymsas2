@@ -24,6 +24,21 @@ namespace QYMSAS
         {
             busqueda();
         }
+        private void solonumeros(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
         private void busqueda()
         {
             String busqueda = "select * from nomina WHERE tipo='ACOPIO';";
@@ -36,7 +51,7 @@ namespace QYMSAS
             dg_consulta.Columns[0].HeaderText = "ID NOMINA RECEBERA";
             dg_consulta.Columns[1].HeaderText = "FECHA";
             dg_consulta.Columns[2].HeaderText = "NOMBRE";
-            dg_consulta.Columns[3].HeaderText = "ID TRABAJADOR";
+            dg_consulta.Columns[3].HeaderText = "IDENTIFICACION";
             dg_consulta.Columns[4].HeaderText = "SALARIO";
             dg_consulta.Columns[5].HeaderText = "AUXILIO DE TRANSPORTE";
             dg_consulta.Columns[6].HeaderText = "PRESTACIONES";
@@ -69,7 +84,7 @@ namespace QYMSAS
             this.textSeg.Text = "";
             this.textSegd.Text = "";
             Cb_trabajador.Focus();
-            cbtipo.Focus();
+           // cbtipo.Focus();
             cb_nombre.Focus();
         }
 
@@ -80,9 +95,9 @@ namespace QYMSAS
                // string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
                 String identificacion = Convert.ToString(Cb_trabajador.SelectedItem);
-                String tipo = Convert.ToString(cbtipo.SelectedItem);
+             //   String tipo = Convert.ToString(cbtipo.SelectedItem);
                 String nombre = Convert.ToString(cb_nombre.SelectedItem);
-                string Query = "INSERT INTO nomina (fecha,nombre_TR,id_trabajador,salario_rec,auxilio_de_transporte_rec,prestaciones_rec,seguro_rec,seguridad_rec,bonificaciones_rec,neto_rec,tipo) values('" + fecha + "','" + nombre + "','" + identificacion + "','" + this.txt_valor.Text + "','" + this.txt_Aux.Text + "','" + this.textprest.Text + "', '" + this.textSeg.Text + "', '" + this.textSegd.Text + "','" + this.textBon.Text + "','" + this.textNeto.Text + "','" + tipo + "');";
+                string Query = "INSERT INTO nomina (fecha,nombre_TR,id_trabajador,salario_rec,auxilio_de_transporte_rec,prestaciones_rec,seguro_rec,seguridad_rec,bonificaciones_rec,neto_rec,tipo) values('" + fecha + "','" + nombre + "','" + identificacion + "','" + this.txt_valor.Text + "','" + this.txt_Aux.Text + "','" + this.textprest.Text + "', '" + this.textSeg.Text + "', '" + this.textSegd.Text + "','" + this.textBon.Text + "','" + this.textNeto.Text + "','" +"ACOPIO"+ "');";
                // MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;

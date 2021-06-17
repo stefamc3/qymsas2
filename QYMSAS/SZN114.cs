@@ -45,7 +45,7 @@ namespace QYMSAS
         {
             this.txt_valor.Text = "";
             this.txt_destino.Text = "";
-            Cbid_maquina.Focus();
+         //   Cbid_maquina.Focus();
         }
 
         private void Bt_Ingresar_Click(object sender, EventArgs e)
@@ -54,8 +54,8 @@ namespace QYMSAS
             {
                 string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
-                String id_maquina = Convert.ToString(Cbid_maquina.SelectedItem);
-                string Query = "INSERT INTO fletes (fecha,destino,valor,fletes_id_maquina) values('" + fecha + "','" + this.txt_destino.Text + "','" + this.txt_valor.Text + "','" + id_maquina + "');";
+              //  String id_maquina = Convert.ToString(Cbid_maquina.SelectedItem);
+                string Query = "INSERT INTO fletes (fecha,destino,valor,fletes_id_maquina) values('" + fecha + "','" + this.txt_destino.Text + "','" + this.txt_valor.Text + "','" +"9"+ "');";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;

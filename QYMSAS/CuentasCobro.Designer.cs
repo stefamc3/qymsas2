@@ -63,7 +63,7 @@
             this.bt_nuevo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bt_nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.bt_nuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_nuevo.Location = new System.Drawing.Point(136, 282);
+            this.bt_nuevo.Location = new System.Drawing.Point(136, 231);
             this.bt_nuevo.Name = "bt_nuevo";
             this.bt_nuevo.Size = new System.Drawing.Size(98, 36);
             this.bt_nuevo.TabIndex = 127;
@@ -76,7 +76,7 @@
             this.Bt_Ingresar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Bt_Ingresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.Bt_Ingresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bt_Ingresar.Location = new System.Drawing.Point(240, 282);
+            this.Bt_Ingresar.Location = new System.Drawing.Point(240, 231);
             this.Bt_Ingresar.Name = "Bt_Ingresar";
             this.Bt_Ingresar.Size = new System.Drawing.Size(98, 36);
             this.Bt_Ingresar.TabIndex = 125;
@@ -217,7 +217,7 @@
             this.bt_eliminar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bt_eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.bt_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_eliminar.Location = new System.Drawing.Point(344, 282);
+            this.bt_eliminar.Location = new System.Drawing.Point(344, 231);
             this.bt_eliminar.Name = "bt_eliminar";
             this.bt_eliminar.Size = new System.Drawing.Size(98, 36);
             this.bt_eliminar.TabIndex = 138;
@@ -229,7 +229,7 @@
             // 
             this.btn_modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modificar.Location = new System.Drawing.Point(448, 282);
+            this.btn_modificar.Location = new System.Drawing.Point(448, 231);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(106, 36);
             this.btn_modificar.TabIndex = 139;
@@ -241,7 +241,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(112, 324);
+            this.label3.Location = new System.Drawing.Point(112, 273);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 18);
             this.label3.TabIndex = 142;
@@ -249,7 +249,7 @@
             // 
             // busCue
             // 
-            this.busCue.Location = new System.Drawing.Point(184, 324);
+            this.busCue.Location = new System.Drawing.Point(184, 273);
             this.busCue.Name = "busCue";
             this.busCue.Size = new System.Drawing.Size(498, 20);
             this.busCue.TabIndex = 141;
@@ -286,7 +286,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dg_consulta.DefaultCellStyle = dataGridViewCellStyle2;
             this.dg_consulta.EnableHeadersVisualStyles = false;
-            this.dg_consulta.Location = new System.Drawing.Point(40, 353);
+            this.dg_consulta.Location = new System.Drawing.Point(40, 299);
             this.dg_consulta.Name = "dg_consulta";
             this.dg_consulta.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -301,14 +301,14 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dg_consulta.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dg_consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_consulta.Size = new System.Drawing.Size(719, 290);
+            this.dg_consulta.Size = new System.Drawing.Size(719, 344);
             this.dg_consulta.TabIndex = 140;
             // 
             // exportar
             // 
             this.exportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.exportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exportar.Location = new System.Drawing.Point(560, 282);
+            this.exportar.Location = new System.Drawing.Point(560, 231);
             this.exportar.Name = "exportar";
             this.exportar.Size = new System.Drawing.Size(107, 36);
             this.exportar.TabIndex = 216;

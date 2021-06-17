@@ -43,12 +43,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.exportar = new System.Windows.Forms.Button();
             this.dg_consulta = new System.Windows.Forms.DataGridView();
-            this.label19 = new System.Windows.Forms.Label();
-            this.txt_idR = new System.Windows.Forms.TextBox();
-            this.cbApartado = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.cbtipo = new System.Windows.Forms.ComboBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -103,7 +98,7 @@
             // 
             this.btn_modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modificar.Location = new System.Drawing.Point(489, 366);
+            this.btn_modificar.Location = new System.Drawing.Point(489, 334);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(98, 36);
             this.btn_modificar.TabIndex = 129;
@@ -116,7 +111,7 @@
             this.bt_nuevo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bt_nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.bt_nuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_nuevo.Location = new System.Drawing.Point(177, 366);
+            this.bt_nuevo.Location = new System.Drawing.Point(177, 334);
             this.bt_nuevo.Name = "bt_nuevo";
             this.bt_nuevo.Size = new System.Drawing.Size(98, 36);
             this.bt_nuevo.TabIndex = 128;
@@ -129,7 +124,7 @@
             this.bt_Eliminar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bt_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.bt_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_Eliminar.Location = new System.Drawing.Point(385, 366);
+            this.bt_Eliminar.Location = new System.Drawing.Point(385, 334);
             this.bt_Eliminar.Name = "bt_Eliminar";
             this.bt_Eliminar.Size = new System.Drawing.Size(98, 36);
             this.bt_Eliminar.TabIndex = 127;
@@ -142,7 +137,7 @@
             this.Bt_Ingresar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Bt_Ingresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.Bt_Ingresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bt_Ingresar.Location = new System.Drawing.Point(281, 366);
+            this.Bt_Ingresar.Location = new System.Drawing.Point(281, 334);
             this.Bt_Ingresar.Name = "Bt_Ingresar";
             this.Bt_Ingresar.Size = new System.Drawing.Size(98, 36);
             this.Bt_Ingresar.TabIndex = 126;
@@ -154,7 +149,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(145, 407);
+            this.label1.Location = new System.Drawing.Point(145, 375);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 18);
             this.label1.TabIndex = 131;
@@ -162,7 +157,7 @@
             // 
             // busAce
             // 
-            this.busAce.Location = new System.Drawing.Point(217, 407);
+            this.busAce.Location = new System.Drawing.Point(217, 375);
             this.busAce.Name = "busAce";
             this.busAce.Size = new System.Drawing.Size(498, 20);
             this.busAce.TabIndex = 130;
@@ -194,7 +189,7 @@
             // 
             this.exportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.exportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exportar.Location = new System.Drawing.Point(593, 366);
+            this.exportar.Location = new System.Drawing.Point(593, 334);
             this.exportar.Name = "exportar";
             this.exportar.Size = new System.Drawing.Size(107, 36);
             this.exportar.TabIndex = 215;
@@ -233,7 +228,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dg_consulta.DefaultCellStyle = dataGridViewCellStyle2;
             this.dg_consulta.EnableHeadersVisualStyles = false;
-            this.dg_consulta.Location = new System.Drawing.Point(29, 432);
+            this.dg_consulta.Location = new System.Drawing.Point(29, 401);
             this.dg_consulta.Name = "dg_consulta";
             this.dg_consulta.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -248,78 +243,19 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dg_consulta.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dg_consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_consulta.Size = new System.Drawing.Size(826, 221);
+            this.dg_consulta.Size = new System.Drawing.Size(826, 252);
             this.dg_consulta.TabIndex = 359;
-            // 
-            // label19
-            // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(435, 338);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(110, 18);
-            this.label19.TabIndex = 404;
-            this.label19.Text = "ID Resumen: ";
-            // 
-            // txt_idR
-            // 
-            this.txt_idR.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_idR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_idR.Location = new System.Drawing.Point(548, 336);
-            this.txt_idR.Name = "txt_idR";
-            this.txt_idR.Size = new System.Drawing.Size(305, 26);
-            this.txt_idR.TabIndex = 403;
-            // 
-            // cbApartado
-            // 
-            this.cbApartado.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbApartado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbApartado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cbApartado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbApartado.FormattingEnabled = true;
-            this.cbApartado.Items.AddRange(new object[] {
-            "COMPRA"});
-            this.cbApartado.Location = new System.Drawing.Point(548, 66);
-            this.cbApartado.Name = "cbApartado";
-            this.cbApartado.Size = new System.Drawing.Size(186, 28);
-            this.cbApartado.TabIndex = 402;
             // 
             // label21
             // 
             this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(581, 45);
+            this.label21.Location = new System.Drawing.Point(583, 52);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(126, 18);
+            this.label21.Size = new System.Drawing.Size(130, 18);
             this.label21.TabIndex = 401;
-            this.label21.Text = "Tipo de Factura";
-            // 
-            // cbtipo
-            // 
-            this.cbtipo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbtipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbtipo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cbtipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbtipo.FormattingEnabled = true;
-            this.cbtipo.Items.AddRange(new object[] {
-            "RECEBERA"});
-            this.cbtipo.Location = new System.Drawing.Point(124, 334);
-            this.cbtipo.Name = "cbtipo";
-            this.cbtipo.Size = new System.Drawing.Size(305, 28);
-            this.cbtipo.TabIndex = 400;
-            // 
-            // label20
-            // 
-            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(17, 338);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(46, 18);
-            this.label20.TabIndex = 399;
-            this.label20.Text = "Tipo:";
+            this.label21.Text = "Factura Compra";
             // 
             // pictureBox8
             // 
@@ -374,6 +310,7 @@
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(306, 26);
             this.txttelefono.TabIndex = 392;
+            this.txttelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label18
             // 
@@ -403,6 +340,7 @@
             this.txtnit.Name = "txtnit";
             this.txtnit.Size = new System.Drawing.Size(306, 26);
             this.txtnit.TabIndex = 391;
+            this.txtnit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label13
             // 
@@ -445,6 +383,7 @@
             this.txtvaloru.Name = "txtvaloru";
             this.txtvaloru.Size = new System.Drawing.Size(305, 26);
             this.txtvaloru.TabIndex = 387;
+            this.txtvaloru.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // pictureBox4
             // 
@@ -661,9 +600,9 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(435, 202);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 18);
+            this.label10.Size = new System.Drawing.Size(79, 18);
             this.label10.TabIndex = 366;
-            this.label10.Text = "Metros:";
+            this.label10.Text = "Cantidad:";
             // 
             // txtmetros
             // 
@@ -673,6 +612,7 @@
             this.txtmetros.Name = "txtmetros";
             this.txtmetros.Size = new System.Drawing.Size(305, 26);
             this.txtmetros.TabIndex = 363;
+            this.txtmetros.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label5
             // 
@@ -681,9 +621,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(17, 201);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 18);
+            this.label5.Size = new System.Drawing.Size(103, 18);
             this.label5.TabIndex = 365;
-            this.label5.Text = "Material:";
+            this.label5.Text = "Descripción:";
             // 
             // txtmaterial
             // 
@@ -732,12 +672,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(884, 698);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.txt_idR);
-            this.Controls.Add(this.cbApartado);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.cbtipo);
-            this.Controls.Add(this.label20);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.pictureBox6);
@@ -819,12 +754,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button exportar;
         public System.Windows.Forms.DataGridView dg_consulta;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox txt_idR;
-        private System.Windows.Forms.ComboBox cbApartado;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.ComboBox cbtipo;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox6;

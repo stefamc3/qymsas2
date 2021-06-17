@@ -91,7 +91,21 @@ namespace QYMSAS
                 busqueda();
             }
         }
-
+        private void solonumeros(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
         private void Bt_Ingresar_Click(object sender, EventArgs e)
         {
 
@@ -99,7 +113,7 @@ namespace QYMSAS
             {
                // string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
-                string Query = "INSERT INTO produccion_acopio (fecha,quincena,clientes_A,toneladas_PA,precio_PA,total_PA) values('" + fecha + "','" + this.textQuin.Text + "','" + this.txt_cliente.Text + "','" + this.txt_ton.Text + "','" + this.textPre.Text + "','" + this.txt_ton.Text+"'); ";
+                string Query = "INSERT INTO produccion_acopio (fecha,quincena,clientes_A,toneladas_PA,precio_PA,total_PA) values('" + fecha + "','" + this.textQuin.Text + "','" + this.txt_cliente.Text + "','" + this.txt_ton.Text + "','" + this.textPre.Text + "','" + this.textTotal.Text+"'); ";
               //  MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;

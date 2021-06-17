@@ -30,7 +30,21 @@ namespace QYMSAS
             this.txt_rvalor.Text = "";
             this.txtidF.Text = "";
         }
-
+        private void solonumeros(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
         private void Bt_Ingresar_Click(object sender, EventArgs e)
         {
             try
@@ -110,7 +124,7 @@ namespace QYMSAS
             dg_consulta.Columns[6].HeaderText = "REMISIONE";
             dg_consulta.Columns[7].HeaderText = "PRECIO";
             dg_consulta.Columns[8].HeaderText = "ESTADO";
-            dg_consulta.Columns[9].HeaderText = "ID FAC";
+            dg_consulta.Columns[9].HeaderText = "FACTURA";
         }
 
         private void exportar_Click(object sender, EventArgs e)

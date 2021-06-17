@@ -77,6 +77,7 @@
             this.txt_valord.Name = "txt_valord";
             this.txt_valord.Size = new System.Drawing.Size(305, 26);
             this.txt_valord.TabIndex = 182;
+            this.txt_valord.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // bt_nuevo
             // 
@@ -184,11 +185,11 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(403, 213);
+            this.label3.Location = new System.Drawing.Point(403, 212);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 18);
+            this.label3.Size = new System.Drawing.Size(76, 18);
             this.label3.TabIndex = 196;
-            this.label3.Text = "Id Maquina:";
+            this.label3.Text = "Maquina:";
             // 
             // Cbid_maquina
             // 

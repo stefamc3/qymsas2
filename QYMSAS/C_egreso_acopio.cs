@@ -45,6 +45,21 @@ namespace QYMSAS
             dg_consulta.Columns[8].HeaderText = "TOTAL";
             dg_consulta.Columns[9].HeaderText = "TIPO";
         }
+        private void solonumeros(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
         private void bt_nuevo_Click(object sender, EventArgs e)
         {
             limpia();
@@ -58,7 +73,7 @@ namespace QYMSAS
             this.txt_telefono.Text = "";
             this.txt_descripcion.Text = "";
             this.txt_valor.Text = "";
-            cbtipo.Focus();
+           // cbtipo.Focus();
         }
         private void Bt_Ingresar_Click(object sender, EventArgs e)
         {
@@ -66,8 +81,8 @@ namespace QYMSAS
             {
                 string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
-                String tipo = Convert.ToString(cbtipo.SelectedItem);
-                string Query = "INSERT INTO egreso (fecha,Num_comprobante,señores,telefono,direccion,ciudad,descripcion,valor,tipo) values('" + fecha + "','" + this.txtNumF.Text + "','" + this.txt_señor.Text + "','" + this.txt_telefono.Text + "','" + this.txt_direccion.Text + "','" + this.txt_ciudad.Text + "','" + this.txt_descripcion.Text + "','" + this.txt_valor.Text + "','" + tipo + "');";
+             //   String tipo = Convert.ToString(cbtipo.SelectedItem);
+                string Query = "INSERT INTO egreso (fecha,Num_comprobante,señores,telefono,direccion,ciudad,descripcion,valor,tipo) values('" + fecha + "','" + this.txtNumF.Text + "','" + this.txt_señor.Text + "','" + this.txt_telefono.Text + "','" + this.txt_direccion.Text + "','" + this.txt_ciudad.Text + "','" + this.txt_descripcion.Text + "','" + this.txt_valor.Text + "','" +"ACOPIO"+ "');";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;

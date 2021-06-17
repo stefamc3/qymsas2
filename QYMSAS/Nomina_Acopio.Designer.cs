@@ -62,8 +62,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.exportar = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.cbtipo = new System.Windows.Forms.ComboBox();
             this.Cb_trabajador = new System.Windows.Forms.ComboBox();
             this.cb_nombre = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).BeginInit();
@@ -103,7 +101,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dg_consulta.DefaultCellStyle = dataGridViewCellStyle2;
             this.dg_consulta.EnableHeadersVisualStyles = false;
-            this.dg_consulta.Location = new System.Drawing.Point(37, 441);
+            this.dg_consulta.Location = new System.Drawing.Point(37, 408);
             this.dg_consulta.Name = "dg_consulta";
             this.dg_consulta.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -118,7 +116,7 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dg_consulta.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dg_consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_consulta.Size = new System.Drawing.Size(830, 202);
+            this.dg_consulta.Size = new System.Drawing.Size(830, 235);
             this.dg_consulta.TabIndex = 188;
             // 
             // pictureBox1
@@ -147,7 +145,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(155, 416);
+            this.label9.Location = new System.Drawing.Point(155, 382);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(66, 18);
             this.label9.TabIndex = 185;
@@ -155,7 +153,7 @@
             // 
             // busAce
             // 
-            this.busAce.Location = new System.Drawing.Point(227, 416);
+            this.busAce.Location = new System.Drawing.Point(227, 382);
             this.busAce.Name = "busAce";
             this.busAce.Size = new System.Drawing.Size(498, 20);
             this.busAce.TabIndex = 184;
@@ -165,7 +163,7 @@
             // 
             this.btn_modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modificar.Location = new System.Drawing.Point(501, 374);
+            this.btn_modificar.Location = new System.Drawing.Point(501, 340);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(98, 36);
             this.btn_modificar.TabIndex = 183;
@@ -178,7 +176,7 @@
             this.bt_nuevo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bt_nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.bt_nuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_nuevo.Location = new System.Drawing.Point(189, 374);
+            this.bt_nuevo.Location = new System.Drawing.Point(189, 340);
             this.bt_nuevo.Name = "bt_nuevo";
             this.bt_nuevo.Size = new System.Drawing.Size(98, 36);
             this.bt_nuevo.TabIndex = 182;
@@ -191,7 +189,7 @@
             this.bt_Eliminar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bt_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.bt_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_Eliminar.Location = new System.Drawing.Point(397, 374);
+            this.bt_Eliminar.Location = new System.Drawing.Point(397, 340);
             this.bt_Eliminar.Name = "bt_Eliminar";
             this.bt_Eliminar.Size = new System.Drawing.Size(98, 36);
             this.bt_Eliminar.TabIndex = 181;
@@ -204,7 +202,7 @@
             this.Bt_Ingresar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Bt_Ingresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.Bt_Ingresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bt_Ingresar.Location = new System.Drawing.Point(293, 374);
+            this.Bt_Ingresar.Location = new System.Drawing.Point(293, 340);
             this.Bt_Ingresar.Name = "Bt_Ingresar";
             this.Bt_Ingresar.Size = new System.Drawing.Size(98, 36);
             this.Bt_Ingresar.TabIndex = 180;
@@ -231,7 +229,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(112, 18);
             this.label11.TabIndex = 208;
-            this.label11.Text = "Id Trabajador:";
+            this.label11.Text = "Identificación:";
             // 
             // textNeto
             // 
@@ -241,6 +239,7 @@
             this.textNeto.Name = "textNeto";
             this.textNeto.Size = new System.Drawing.Size(287, 26);
             this.textNeto.TabIndex = 206;
+            this.textNeto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label8
             // 
@@ -261,6 +260,7 @@
             this.textBon.Name = "textBon";
             this.textBon.Size = new System.Drawing.Size(287, 26);
             this.textBon.TabIndex = 204;
+            this.textBon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label6
             // 
@@ -281,6 +281,7 @@
             this.textSegd.Name = "textSegd";
             this.textSegd.Size = new System.Drawing.Size(287, 26);
             this.textSegd.TabIndex = 202;
+            this.textSegd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label5
             // 
@@ -301,6 +302,7 @@
             this.textSeg.Name = "textSeg";
             this.textSeg.Size = new System.Drawing.Size(287, 26);
             this.textSeg.TabIndex = 200;
+            this.textSeg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label3
             // 
@@ -321,6 +323,7 @@
             this.textprest.Name = "textprest";
             this.textprest.Size = new System.Drawing.Size(287, 26);
             this.textprest.TabIndex = 198;
+            this.textprest.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label1
             // 
@@ -352,6 +355,7 @@
             this.txt_valor.Name = "txt_valor";
             this.txt_valor.Size = new System.Drawing.Size(287, 26);
             this.txt_valor.TabIndex = 190;
+            this.txt_valor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label2
             // 
@@ -372,6 +376,7 @@
             this.txt_Aux.Name = "txt_Aux";
             this.txt_Aux.Size = new System.Drawing.Size(287, 26);
             this.txt_Aux.TabIndex = 191;
+            this.txt_Aux.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // dt_fecha
             // 
@@ -410,39 +415,13 @@
             // 
             this.exportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.exportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exportar.Location = new System.Drawing.Point(605, 374);
+            this.exportar.Location = new System.Drawing.Point(605, 340);
             this.exportar.Name = "exportar";
             this.exportar.Size = new System.Drawing.Size(107, 36);
             this.exportar.TabIndex = 215;
             this.exportar.Text = "Exportar";
             this.exportar.UseVisualStyleBackColor = false;
             this.exportar.Click += new System.EventHandler(this.exportar_Click);
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(34, 349);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 18);
-            this.label12.TabIndex = 217;
-            this.label12.Text = "Tipo:";
-            // 
-            // cbtipo
-            // 
-            this.cbtipo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbtipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbtipo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cbtipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbtipo.FormattingEnabled = true;
-            this.cbtipo.Items.AddRange(new object[] {
-            "RECEBERA",
-            "ACOPIO"});
-            this.cbtipo.Location = new System.Drawing.Point(153, 339);
-            this.cbtipo.Name = "cbtipo";
-            this.cbtipo.Size = new System.Drawing.Size(287, 28);
-            this.cbtipo.TabIndex = 216;
             // 
             // Cb_trabajador
             // 
@@ -500,8 +479,6 @@
             this.ClientSize = new System.Drawing.Size(901, 698);
             this.Controls.Add(this.cb_nombre);
             this.Controls.Add(this.Cb_trabajador);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.cbtipo);
             this.Controls.Add(this.exportar);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.textNeto);
@@ -578,8 +555,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button exportar;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox cbtipo;
         private System.Windows.Forms.ComboBox Cb_trabajador;
         private System.Windows.Forms.ComboBox cb_nombre;
     }

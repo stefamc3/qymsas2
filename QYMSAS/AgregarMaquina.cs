@@ -41,32 +41,32 @@ namespace QYMSAS
         private void bt_nuevo_Click(object sender, EventArgs e)
         {
             this.txt_nom.Text = "";
-          
+
         }
 
         private void Bt_Ingresar_Click(object sender, EventArgs e)
         {
             try
             {
-               // string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
+                // string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 string Query = "INSERT INTO maquinas (nombre,Tarjeta_propiedad) values('" + this.txt_nom.Text + "', '" + this.txt_tarjeta.Text + "');";
-              //  MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                //  MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;
-              //  MyConn2.Open();
+                //  MyConn2.Open();
                 MyReader2 = MyCommand2.ExecuteReader();
                 MessageBox.Show("Se guardado el registro", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 while (MyReader2.Read())
                 {
                 }
-              //  MyConn2.Close();
+                //  MyConn2.Close();
                 busqueda();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
         private void bt_eliminar_Click(object sender, EventArgs e)
@@ -132,6 +132,14 @@ namespace QYMSAS
                 MessageBox.Show("No ha modificado el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-    }
 
+        private void dg_consulta_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dg_consulta.SelectedRows.Count > 0)
+            {
+                txt_nom.Text = dg_consulta.CurrentRow.Cells["nombre"].Value.ToString();
+                txt_tarjeta.Text = dg_consulta.CurrentRow.Cells["Tarjeta_propiedad"].Value.ToString();
+            }
+        }
+    }
 }

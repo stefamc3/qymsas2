@@ -113,6 +113,7 @@
             this.txt_rvalor.Name = "txt_rvalor";
             this.txt_rvalor.Size = new System.Drawing.Size(305, 26);
             this.txt_rvalor.TabIndex = 123;
+            this.txt_rvalor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label2
             // 
@@ -133,6 +134,7 @@
             this.txtmetrosr.Name = "txtmetrosr";
             this.txtmetrosr.Size = new System.Drawing.Size(171, 26);
             this.txtmetrosr.TabIndex = 124;
+            this.txtmetrosr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // dt_fecha
             // 
@@ -215,6 +217,7 @@
             this.txtremision.Name = "txtremision";
             this.txtremision.Size = new System.Drawing.Size(174, 26);
             this.txtremision.TabIndex = 139;
+            this.txtremision.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label5
             // 
@@ -408,9 +411,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(442, 285);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 18);
+            this.label9.Size = new System.Drawing.Size(70, 18);
             this.label9.TabIndex = 217;
-            this.label9.Text = "Id Factura:";
+            this.label9.Text = "Factura:";
             // 
             // txtidF
             // 

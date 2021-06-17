@@ -52,8 +52,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txt_cantidad = new System.Windows.Forms.TextBox();
             this.txt_idFac = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cb_item = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_descripcionf = new System.Windows.Forms.TextBox();
@@ -173,9 +171,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(5, 200);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 18);
+            this.label1.Size = new System.Drawing.Size(81, 18);
             this.label1.TabIndex = 137;
-            this.label1.Text = "Id Maquina: ";
+            this.label1.Text = "Maquina: ";
             // 
             // Cbid_maquina
             // 
@@ -273,51 +271,27 @@
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(247, 26);
             this.txt_cantidad.TabIndex = 228;
+            this.txt_cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // txt_idFac
             // 
             this.txt_idFac.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_idFac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_idFac.Location = new System.Drawing.Point(474, 269);
+            this.txt_idFac.Location = new System.Drawing.Point(109, 263);
             this.txt_idFac.Name = "txt_idFac";
-            this.txt_idFac.Size = new System.Drawing.Size(305, 26);
+            this.txt_idFac.Size = new System.Drawing.Size(247, 26);
             this.txt_idFac.TabIndex = 227;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(4, 271);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 18);
-            this.label5.TabIndex = 226;
-            this.label5.Text = "Item";
-            // 
-            // cb_item
-            // 
-            this.cb_item.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb_item.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_item.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cb_item.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_item.FormattingEnabled = true;
-            this.cb_item.Items.AddRange(new object[] {
-            "COM"});
-            this.cb_item.Location = new System.Drawing.Point(109, 267);
-            this.cb_item.Name = "cb_item";
-            this.cb_item.Size = new System.Drawing.Size(247, 28);
-            this.cb_item.TabIndex = 225;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(362, 271);
+            this.label4.Location = new System.Drawing.Point(5, 267);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 18);
+            this.label4.Size = new System.Drawing.Size(75, 18);
             this.label4.TabIndex = 224;
-            this.label4.Text = "Id Factura: ";
+            this.label4.Text = "Factura: ";
             // 
             // label3
             // 
@@ -398,8 +372,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txt_cantidad);
             this.Controls.Add(this.txt_idFac);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.cb_item);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_descripcionf);
@@ -456,8 +428,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_cantidad;
         private System.Windows.Forms.TextBox txt_idFac;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cb_item;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_descripcionf;

@@ -35,6 +35,21 @@ namespace QYMSAS
             this.text_Hfinal.Text = "";
             Cbid_maquinaria.Focus();
         }
+        private void solonumeros(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
         private void Bt_Ingresar_Click(object sender, EventArgs e)
         {
             try
@@ -97,7 +112,7 @@ namespace QYMSAS
             dg_consulta.Columns[6].HeaderText = "VALOR HORA";
             dg_consulta.Columns[7].HeaderText = "VALOR M3";
             dg_consulta.Columns[8].HeaderText = "VALOR TOTAL";
-            dg_consulta.Columns[9].HeaderText = "ID MAQUINA";
+            dg_consulta.Columns[9].HeaderText = "MAQUINA";
         }
 
         private void bt_eliminar_Click(object sender, EventArgs e)

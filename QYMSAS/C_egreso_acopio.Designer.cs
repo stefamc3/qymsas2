@@ -33,8 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(C_egreso_acopio));
-            this.cbtipo = new System.Windows.Forms.ComboBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_descripcion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -71,31 +69,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cbtipo
-            // 
-            this.cbtipo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbtipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbtipo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cbtipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbtipo.FormattingEnabled = true;
-            this.cbtipo.Items.AddRange(new object[] {
-            "ACOPIO"});
-            this.cbtipo.Location = new System.Drawing.Point(132, 235);
-            this.cbtipo.Name = "cbtipo";
-            this.cbtipo.Size = new System.Drawing.Size(289, 28);
-            this.cbtipo.TabIndex = 432;
-            // 
-            // label20
-            // 
-            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(30, 239);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(46, 18);
-            this.label20.TabIndex = 431;
-            this.label20.Text = "Tipo:";
             // 
             // label6
             // 
@@ -156,6 +129,7 @@
             this.txt_telefono.Name = "txt_telefono";
             this.txt_telefono.Size = new System.Drawing.Size(243, 26);
             this.txt_telefono.TabIndex = 425;
+            this.txt_telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // txtNumF
             // 
@@ -234,7 +208,7 @@
             // 
             this.exportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.exportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exportar.Location = new System.Drawing.Point(557, 267);
+            this.exportar.Location = new System.Drawing.Point(557, 235);
             this.exportar.Name = "exportar";
             this.exportar.Size = new System.Drawing.Size(107, 36);
             this.exportar.TabIndex = 417;
@@ -244,7 +218,7 @@
             // 
             // busCom
             // 
-            this.busCom.Location = new System.Drawing.Point(179, 309);
+            this.busCom.Location = new System.Drawing.Point(179, 277);
             this.busCom.Name = "busCom";
             this.busCom.Size = new System.Drawing.Size(498, 20);
             this.busCom.TabIndex = 416;
@@ -254,7 +228,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(107, 309);
+            this.label2.Location = new System.Drawing.Point(107, 277);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 18);
             this.label2.TabIndex = 415;
@@ -265,7 +239,7 @@
             this.bt_eliminar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bt_eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.bt_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_eliminar.Location = new System.Drawing.Point(340, 267);
+            this.bt_eliminar.Location = new System.Drawing.Point(340, 235);
             this.bt_eliminar.Name = "bt_eliminar";
             this.bt_eliminar.Size = new System.Drawing.Size(98, 36);
             this.bt_eliminar.TabIndex = 413;
@@ -277,7 +251,7 @@
             // 
             this.btn_modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modificar.Location = new System.Drawing.Point(444, 267);
+            this.btn_modificar.Location = new System.Drawing.Point(444, 235);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(107, 36);
             this.btn_modificar.TabIndex = 412;
@@ -290,7 +264,7 @@
             this.bt_nuevo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bt_nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.bt_nuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_nuevo.Location = new System.Drawing.Point(132, 267);
+            this.bt_nuevo.Location = new System.Drawing.Point(132, 235);
             this.bt_nuevo.Name = "bt_nuevo";
             this.bt_nuevo.Size = new System.Drawing.Size(98, 36);
             this.bt_nuevo.TabIndex = 406;
@@ -303,7 +277,7 @@
             this.Bt_Ingresar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Bt_Ingresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.Bt_Ingresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bt_Ingresar.Location = new System.Drawing.Point(236, 267);
+            this.Bt_Ingresar.Location = new System.Drawing.Point(236, 235);
             this.Bt_Ingresar.Name = "Bt_Ingresar";
             this.Bt_Ingresar.Size = new System.Drawing.Size(98, 36);
             this.Bt_Ingresar.TabIndex = 405;
@@ -330,6 +304,7 @@
             this.txt_valor.Name = "txt_valor";
             this.txt_valor.Size = new System.Drawing.Size(243, 26);
             this.txt_valor.TabIndex = 404;
+            this.txt_valor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // dt_fecha
             // 
@@ -396,7 +371,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dg_consulta.DefaultCellStyle = dataGridViewCellStyle2;
             this.dg_consulta.EnableHeadersVisualStyles = false;
-            this.dg_consulta.Location = new System.Drawing.Point(34, 335);
+            this.dg_consulta.Location = new System.Drawing.Point(34, 303);
             this.dg_consulta.Name = "dg_consulta";
             this.dg_consulta.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -411,7 +386,7 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dg_consulta.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dg_consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_consulta.Size = new System.Drawing.Size(730, 306);
+            this.dg_consulta.Size = new System.Drawing.Size(730, 338);
             this.dg_consulta.TabIndex = 434;
             // 
             // pictureBox5
@@ -466,8 +441,6 @@
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.dg_consulta);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.cbtipo);
-            this.Controls.Add(this.label20);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txt_descripcion);
             this.Controls.Add(this.label5);
@@ -513,9 +486,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cbtipo;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_descripcion;
         private System.Windows.Forms.Label label5;

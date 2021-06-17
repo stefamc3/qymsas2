@@ -38,6 +38,21 @@ namespace QYMSAS
             this.txt_descripcionf.Text = "";
             Cbid_maquina.Focus();
         }
+        private void solonumeros(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
 
         private void Bt_Ingresar_Click(object sender, EventArgs e)
         {
@@ -65,23 +80,7 @@ namespace QYMSAS
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void solonumeros(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsNumber(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-        }
-
+ 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             Application.Exit();

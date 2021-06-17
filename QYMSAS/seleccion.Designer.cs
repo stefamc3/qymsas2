@@ -244,7 +244,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::QYMSAS.Properties.Resources.en_espera;
+            this.pictureBox4.Image = global::QYMSAS.Properties.Resources.apagado;
             this.pictureBox4.Location = new System.Drawing.Point(684, 456);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(38, 37);

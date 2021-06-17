@@ -57,9 +57,9 @@ namespace QYMSAS
             this.txt_descripcionf.Text = "";
             this.Cbid_maquina.Text = "";
             this.dt_fecha.Text = DateTime.Now.ToString();
-            this.cb_item.Text = "";
+           // this.cb_item.Text = "";
             Cbid_maquina.Focus();
-            cb_item.Focus();
+          //  cb_item.Focus();
         }
 
         private void Bt_Ingresar_Click(object sender, EventArgs e)
@@ -69,8 +69,8 @@ namespace QYMSAS
                // string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;"; 
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;              
                 String id_maquina = Convert.ToString(Cbid_maquina.SelectedItem);
-                String item = Convert.ToString(cb_item.SelectedItem);
-                string Query = "INSERT INTO discriminacion (fecha,cantidad,descripcion,valor,maquinas_id_maquina,facturacion_id_facturacion,item) VALUES ('" + fecha + "','" + this.txt_cantidad.Text + "','" + this.txt_descripcionf.Text + "','" + this.txt_valor.Text + "','" + id_maquina + "', '" + this.txt_idFac.Text + "','" + item + "');";
+             //   String item = Convert.ToString(cb_item.SelectedItem);
+                string Query = "INSERT INTO discriminacion (fecha,cantidad,descripcion,valor,maquinas_id_maquina,facturacion_id_facturacion,item) VALUES ('" + fecha + "','" + this.txt_cantidad.Text + "','" + this.txt_descripcionf.Text + "','" + this.txt_valor.Text + "','" + id_maquina + "', '" + this.txt_idFac.Text + "','" +"AF"+ "');";
                // MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;
@@ -108,8 +108,8 @@ namespace QYMSAS
             dg_consulta.Columns[2].HeaderText = "CANTIDAD";
             dg_consulta.Columns[3].HeaderText = "DESCRIPCIÓN";
             dg_consulta.Columns[4].HeaderText = "VALOR";
-            dg_consulta.Columns[5].HeaderText = "ID MAQUINA";
-            dg_consulta.Columns[6].HeaderText = "ID FACTURA";
+            dg_consulta.Columns[5].HeaderText = "MAQUINA";
+            dg_consulta.Columns[6].HeaderText = "FACTURA";
             dg_consulta.Columns[7].HeaderText = "ITEM";
         }
 

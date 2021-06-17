@@ -50,8 +50,6 @@
             this.dt_fecha = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.exportar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Cbid_maquina = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -282,39 +280,12 @@
             this.exportar.UseVisualStyleBackColor = false;
             this.exportar.Click += new System.EventHandler(this.exportar_Click);
             // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(451, 169);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 18);
-            this.label3.TabIndex = 217;
-            this.label3.Text = "Id Maquina: ";
-            // 
-            // Cbid_maquina
-            // 
-            this.Cbid_maquina.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Cbid_maquina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cbid_maquina.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cbid_maquina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cbid_maquina.FormattingEnabled = true;
-            this.Cbid_maquina.Items.AddRange(new object[] {
-            "9- SZN-114"});
-            this.Cbid_maquina.Location = new System.Drawing.Point(556, 167);
-            this.Cbid_maquina.Name = "Cbid_maquina";
-            this.Cbid_maquina.Size = new System.Drawing.Size(166, 28);
-            this.Cbid_maquina.TabIndex = 216;
-            // 
             // SZN114
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(776, 698);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.Cbid_maquina);
             this.Controls.Add(this.exportar);
             this.Controls.Add(this.dg_consulta);
             this.Controls.Add(this.pictureBox1);
@@ -367,7 +338,5 @@
         private System.Windows.Forms.DateTimePicker dt_fecha;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button exportar;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox Cbid_maquina;
     }
 }

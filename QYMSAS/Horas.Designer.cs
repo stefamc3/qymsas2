@@ -76,6 +76,7 @@
             this.txt_valorh.Name = "txt_valorh";
             this.txt_valorh.Size = new System.Drawing.Size(247, 26);
             this.txt_valorh.TabIndex = 4;
+            this.txt_valorh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // bt_nuevo
             // 
@@ -133,6 +134,7 @@
             this.txt_horas.Name = "txt_horas";
             this.txt_horas.Size = new System.Drawing.Size(247, 26);
             this.txt_horas.TabIndex = 2;
+            this.txt_horas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // dt_fecha
             // 
@@ -164,6 +166,7 @@
             this.txVm3.Name = "txVm3";
             this.txVm3.Size = new System.Drawing.Size(305, 26);
             this.txVm3.TabIndex = 5;
+            this.txVm3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label1
             // 
@@ -205,6 +208,7 @@
             this.text_Hinicial.Name = "text_Hinicial";
             this.text_Hinicial.Size = new System.Drawing.Size(247, 26);
             this.text_Hinicial.TabIndex = 0;
+            this.text_Hinicial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // text_Hfinal
             // 
@@ -214,6 +218,7 @@
             this.text_Hfinal.Name = "text_Hfinal";
             this.text_Hfinal.Size = new System.Drawing.Size(305, 26);
             this.text_Hfinal.TabIndex = 1;
+            this.text_Hfinal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label6
             // 
@@ -391,6 +396,7 @@
             this.textTotal.Name = "textTotal";
             this.textTotal.Size = new System.Drawing.Size(247, 26);
             this.textTotal.TabIndex = 6;
+            this.textTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label3
             // 
@@ -421,9 +427,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(379, 283);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 18);
+            this.label9.Size = new System.Drawing.Size(76, 18);
             this.label9.TabIndex = 219;
-            this.label9.Text = "Id Maquina:";
+            this.label9.Text = "Maquina:";
             // 
             // Horas
             // 

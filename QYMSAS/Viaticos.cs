@@ -28,6 +28,21 @@ namespace QYMSAS
             this.txtdes.Text = "";
             Cbid_maquina.Focus();
         }
+        private void solonumeros(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
 
         private void Bt_Ingresar_Click(object sender, EventArgs e)
         {
@@ -103,7 +118,7 @@ namespace QYMSAS
             dg_consulta.Columns[1].HeaderText = "FECHA";
             dg_consulta.Columns[2].HeaderText = "DESCRIPCION";
             dg_consulta.Columns[3].HeaderText = "VALOR";
-            dg_consulta.Columns[4].HeaderText = "ID MAQUINA";
+            dg_consulta.Columns[4].HeaderText = "MAQUINA";
         }
 
         private void busVi_TextChanged(object sender, EventArgs e)

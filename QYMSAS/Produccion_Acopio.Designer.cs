@@ -316,6 +316,7 @@
             this.textPre.Name = "textPre";
             this.textPre.Size = new System.Drawing.Size(306, 26);
             this.textPre.TabIndex = 168;
+            this.textPre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label5
             // 

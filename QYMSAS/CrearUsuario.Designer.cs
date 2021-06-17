@@ -191,7 +191,8 @@
             this.cb_tipo.FormattingEnabled = true;
             this.cb_tipo.Items.AddRange(new object[] {
             "1",
-            "2"});
+            "2",
+            "3"});
             this.cb_tipo.Location = new System.Drawing.Point(185, 321);
             this.cb_tipo.Name = "cb_tipo";
             this.cb_tipo.Size = new System.Drawing.Size(247, 28);
@@ -239,7 +240,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::QYMSAS.Properties.Resources.salida1;
+            this.pictureBox4.Image = global::QYMSAS.Properties.Resources.apagado;
             this.pictureBox4.Location = new System.Drawing.Point(278, 431);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(38, 37);
@@ -250,7 +251,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::QYMSAS.Properties.Resources.salir;
+            this.pictureBox3.Image = global::QYMSAS.Properties.Resources.salida1;
             this.pictureBox3.Location = new System.Drawing.Point(234, 431);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(38, 37);

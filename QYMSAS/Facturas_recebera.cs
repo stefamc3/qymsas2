@@ -34,11 +34,12 @@ namespace QYMSAS
             this.txtretef.Text = "";
             this.txtretefp.Text = "";
             this.txtneto.Text = "";
-            this.txt_idR.Text = "";
+           // this.txt_idR.Text = "";
             Cbid_estadof.Focus();
-            cbtipo.Focus();
-            cbApartado.Focus();
+           // cbtipo.Focus();
+           // cbApartado.Focus();
         }
+        
         private void Facturas_recebera_Load(object sender, EventArgs e)
         {
             busqueda();
@@ -72,7 +73,7 @@ namespace QYMSAS
             dg_consulta.Columns[16].HeaderText = "ESTADO";
             dg_consulta.Columns[17].HeaderText = "TIPO";
             dg_consulta.Columns[18].HeaderText = "TIPO DE FACTURA";
-            dg_consulta.Columns[19].HeaderText = "ID";
+           
         }
 
         private void busqueda2()
@@ -92,9 +93,9 @@ namespace QYMSAS
                // string MyConnection2 = "server=mysql.freehostia.com; database=qymsas_bd; Uid=qymsas_bd; pwd=qym3103369882;";
                 String fecha = "" + dt_fecha.Value.Year + "/" + dt_fecha.Value.Month + "/" + dt_fecha.Value.Day;
                 String estado = Convert.ToString(Cbid_estadof.SelectedItem);
-                String tipo = Convert.ToString(cbtipo.SelectedItem);
-                String apartado = Convert.ToString(cbApartado.SelectedItem);
-                string Query = "INSERT INTO facturacion (Fecha,Factura,señores,nit,direccion,telefono,Descripcion,cantidad,valor_unitario,subtotal,porcentaje_iva,iva,porcenta_Rtefuente,retefuente,neto,estado,tipo,Apartado,resumen_acopio_id_resumen_acopio) values('" + fecha + "','" + this.txtfac.Text + "','" + this.txtdestino.Text + "','" + this.txtnit.Text + "','" + this.txtdireccion.Text + "','" + this.txttelefono.Text + "','" + this.txtmaterial.Text + "','" + this.txtmetros.Text + "','" + this.txtvaloru.Text + "','" + this.txtsubt.Text + "','" + this.txtivap.Text + "','" + this.txtiva.Text + "','" + this.txtretefp.Text + "','" + this.txtretef.Text + "','" + this.txtneto.Text + "','" + estado + "','" + tipo + "','" + apartado + "','" + this.txt_idR.Text + "');";
+               // String tipo = Convert.ToString(cbtipo.SelectedItem);
+               // String apartado = Convert.ToString(cbApartado.SelectedItem);
+                string Query = "INSERT INTO facturacion (Fecha,Factura,señores,nit,direccion,telefono,Descripcion,cantidad,valor_unitario,subtotal,porcentaje_iva,iva,porcenta_Rtefuente,retefuente,neto,estado,tipo,Apartado) values('" + fecha + "','" + this.txtfac.Text + "','" + this.txtdestino.Text + "','" + this.txtnit.Text + "','" + this.txtdireccion.Text + "','" + this.txttelefono.Text + "','" + this.txtmaterial.Text + "','" + this.txtmetros.Text + "','" + this.txtvaloru.Text + "','" + this.txtsubt.Text + "','" + this.txtivap.Text + "','" + this.txtiva.Text + "','" + this.txtretefp.Text + "','" + this.txtretef.Text + "','" + this.txtneto.Text + "','" + estado + "','" +"RECEBERA"+ "','" +"VENTA"+ "');";
              //   MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;

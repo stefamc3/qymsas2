@@ -168,6 +168,7 @@
             this.txt_valor.Name = "txt_valor";
             this.txt_valor.Size = new System.Drawing.Size(247, 26);
             this.txt_valor.TabIndex = 135;
+            this.txt_valor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // pictureBox3
             // 
@@ -279,9 +280,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(365, 229);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 18);
+            this.label3.Size = new System.Drawing.Size(76, 18);
             this.label3.TabIndex = 187;
-            this.label3.Text = "Id Maquina:";
+            this.label3.Text = "Maquina:";
             // 
             // cb_idMaquina
             // 

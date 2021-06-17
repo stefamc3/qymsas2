@@ -224,6 +224,7 @@
             this.textneto.Name = "textneto";
             this.textneto.Size = new System.Drawing.Size(247, 26);
             this.textneto.TabIndex = 202;
+            this.textneto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label5
             // 
@@ -244,6 +245,7 @@
             this.textret.Name = "textret";
             this.textret.Size = new System.Drawing.Size(247, 26);
             this.textret.TabIndex = 200;
+            this.textret.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label3
             // 
@@ -264,6 +266,7 @@
             this.textiva.Name = "textiva";
             this.textiva.Size = new System.Drawing.Size(284, 26);
             this.textiva.TabIndex = 198;
+            this.textiva.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // textNumH
             // 
@@ -273,6 +276,7 @@
             this.textNumH.Name = "textNumH";
             this.textNumH.Size = new System.Drawing.Size(284, 26);
             this.textNumH.TabIndex = 197;
+            this.textNumH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // label1
             // 
@@ -324,6 +328,7 @@
             this.txt_val.Name = "txt_val";
             this.txt_val.Size = new System.Drawing.Size(244, 26);
             this.txt_val.TabIndex = 191;
+            this.txt_val.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // dt_fecha
             // 

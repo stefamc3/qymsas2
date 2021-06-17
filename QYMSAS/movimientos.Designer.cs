@@ -54,8 +54,6 @@
             this.bt_Eliminar = new System.Windows.Forms.Button();
             this.Bt_Ingresar = new System.Windows.Forms.Button();
             this.exportar = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.Cbid_maquina = new System.Windows.Forms.ComboBox();
             this.txt_precioT = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -81,7 +79,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(411, 197);
+            this.label3.Location = new System.Drawing.Point(414, 152);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 18);
             this.label3.TabIndex = 190;
@@ -91,10 +89,11 @@
             // 
             this.textPreTone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textPreTone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPreTone.Location = new System.Drawing.Point(548, 238);
+            this.textPreTone.Location = new System.Drawing.Point(551, 193);
             this.textPreTone.Name = "textPreTone";
             this.textPreTone.Size = new System.Drawing.Size(247, 26);
             this.textPreTone.TabIndex = 189;
+            this.textPreTone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // textPatio
             // 
@@ -110,7 +109,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(408, 242);
+            this.label1.Location = new System.Drawing.Point(411, 197);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 18);
             this.label1.TabIndex = 187;
@@ -173,10 +172,11 @@
             // 
             this.textItem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textItem.Location = new System.Drawing.Point(548, 193);
+            this.textItem.Location = new System.Drawing.Point(551, 148);
             this.textItem.Name = "textItem";
             this.textItem.Size = new System.Drawing.Size(247, 26);
             this.textItem.TabIndex = 193;
+            this.textItem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // dg_consulta
             // 
@@ -209,7 +209,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dg_consulta.DefaultCellStyle = dataGridViewCellStyle2;
             this.dg_consulta.EnableHeadersVisualStyles = false;
-            this.dg_consulta.Location = new System.Drawing.Point(38, 403);
+            this.dg_consulta.Location = new System.Drawing.Point(38, 340);
             this.dg_consulta.Name = "dg_consulta";
             this.dg_consulta.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -224,7 +224,7 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dg_consulta.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dg_consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_consulta.Size = new System.Drawing.Size(740, 244);
+            this.dg_consulta.Size = new System.Drawing.Size(740, 307);
             this.dg_consulta.TabIndex = 203;
             // 
             // pictureBox1
@@ -253,7 +253,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(123, 374);
+            this.label9.Location = new System.Drawing.Point(123, 314);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(66, 18);
             this.label9.TabIndex = 200;
@@ -261,7 +261,7 @@
             // 
             // busAce
             // 
-            this.busAce.Location = new System.Drawing.Point(195, 374);
+            this.busAce.Location = new System.Drawing.Point(195, 314);
             this.busAce.Name = "busAce";
             this.busAce.Size = new System.Drawing.Size(498, 20);
             this.busAce.TabIndex = 199;
@@ -271,7 +271,7 @@
             // 
             this.btn_modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modificar.Location = new System.Drawing.Point(453, 332);
+            this.btn_modificar.Location = new System.Drawing.Point(453, 272);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(106, 36);
             this.btn_modificar.TabIndex = 198;
@@ -284,7 +284,7 @@
             this.bt_nuevo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bt_nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.bt_nuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_nuevo.Location = new System.Drawing.Point(141, 332);
+            this.bt_nuevo.Location = new System.Drawing.Point(141, 272);
             this.bt_nuevo.Name = "bt_nuevo";
             this.bt_nuevo.Size = new System.Drawing.Size(98, 36);
             this.bt_nuevo.TabIndex = 197;
@@ -297,7 +297,7 @@
             this.bt_Eliminar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bt_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.bt_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_Eliminar.Location = new System.Drawing.Point(349, 332);
+            this.bt_Eliminar.Location = new System.Drawing.Point(349, 272);
             this.bt_Eliminar.Name = "bt_Eliminar";
             this.bt_Eliminar.Size = new System.Drawing.Size(98, 36);
             this.bt_Eliminar.TabIndex = 196;
@@ -310,7 +310,7 @@
             this.Bt_Ingresar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Bt_Ingresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.Bt_Ingresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bt_Ingresar.Location = new System.Drawing.Point(245, 332);
+            this.Bt_Ingresar.Location = new System.Drawing.Point(245, 272);
             this.Bt_Ingresar.Name = "Bt_Ingresar";
             this.Bt_Ingresar.Size = new System.Drawing.Size(98, 36);
             this.Bt_Ingresar.TabIndex = 195;
@@ -322,7 +322,7 @@
             // 
             this.exportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.exportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exportar.Location = new System.Drawing.Point(565, 332);
+            this.exportar.Location = new System.Drawing.Point(565, 272);
             this.exportar.Name = "exportar";
             this.exportar.Size = new System.Drawing.Size(107, 36);
             this.exportar.TabIndex = 215;
@@ -330,38 +330,13 @@
             this.exportar.UseVisualStyleBackColor = false;
             this.exportar.Click += new System.EventHandler(this.exportar_Click);
             // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(411, 154);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 18);
-            this.label5.TabIndex = 217;
-            this.label5.Text = "Id Maquina: ";
-            // 
-            // Cbid_maquina
-            // 
-            this.Cbid_maquina.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Cbid_maquina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cbid_maquina.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cbid_maquina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cbid_maquina.FormattingEnabled = true;
-            this.Cbid_maquina.Items.AddRange(new object[] {
-            "8- Foton 2"});
-            this.Cbid_maquina.Location = new System.Drawing.Point(548, 150);
-            this.Cbid_maquina.Name = "Cbid_maquina";
-            this.Cbid_maquina.Size = new System.Drawing.Size(247, 28);
-            this.Cbid_maquina.TabIndex = 216;
-            // 
             // txt_precioT
             // 
             this.txt_precioT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_precioT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_precioT.Location = new System.Drawing.Point(130, 281);
+            this.txt_precioT.Location = new System.Drawing.Point(551, 239);
             this.txt_precioT.Name = "txt_precioT";
-            this.txt_precioT.Size = new System.Drawing.Size(272, 26);
+            this.txt_precioT.Size = new System.Drawing.Size(247, 26);
             this.txt_precioT.TabIndex = 219;
             // 
             // label2
@@ -369,7 +344,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 271);
+            this.label2.Location = new System.Drawing.Point(411, 229);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 36);
             this.label2.TabIndex = 218;
@@ -378,7 +353,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::QYMSAS.Properties.Resources.lupa;
-            this.pictureBox5.Location = new System.Drawing.Point(103, 286);
+            this.pictureBox5.Location = new System.Drawing.Point(524, 242);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(21, 21);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -395,8 +370,6 @@
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.txt_precioT);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.Cbid_maquina);
             this.Controls.Add(this.exportar);
             this.Controls.Add(this.dg_consulta);
             this.Controls.Add(this.pictureBox1);
@@ -458,8 +431,6 @@
         private System.Windows.Forms.Button bt_Eliminar;
         private System.Windows.Forms.Button Bt_Ingresar;
         private System.Windows.Forms.Button exportar;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox Cbid_maquina;
         private System.Windows.Forms.TextBox txt_precioT;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox5;
