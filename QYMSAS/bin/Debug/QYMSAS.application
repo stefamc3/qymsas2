@@ -8,7 +8,7 @@
         <beforeApplicationStartup />
       </update>
     </subscription>
-    <deploymentProvider codebase="http://desktop-mv7e4tv/QYMSAS/QYMSAS.application" />
+    <deploymentProvider codebase="http://desktop-eo2hu8n/QYMSAS/QYMSAS.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
     <framework targetVersion="4.6.2" profile="Full" supportedRuntime="4.0.30319" />
@@ -21,7 +21,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>h2W3EWI0yO9w+aZH9rI8x3QnRXo5zPhgUN9kTG8LGD0=</dsig:DigestValue>
+        <dsig:DigestValue>681VpwEKit3wJFLg60W6aSnTq9WA+6t2n8YHZq1Mp8E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -36,6 +36,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txt_año = new System.Windows.Forms.TextBox();
             this.bt_nuevo = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -57,7 +58,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::QYMSAS.Properties.Resources.en_espera;
-            this.pictureBox3.Location = new System.Drawing.Point(308, 410);
+            this.pictureBox3.Location = new System.Drawing.Point(308, 429);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(38, 37);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -68,7 +69,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::QYMSAS.Properties.Resources.menu;
-            this.pictureBox2.Location = new System.Drawing.Point(264, 410);
+            this.pictureBox2.Location = new System.Drawing.Point(264, 429);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 37);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -80,9 +81,9 @@
             // 
             this.txt_año.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_año.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_año.Location = new System.Drawing.Point(126, 378);
+            this.txt_año.Location = new System.Drawing.Point(242, 389);
             this.txt_año.Name = "txt_año";
-            this.txt_año.Size = new System.Drawing.Size(305, 26);
+            this.txt_año.Size = new System.Drawing.Size(130, 26);
             this.txt_año.TabIndex = 225;
             // 
             // bt_nuevo
@@ -90,28 +91,40 @@
             this.bt_nuevo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bt_nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.bt_nuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_nuevo.Location = new System.Drawing.Point(455, 378);
+            this.bt_nuevo.Location = new System.Drawing.Point(378, 384);
             this.bt_nuevo.Name = "bt_nuevo";
             this.bt_nuevo.Size = new System.Drawing.Size(98, 36);
             this.bt_nuevo.TabIndex = 226;
-            this.bt_nuevo.Text = "Nuevo";
+            this.bt_nuevo.Text = "Generar";
             this.bt_nuevo.UseVisualStyleBackColor = false;
             this.bt_nuevo.Click += new System.EventHandler(this.bt_nuevo_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(160, 392);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 20);
+            this.label1.TabIndex = 227;
+            this.label1.Text = "Año:";
             // 
             // estadisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(609, 460);
+            this.ClientSize = new System.Drawing.Size(609, 471);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.bt_nuevo);
             this.Controls.Add(this.txt_año);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.chart1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(625, 499);
-            this.MinimumSize = new System.Drawing.Size(625, 499);
+            this.MaximumSize = new System.Drawing.Size(625, 510);
+            this.MinimumSize = new System.Drawing.Size(625, 510);
             this.Name = "estadisticas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estadistica";
@@ -131,5 +144,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox txt_año;
         private System.Windows.Forms.Button bt_nuevo;
+        private System.Windows.Forms.Label label1;
     }
 }
