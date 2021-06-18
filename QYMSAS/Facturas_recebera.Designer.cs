@@ -281,6 +281,7 @@
             // txtmaterial
             // 
             this.txtmaterial.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtmaterial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtmaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmaterial.Location = new System.Drawing.Point(134, 197);
             this.txtmaterial.Name = "txtmaterial";
@@ -736,7 +737,7 @@
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dg_siigo.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dg_siigo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_siigo.Size = new System.Drawing.Size(54, 39);
+            this.dg_siigo.Size = new System.Drawing.Size(54, 42);
             this.dg_siigo.TabIndex = 331;
             this.dg_siigo.Visible = false;
             // 
@@ -746,6 +747,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(884, 698);
+            this.Controls.Add(this.dg_siigo);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.label16);
@@ -797,7 +799,6 @@
             this.Controls.Add(this.Bt_Ingresar);
             this.Controls.Add(this.dt_fecha);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dg_siigo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(900, 737);
             this.MinimumSize = new System.Drawing.Size(900, 726);
