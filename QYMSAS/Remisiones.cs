@@ -147,5 +147,19 @@ namespace QYMSAS
                 MessageBox.Show("No ha modificado el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void dg_consulta_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dg_consulta.SelectedRows.Count > 0)
+            {
+                txtdestinor.Text = dg_consulta.CurrentRow.Cells["destino"].Value.ToString();
+                txtidF.Text = dg_consulta.CurrentRow.Cells["facturacion_id_facturacion"].Value.ToString();
+                txtmaterialr.Text = dg_consulta.CurrentRow.Cells["material"].Value.ToString();
+                txtmetrosr.Text = dg_consulta.CurrentRow.Cells["metros"].Value.ToString();
+                txtplaca.Text = dg_consulta.CurrentRow.Cells["placa"].Value.ToString();
+                txtremision.Text = dg_consulta.CurrentRow.Cells["remision"].Value.ToString();
+                txt_rvalor.Text = dg_consulta.CurrentRow.Cells["precio"].Value.ToString();
+            }
+        }
     }
 }

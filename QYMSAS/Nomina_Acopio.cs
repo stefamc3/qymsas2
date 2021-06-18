@@ -81,7 +81,6 @@ namespace QYMSAS
             this.textBon.Text = "";
             this.textNeto.Text = "";
             this.textprest.Text = "";
-            this.textSeg.Text = "";
             this.textSegd.Text = "";
             Cb_trabajador.Focus();
            // cbtipo.Focus();
@@ -97,7 +96,7 @@ namespace QYMSAS
                 String identificacion = Convert.ToString(Cb_trabajador.SelectedItem);
              //   String tipo = Convert.ToString(cbtipo.SelectedItem);
                 String nombre = Convert.ToString(cb_nombre.SelectedItem);
-                string Query = "INSERT INTO nomina (fecha,nombre_TR,id_trabajador,salario_rec,auxilio_de_transporte_rec,prestaciones_rec,seguro_rec,seguridad_rec,bonificaciones_rec,neto_rec,tipo) values('" + fecha + "','" + nombre + "','" + identificacion + "','" + this.txt_valor.Text + "','" + this.txt_Aux.Text + "','" + this.textprest.Text + "', '" + this.textSeg.Text + "', '" + this.textSegd.Text + "','" + this.textBon.Text + "','" + this.textNeto.Text + "','" +"ACOPIO"+ "');";
+                string Query = "INSERT INTO nomina (fecha,nombre_TR,id_trabajador,salario_rec,auxilio_de_transporte_rec,prestaciones_rec,seguridad_rec,bonificaciones_rec,neto_rec,tipo) values('" + fecha + "','" + nombre + "','" + identificacion + "','" + this.txt_valor.Text + "','" + this.txt_Aux.Text + "','" + this.textprest.Text + "',  '" + this.textSegd.Text + "','" + this.textBon.Text + "','" + this.textNeto.Text + "','" +"ACOPIO"+ "');";
                // MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, basededatos.ObtenerConexion());
                 MySqlDataReader MyReader2;
@@ -154,6 +153,19 @@ namespace QYMSAS
             else
             {
                 MessageBox.Show("No ha modificado el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void dg_consulta_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dg_consulta.SelectedRows.Count > 0)
+            {
+                txt_Aux.Text = dg_consulta.CurrentRow.Cells["auxilio_de_transporte_rec"].Value.ToString();
+                txt_valor.Text = dg_consulta.CurrentRow.Cells["salario_rec"].Value.ToString();
+                textprest.Text = dg_consulta.CurrentRow.Cells["prestaciones_rec"].Value.ToString();
+                textBon.Text = dg_consulta.CurrentRow.Cells["bonificaciones_rec"].Value.ToString();
+                textSegd.Text = dg_consulta.CurrentRow.Cells["seguridad_rec"].Value.ToString();
+                textNeto.Text = dg_consulta.CurrentRow.Cells["neto_rec"].Value.ToString();
             }
         }
     }

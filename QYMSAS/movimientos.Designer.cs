@@ -226,6 +226,7 @@
             this.dg_consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg_consulta.Size = new System.Drawing.Size(740, 307);
             this.dg_consulta.TabIndex = 203;
+            this.dg_consulta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_consulta_CellClick);
             // 
             // pictureBox1
             // 
@@ -344,11 +345,11 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(411, 229);
+            this.label2.Location = new System.Drawing.Point(413, 243);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 36);
+            this.label2.Size = new System.Drawing.Size(105, 18);
             this.label2.TabIndex = 218;
-            this.label2.Text = "Precio \r\nTonelada:";
+            this.label2.Text = "Precio Total:";
             // 
             // pictureBox5
             // 

@@ -159,5 +159,14 @@ namespace QYMSAS
         {
 
         }
+
+        private void dg_consulta_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dg_consulta.SelectedRows.Count > 0)
+            {
+                txtdes.Text = dg_consulta.CurrentRow.Cells["descripcion"].Value.ToString();
+                txt_valord.Text = dg_consulta.CurrentRow.Cells["valor"].Value.ToString();
+            }
+        }
     }
 }

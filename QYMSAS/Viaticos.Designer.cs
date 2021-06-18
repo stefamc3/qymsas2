@@ -317,6 +317,7 @@
             this.dg_consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg_consulta.Size = new System.Drawing.Size(814, 323);
             this.dg_consulta.TabIndex = 216;
+            this.dg_consulta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_consulta_CellClick);
             // 
             // Viaticos
             // 

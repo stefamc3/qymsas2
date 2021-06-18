@@ -50,8 +50,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textSegd = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textSeg = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.textprest = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -118,6 +116,7 @@
             this.dg_consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg_consulta.Size = new System.Drawing.Size(830, 235);
             this.dg_consulta.TabIndex = 188;
+            this.dg_consulta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_consulta_CellClick);
             // 
             // pictureBox1
             // 
@@ -235,7 +234,7 @@
             // 
             this.textNeto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textNeto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textNeto.Location = new System.Drawing.Point(580, 307);
+            this.textNeto.Location = new System.Drawing.Point(153, 304);
             this.textNeto.Name = "textNeto";
             this.textNeto.Size = new System.Drawing.Size(287, 26);
             this.textNeto.TabIndex = 206;
@@ -246,7 +245,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(449, 311);
+            this.label8.Location = new System.Drawing.Point(34, 308);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 18);
             this.label8.TabIndex = 205;
@@ -256,7 +255,7 @@
             // 
             this.textBon.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBon.Location = new System.Drawing.Point(580, 268);
+            this.textBon.Location = new System.Drawing.Point(580, 226);
             this.textBon.Name = "textBon";
             this.textBon.Size = new System.Drawing.Size(287, 26);
             this.textBon.TabIndex = 204;
@@ -267,7 +266,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(449, 272);
+            this.label6.Location = new System.Drawing.Point(449, 230);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(124, 18);
             this.label6.TabIndex = 203;
@@ -277,7 +276,7 @@
             // 
             this.textSegd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textSegd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textSegd.Location = new System.Drawing.Point(153, 307);
+            this.textSegd.Location = new System.Drawing.Point(580, 268);
             this.textSegd.Name = "textSegd";
             this.textSegd.Size = new System.Drawing.Size(287, 26);
             this.textSegd.TabIndex = 202;
@@ -288,32 +287,11 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(34, 311);
+            this.label5.Location = new System.Drawing.Point(449, 268);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 18);
             this.label5.TabIndex = 201;
             this.label5.Text = "Seguridad:";
-            // 
-            // textSeg
-            // 
-            this.textSeg.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textSeg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textSeg.Location = new System.Drawing.Point(580, 227);
-            this.textSeg.Name = "textSeg";
-            this.textSeg.Size = new System.Drawing.Size(287, 26);
-            this.textSeg.TabIndex = 200;
-            this.textSeg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(449, 226);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 18);
-            this.label3.TabIndex = 199;
-            this.label3.Text = "Seguro:";
             // 
             // textprest
             // 
@@ -487,8 +465,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textSegd);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textSeg);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.textprest);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label10);
@@ -543,8 +519,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textSegd;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textSeg;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textprest;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;

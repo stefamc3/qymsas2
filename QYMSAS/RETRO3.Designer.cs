@@ -114,6 +114,7 @@
             this.dg_consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg_consulta.Size = new System.Drawing.Size(733, 266);
             this.dg_consulta.TabIndex = 216;
+            this.dg_consulta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_consulta_CellClick);
             // 
             // pictureBox1
             // 
@@ -220,9 +221,9 @@
             // 
             this.textneto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textneto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textneto.Location = new System.Drawing.Point(548, 267);
+            this.textneto.Location = new System.Drawing.Point(548, 269);
             this.textneto.Name = "textneto";
-            this.textneto.Size = new System.Drawing.Size(247, 26);
+            this.textneto.Size = new System.Drawing.Size(244, 26);
             this.textneto.TabIndex = 202;
             this.textneto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
@@ -231,7 +232,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(462, 271);
+            this.label5.Location = new System.Drawing.Point(458, 271);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 18);
             this.label5.TabIndex = 201;
@@ -241,9 +242,9 @@
             // 
             this.textret.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textret.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textret.Location = new System.Drawing.Point(548, 229);
+            this.textret.Location = new System.Drawing.Point(548, 231);
             this.textret.Name = "textret";
-            this.textret.Size = new System.Drawing.Size(247, 26);
+            this.textret.Size = new System.Drawing.Size(244, 26);
             this.textret.TabIndex = 200;
             this.textret.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
@@ -252,7 +253,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(459, 233);
+            this.label3.Location = new System.Drawing.Point(455, 233);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 18);
             this.label3.TabIndex = 199;
@@ -314,7 +315,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(459, 195);
+            this.label2.Location = new System.Drawing.Point(455, 195);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 18);
             this.label2.TabIndex = 194;
@@ -324,9 +325,9 @@
             // 
             this.txt_val.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_val.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_val.Location = new System.Drawing.Point(548, 194);
+            this.txt_val.Location = new System.Drawing.Point(545, 186);
             this.txt_val.Name = "txt_val";
-            this.txt_val.Size = new System.Drawing.Size(244, 26);
+            this.txt_val.Size = new System.Drawing.Size(247, 26);
             this.txt_val.TabIndex = 191;
             this.txt_val.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
@@ -380,7 +381,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(459, 150);
+            this.label6.Location = new System.Drawing.Point(455, 150);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 18);
             this.label6.TabIndex = 219;

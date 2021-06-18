@@ -155,5 +155,19 @@ namespace QYMSAS
                 MessageBox.Show("No ha modificado el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void dg_consulta_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dg_consulta.SelectedRows.Count > 0)
+            {
+                txt_horas.Text = dg_consulta.CurrentRow.Cells["Num_Horas"].Value.ToString();
+                txt_valorh .Text = dg_consulta.CurrentRow.Cells["Valor_Hora"].Value.ToString();
+                txVm3.Text = dg_consulta.CurrentRow.Cells["valor_m3"].Value.ToString();
+                text_Hinicial.Text = dg_consulta.CurrentRow.Cells["horometro_inicial"].Value.ToString();
+                text_Hfinal.Text = dg_consulta.CurrentRow.Cells["horometro_final"].Value.ToString();
+                textM3.Text = dg_consulta.CurrentRow.Cells["metros_cubicos"].Value.ToString();
+                textTotal.Text = dg_consulta.CurrentRow.Cells["Valor_total"].Value.ToString();               
+            }
+        }
     }
 }

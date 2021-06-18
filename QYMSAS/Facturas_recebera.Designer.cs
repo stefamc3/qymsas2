@@ -212,6 +212,7 @@
             this.dg_consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg_consulta.Size = new System.Drawing.Size(835, 249);
             this.dg_consulta.TabIndex = 231;
+            this.dg_consulta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_consulta_CellClick);
             // 
             // label3
             // 

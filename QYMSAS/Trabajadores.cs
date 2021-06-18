@@ -137,5 +137,21 @@ namespace QYMSAS
                 MessageBox.Show("No ha modificado el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void dg_consulta_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dg_consulta.SelectedRows.Count > 0)
+            {
+                txtARL.Text = dg_consulta.CurrentRow.Cells["ARL"].Value.ToString();
+                txt_car.Text = dg_consulta.CurrentRow.Cells["cargo_trabajador"].Value.ToString();
+                txt_email.Text = dg_consulta.CurrentRow.Cells["email"].Value.ToString();
+                textEPS.Text = dg_consulta.CurrentRow.Cells["EPS"].Value.ToString();
+                txt_nom.Text = dg_consulta.CurrentRow.Cells["nombre_trabajador"].Value.ToString();
+                txt_tel.Text = dg_consulta.CurrentRow.Cells["telefono"].Value.ToString();
+                txt_telE.Text = dg_consulta.CurrentRow.Cells["tel_emergencia"].Value.ToString();
+                textRH.Text = dg_consulta.CurrentRow.Cells["RH"].Value.ToString();
+
+            }
+        }
     }
 }

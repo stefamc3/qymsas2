@@ -154,5 +154,17 @@ namespace QYMSAS
         {
             textTotal.Text = Convert.ToString(Convert.ToDecimal(txt_ton.Text) * Convert.ToDecimal(textPre.Text));
         }
+
+        private void dg_consulta_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dg_consulta.SelectedRows.Count > 0)
+            {
+                txt_cliente.Text = dg_consulta.CurrentRow.Cells["clientes_A"].Value.ToString();
+                txt_ton.Text = dg_consulta.CurrentRow.Cells["toneladas_PA"].Value.ToString();
+                textPre.Text = dg_consulta.CurrentRow.Cells["precio_PA"].Value.ToString();
+                textQuin.Text = dg_consulta.CurrentRow.Cells["quincena"].Value.ToString();
+                textTotal.Text = dg_consulta.CurrentRow.Cells["total_PA"].Value.ToString();
+            }
+        }
     }
 }

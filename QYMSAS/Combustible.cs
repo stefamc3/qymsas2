@@ -163,5 +163,17 @@ namespace QYMSAS
                 MessageBox.Show("No ha modificado el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void dg_consulta_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dg_consulta.SelectedRows.Count > 0)
+            {
+                txt_cantidad.Text = dg_consulta.CurrentRow.Cells["cantidad"].Value.ToString();
+                txt_descripcionf.Text = dg_consulta.CurrentRow.Cells["descripcion"].Value.ToString();
+                txt_valor.Text = dg_consulta.CurrentRow.Cells["valor"].Value.ToString();
+                Cbid_maquina.Text = dg_consulta.CurrentRow.Cells["maquinas_id_maquina"].Value.ToString();
+                txt_idFac.Text = dg_consulta.CurrentRow.Cells["facturacion_id_facturacion"].Value.ToString();
+            }
+        }
     }
 }

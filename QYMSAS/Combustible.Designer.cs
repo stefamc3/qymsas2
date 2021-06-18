@@ -344,7 +344,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dg_consulta.DefaultCellStyle = dataGridViewCellStyle2;
             this.dg_consulta.EnableHeadersVisualStyles = false;
-            this.dg_consulta.Location = new System.Drawing.Point(7, 376);
+            this.dg_consulta.Location = new System.Drawing.Point(18, 376);
             this.dg_consulta.Name = "dg_consulta";
             this.dg_consulta.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -361,6 +361,7 @@
             this.dg_consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg_consulta.Size = new System.Drawing.Size(772, 267);
             this.dg_consulta.TabIndex = 402;
+            this.dg_consulta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_consulta_CellContentClick);
             // 
             // Combustible
             // 

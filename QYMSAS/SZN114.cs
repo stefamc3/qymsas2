@@ -126,5 +126,15 @@ namespace QYMSAS
                 MessageBox.Show("No ha modificado el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void dg_consulta_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dg_consulta.SelectedRows.Count > 0)
+            {
+                txt_destino.Text = dg_consulta.CurrentRow.Cells["destino"].Value.ToString();
+                txt_valor.Text = dg_consulta.CurrentRow.Cells["valor"].Value.ToString();
+                
+            }
+        }
     }
 }

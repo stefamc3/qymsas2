@@ -104,6 +104,7 @@
             this.dg_consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg_consulta.Size = new System.Drawing.Size(701, 309);
             this.dg_consulta.TabIndex = 167;
+            this.dg_consulta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_consulta_CellClick);
             // 
             // pictureBox1
             // 
@@ -251,7 +252,7 @@
             this.dt_fecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dt_fecha.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dt_fecha.Location = new System.Drawing.Point(141, 165);
+            this.dt_fecha.Location = new System.Drawing.Point(261, 165);
             this.dt_fecha.Name = "dt_fecha";
             this.dt_fecha.Size = new System.Drawing.Size(304, 26);
             this.dt_fecha.TabIndex = 152;
@@ -261,7 +262,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(41, 171);
+            this.label7.Location = new System.Drawing.Point(161, 171);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 18);
             this.label7.TabIndex = 154;

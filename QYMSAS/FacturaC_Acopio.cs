@@ -201,6 +201,27 @@ namespace QYMSAS
         {
             txtneto.Text = Convert.ToString(Convert.ToDecimal(txtsubt.Text) - Convert.ToDecimal(txtretefp.Text) + Convert.ToDecimal(txtiva.Text));
         }
+
+        private void dg_consulta_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dg_consulta.SelectedRows.Count > 0)
+            {
+                txtdestino.Text = dg_consulta.CurrentRow.Cells["señores"].Value.ToString();
+                txtfac.Text = dg_consulta.CurrentRow.Cells["Factura"].Value.ToString();
+                txtdireccion.Text = dg_consulta.CurrentRow.Cells["direccion"].Value.ToString();
+                txtiva.Text = dg_consulta.CurrentRow.Cells["iva"].Value.ToString();
+                txtivap.Text = dg_consulta.CurrentRow.Cells["porcentaje_iva"].Value.ToString();
+                txtmaterial.Text = dg_consulta.CurrentRow.Cells["Descripcion"].Value.ToString();
+                txtmetros.Text = dg_consulta.CurrentRow.Cells["cantidad"].Value.ToString();
+                txtneto.Text = dg_consulta.CurrentRow.Cells["neto"].Value.ToString();
+                txtnit.Text = dg_consulta.CurrentRow.Cells["nit"].Value.ToString();
+                txtretef.Text = dg_consulta.CurrentRow.Cells["retefuente"].Value.ToString();
+                txtretefp.Text = dg_consulta.CurrentRow.Cells["porcenta_Rtefuente"].Value.ToString();
+                txtsubt.Text = dg_consulta.CurrentRow.Cells["subtotal"].Value.ToString();
+                txttelefono.Text = dg_consulta.CurrentRow.Cells["telefono"].Value.ToString();
+                txtvaloru.Text = dg_consulta.CurrentRow.Cells["valor_unitario"].Value.ToString();
+            }
+        }
     }
 }
 

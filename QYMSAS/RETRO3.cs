@@ -148,5 +148,19 @@ namespace QYMSAS
                 MessageBox.Show("No ha modificado el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void dg_consulta_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dg_consulta.SelectedRows.Count > 0)
+            {
+                txt_des.Text = dg_consulta.CurrentRow.Cells["destino"].Value.ToString();
+                txt_val.Text = dg_consulta.CurrentRow.Cells["valor_p"].Value.ToString();
+                textiva.Text = dg_consulta.CurrentRow.Cells["iva_p"].Value.ToString();
+                textneto.Text = dg_consulta.CurrentRow.Cells["neto_p"].Value.ToString();
+                textNumH.Text = dg_consulta.CurrentRow.Cells["num_horas_p"].Value.ToString();
+                textret.Text = dg_consulta.CurrentRow.Cells["rte_fuente_p"].Value.ToString();
+                
+            }
+        }
     }
 }

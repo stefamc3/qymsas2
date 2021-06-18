@@ -303,6 +303,7 @@
             this.dg_consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg_consulta.Size = new System.Drawing.Size(719, 344);
             this.dg_consulta.TabIndex = 140;
+            this.dg_consulta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_consulta_CellContentClick);
             // 
             // exportar
             // 

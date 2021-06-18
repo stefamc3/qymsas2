@@ -157,5 +157,17 @@ namespace QYMSAS
         {
             txt_precioT.Text = Convert.ToString(Convert.ToDecimal(txt_Ton.Text) * Convert.ToDecimal(textPreTone.Text));
         }
+
+        private void dg_consulta_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dg_consulta.SelectedRows.Count > 0)
+            {
+                txt_precioT.Text = dg_consulta.CurrentRow.Cells["precio_total"].Value.ToString();
+                txt_Ton.Text = dg_consulta.CurrentRow.Cells["tonelada_m"].Value.ToString();
+                textItem.Text = dg_consulta.CurrentRow.Cells["item"].Value.ToString();
+                textPatio.Text = dg_consulta.CurrentRow.Cells["patio"].Value.ToString();
+                textPreTone.Text = dg_consulta.CurrentRow.Cells["precio_total"].Value.ToString();
+            }
+        }
     }
 }
