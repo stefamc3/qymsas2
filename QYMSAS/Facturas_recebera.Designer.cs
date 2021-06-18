@@ -737,7 +737,7 @@
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dg_siigo.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dg_siigo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_siigo.Size = new System.Drawing.Size(54, 42);
+            this.dg_siigo.Size = new System.Drawing.Size(68, 58);
             this.dg_siigo.TabIndex = 331;
             this.dg_siigo.Visible = false;
             // 
