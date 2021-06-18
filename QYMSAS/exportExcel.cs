@@ -40,6 +40,29 @@ namespace QYMSAS
             //progress.Value = 0; 
         }
 
+        public void exportaraexcelsiigo(DataGridView tabla)
+        {
+            int filastotales = tabla.Rows.Count;
+            excel.Application.Workbooks.Add(true);
+            int IndiceColumna = 0;
+            int IndeceFila = 0;
+            foreach (DataGridViewRow row in tabla.Rows) // Filas
+            {
+                IndeceFila++;
+                IndiceColumna = 0;
+                foreach (DataGridViewColumn col in tabla.Columns)
+                {
+                    IndiceColumna++;
+                    excel.Cells[IndeceFila , IndiceColumna] = row.Cells[col.Name].Value;
+                }
+                //progress.Value = (IndeceFila * 100) / filastotales;
+            }
+            excel.Visible = true;
+            Worksheet worksheet = (Worksheet)excel.ActiveSheet;
+            worksheet.Activate();
+            MessageBox.Show("Exportación Exitosa", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //progress.Value = 0; 
+        }
         public void descargarmemoria()
         {
             excel.Visible = true;

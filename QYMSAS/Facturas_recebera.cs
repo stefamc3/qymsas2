@@ -145,7 +145,7 @@ namespace QYMSAS
         {
             busqueda2();
             exportExcel exc = new exportExcel();
-            exc.exportaraexcel(dg_siigo);
+            exc.exportaraexcelsiigo(dg_siigo);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

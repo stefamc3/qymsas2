@@ -750,14 +750,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QYMSAS.exe" size="2262000">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QYMSAS.exe" size="2262512">
       <assemblyIdentity name="QYMSAS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2t/bLI2NHtUju9MW0AE84CaJJrBrbJOMefv/7bDkxFk=</dsig:DigestValue>
+        <dsig:DigestValue>nQgpK5LZmsP2f/8WMUL3R/uiBq8frUoA1qyxcecQT4A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
