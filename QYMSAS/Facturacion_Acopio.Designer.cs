@@ -32,6 +32,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Facturacion_Acopio));
             this.dt_fecha = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
@@ -55,7 +59,6 @@
             this.txtmetros = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtmaterial = new System.Windows.Forms.TextBox();
-            this.btn_exportar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.buscar = new System.Windows.Forms.Label();
@@ -84,6 +87,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
+            this.btn_exportar = new System.Windows.Forms.Button();
+            this.dg_siigo = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_consulta)).BeginInit();
@@ -93,6 +98,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_siigo)).BeginInit();
             this.SuspendLayout();
             // 
             // dt_fecha
@@ -324,18 +330,6 @@
             this.txtmaterial.Name = "txtmaterial";
             this.txtmaterial.Size = new System.Drawing.Size(305, 26);
             this.txtmaterial.TabIndex = 275;
-            // 
-            // btn_exportar
-            // 
-            this.btn_exportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_exportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exportar.Location = new System.Drawing.Point(606, 338);
-            this.btn_exportar.Name = "btn_exportar";
-            this.btn_exportar.Size = new System.Drawing.Size(107, 36);
-            this.btn_exportar.TabIndex = 301;
-            this.btn_exportar.Text = "Exportar";
-            this.btn_exportar.UseVisualStyleBackColor = false;
-            this.btn_exportar.Click += new System.EventHandler(this.btn_exportar_Click);
             // 
             // btn_modificar
             // 
@@ -677,12 +671,76 @@
             this.label21.TabIndex = 329;
             this.label21.Text = "Tipo de Factura";
             // 
+            // btn_exportar
+            // 
+            this.btn_exportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_exportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exportar.Location = new System.Drawing.Point(607, 338);
+            this.btn_exportar.Name = "btn_exportar";
+            this.btn_exportar.Size = new System.Drawing.Size(152, 36);
+            this.btn_exportar.TabIndex = 330;
+            this.btn_exportar.Text = "Exportar Siigo";
+            this.btn_exportar.UseVisualStyleBackColor = false;
+            this.btn_exportar.Click += new System.EventHandler(this.btn_exportar_Click_1);
+            // 
+            // dg_siigo
+            // 
+            this.dg_siigo.AllowUserToAddRows = false;
+            this.dg_siigo.AllowUserToDeleteRows = false;
+            this.dg_siigo.AllowUserToOrderColumns = true;
+            this.dg_siigo.AllowUserToResizeColumns = false;
+            this.dg_siigo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dg_siigo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dg_siigo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dg_siigo.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dg_siigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_siigo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dg_siigo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_siigo.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dg_siigo.EnableHeadersVisualStyles = false;
+            this.dg_siigo.Location = new System.Drawing.Point(142, 23);
+            this.dg_siigo.Name = "dg_siigo";
+            this.dg_siigo.ReadOnly = true;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_siigo.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dg_siigo.RowHeadersVisible = false;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dg_siigo.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dg_siigo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dg_siigo.Size = new System.Drawing.Size(54, 42);
+            this.dg_siigo.TabIndex = 332;
+            this.dg_siigo.Visible = false;
+            // 
             // Facturacion_Acopio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(884, 698);
+            this.Controls.Add(this.dg_siigo);
+            this.Controls.Add(this.btn_exportar);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.txtivap);
@@ -704,7 +762,6 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dg_consulta);
-            this.Controls.Add(this.btn_exportar);
             this.Controls.Add(this.btn_modificar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.buscar);
@@ -750,6 +807,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_siigo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -778,7 +836,6 @@
         private System.Windows.Forms.TextBox txtmetros;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtmaterial;
-        private System.Windows.Forms.Button btn_exportar;
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label buscar;
@@ -807,5 +864,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button btn_exportar;
+        public System.Windows.Forms.DataGridView dg_siigo;
     }
 }
