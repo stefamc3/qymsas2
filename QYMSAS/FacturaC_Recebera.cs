@@ -51,8 +51,28 @@ namespace QYMSAS
             dg_consulta.Columns[16].HeaderText = "ESTADO";
             dg_consulta.Columns[17].HeaderText = "TIPO";
             dg_consulta.Columns[18].HeaderText = "TIPO DE FACTURA";
-            dg_consulta.Columns[19].HeaderText = "ID";
+            //dg_consulta.Columns[19].HeaderText = "ID";
 
+        }
+
+        private void busqueda2()
+        {
+            String busqueda = "select case when facturacion.estado='PAGO' then 'P' else 'O' end as '1', case when facturacion.nit<999999999 then " +
+                "concat('0', facturacion.nit) else facturacion.nit end as '2', month(fecha) as '3', case when facturacion.nit<999999999 then " +
+                "concat('0000', facturacion.nit) else concat('000', facturacion.nit) end as '4', case when facturacion.tipo='RECEBERA' then '002' " +
+                "end as '5', case when facturacion.apartado='COMPRA' then '0001' end as '6', case when facturacion.apartado='COMPRA' then '000' end as '7', " +
+                "case when facturacion.descripcion='RECEBO' then '001' when facturacion.descripcion='CARBON' then '002' when facturacion.descripcion='ALQUILER MAQUINA' " +
+                "then '003' when facturacion.descripcion='TRANSPORTE' then '004' when facturacion.descripcion='ACEITES Y FILTROS' then '005' " +
+                "when facturacion.descripcion='COMBUSTIBLE' then '006' else '007' end as '8', facturacion.factura as '9', " +
+                "facturacion.valor_unitario as '10', facturacion.cantidad as '11', case when facturacion.tipo='RECEBERA' then '0002' end as '12', " +
+                "case when facturacion.apartado='COMPRA' then '000' end as '13', facturacion.subtotal as '14', facturacion.iva as '15', facturacion.retefuente as '16', " +
+                "facturacion.neto as '17' from facturacion where tipo='RECEBERA' and Apartado = 'COMPRA'";
+            MySqlCommand comando = new MySqlCommand(busqueda, basededatos.ObtenerConexion());
+            MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+            MyAdapter.SelectCommand = comando;
+            DataTable dTable = new DataTable();
+            MyAdapter.Fill(dTable);
+            dg_siigo.DataSource = dTable;
         }
         private void solonumeros(object sender, KeyPressEventArgs e)
         {
@@ -158,8 +178,9 @@ namespace QYMSAS
 
         private void exportar_Click(object sender, EventArgs e)
         {
+            busqueda2();
             exportExcel exc = new exportExcel();
-            exc.exportaraexcel(dg_consulta);
+            exc.exportaraexcelsiigo(dg_siigo);
         }
         private void pictureBox5_Click_1(object sender, EventArgs e)
         {
